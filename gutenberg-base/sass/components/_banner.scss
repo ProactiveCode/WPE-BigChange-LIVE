@@ -1,0 +1,192 @@
+.banner {
+    padding: 20px 0px;
+    text-align: center; 
+    margin: 40px 0px;
+
+    h1,h2,h3,h4,h5,h6,p,span,li,ol,ul,small {
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        @include font-size(20);
+        line-height: 1.1;
+
+        @media(min-width: $md) {
+            @include font-size(25);
+        }
+
+        @media(min-width: $lg) {
+            @include font-size(40);
+        }
+    }
+
+    &--blue {
+        background-color: $brand-color;
+
+        h1,h2,h3,h4,h5,h6,p,span,li,ol,ul,small {
+            color: $white;
+        }
+    }
+
+    &--light-blue {
+        background-color: $sec-brand-color;
+    }
+
+    &__quote {
+        img {
+            width: 40px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.page-template-template-case-studies {
+    .small-banner {
+        padding: 0;
+    }
+    .hero__text {
+        p {
+            max-width:500px;
+        }
+    }
+}
+
+.small-banner {
+    >.wp-block-group__inner-container {
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-color: #356782;
+
+        @media(min-width: $lg) {
+            background-size: 60% 100%;
+        }
+    }
+    
+    &__text {
+        width: 100%;
+        padding: 60px 30px;
+
+        @media(min-width: $md) {
+            padding: 60px;
+            padding-left: 100px;
+        }
+
+        @media(min-width: $lg) {
+            width: 50%;
+            padding: 60px;
+        }
+
+        br {
+            display: none;
+
+            @media(min-width: $md) {
+               display: block;
+            }
+        }
+    }
+
+    &__text {
+        margin: 0 !important; //override some stupid theme sstyle
+
+        p {
+            font-family: $condensed;
+            font-size: 30px;
+            color: $white;
+            display: block;
+            text-transform: uppercase;
+            line-height: 1.4;
+            text-shadow: 0 0 5px black;
+
+            @media(min-width: $lg) {
+                text-shadow: none;
+            }
+        }
+    }
+}
+
+.tiny-banner {
+    .wp-block-group .wp-block-group__inner-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0px;
+    } 
+   
+
+    &__text {
+        width: 100%;
+        text-align: center;
+        color: $white;
+        margin: 0 !important;
+        font-size: 30px;
+
+        @media(min-width: $lg) {
+            width: auto;
+            text-align: left;
+        }
+    }
+
+    &__button {
+        margin-top: 15px;
+        
+        @media(min-width: $lg) {
+            margin-top: 0px;
+            margin: 0 !important;
+        }
+    }
+}
+
+.sub-banner {
+    padding: 30px;
+    background-color: $brand-color;
+    margin-bottom: 10px;
+
+    &.bg-new-blue {
+        background-color: $new-blue;
+    }
+
+    h3 {
+        color: $white;
+        margin: 0;
+        margin-bottom: 15px;
+
+        @media(max-width: $md) {
+            @include font-size(25);
+        }
+        
+        @media(min-width: $lg) {
+            @include font-size(36);
+        }
+    }
+
+    &--start-growing {
+
+        @media(min-width: $md) {
+            background-color: transparent;
+        }
+        
+        &:after {
+            content: '';
+            position: absolute;
+            left: 20px;
+            z-index: -1;
+            bottom: 0;
+            width: calc(100% - 40px);
+            height: 170px;
+            background-color: $brand-color;
+            display: none;
+
+            @media(min-width: $md) {
+                display: block;
+                // bottom: 20px;
+            }
+
+            @media(min-width: $lg) {
+                height: 210px;
+            }
+        }
+    }
+}

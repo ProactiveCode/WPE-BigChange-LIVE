@@ -1,0 +1,137 @@
+.why-bc-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__card {
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+
+        @media(min-width: $md) {
+            width: calc(50% - 10px);
+        }
+
+        @media(min-width: $lg) {
+            width: calc(33.3333% - 10px);
+
+            &:nth-of-type(odd) {
+                flex-direction: column-reverse;
+            }
+        }
+
+        &--full {
+            width: 100% !important;
+        }
+        
+        &--other-layout {
+            @media(min-width: $lg) {
+                width: calc(66.6666% - 10px);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .why-bc-cards__content-wrapper {
+                @media(min-width: $lg) {
+                    width: 50%;
+                    height: auto;
+                }
+            }
+
+            .why-bc-cards__image {
+                @media(min-width: $lg) {
+                    display: none;
+                }
+            }
+        }
+
+        &--stand-out {
+            .why-bc-cards__content-wrapper {
+                background-color: $sec-brand-color;
+            }
+           
+            h1,h2,h3,h4,h5,h6,div,p,li {
+                color: $white;
+            }
+
+            .why-bc-cards__title h3 {
+                color: $white;
+            }
+
+            .why-bc-cards__link a {
+                color: $white;
+            }
+        }
+    }
+
+    &__content-wrapper {
+        padding: 20px;
+        padding-bottom: 60px;
+        position: relative;
+        height: 100%;
+        background-color: #D6E2F0;
+    }
+
+    &__image {
+        width: 100%;
+        height: 200px;
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        h3 {
+            margin: 0;
+            font-family: $condensed;
+            font-size: 24px;
+            color: $sec-brand-color;
+            text-transform: uppercase;
+        }
+    }
+
+    &__text {
+        p {
+            margin: 0;
+        }
+    }
+
+    &__link {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        width: calc(100% - 40px);
+
+        a {
+            color: $sec-brand-color;
+            font-size: 17px;
+            text-decoration: underline;
+            position: relative;
+            width: 100%;
+            display: block;
+
+            &:after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 30px;
+                height: 40px;
+                background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3Ebackground%3C/title%3E%3Crect fill='none' id='canvas_background' height='402' width='582' y='-1' x='-1'/%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Crect x='0' y='-0.062893' id='svg_1' width='32' height='32' fill='none'/%3E%3Cpolygon fill='%23429bcb' id='svg_2' points='10,2.001 24,16 10,30 '/%3E%3C/g%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,863 @@
+.diamond-text {
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        
+        @media(min-width: $md) {
+            padding-bottom: 120px;
+        }
+
+        @media(min-width: $xlg) {
+            padding-bottom: 0px;
+        }
+    }
+
+    &__text,
+    &__diamonds {
+        width: 100%;
+
+        @media(min-width: $md) {
+            width: 50%;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media(min-width: $md) {
+            padding-right: 60px;
+        }
+    }
+
+    &__title {
+        h3 {
+            color: $sec-brand-color;
+            font-size: 40px;
+
+            @media(min-width: $lg) {
+                font-size: 60px;
+            }
+        }
+    }
+
+    &__content {
+        p {
+            &.title {
+                color: $sec-brand-color;
+                font-weight: 700;
+                margin-bottom: 5px;
+                font-family: $condensed;
+                font-size: 22px;
+            }
+
+            &.smaller-margin {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.diamonds-5-in-1 {
+    position: relative;
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media(min-width: $md) {
+        height: 70vw;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        max-height: 1000px;
+        margin: 50px 0px;
+        display: block;
+    }
+
+    &--mobile {
+        .diamond__small-text {
+            p, span{
+                font-size: 17px !important; //overwrite responsive font for mobile layout - class added on width js detection
+            }
+        }
+    }
+
+
+    .diamond {
+        background-color: $white;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        border: 2px solid $brand-color;
+
+        @media(min-width: 400px) {
+            width: calc(50% - 5px);
+        }
+
+        @media(min-width: $md) {
+            position: absolute;
+            transform: rotate(-45deg);
+            max-width: 200px;
+            max-height: 200px;
+            width: 14.2vw;
+            height: 14.2vw;
+            margin-bottom: 0px;
+            padding: 0px;
+            background-color: $sec-brand-color;
+            display: block;
+            border: 2px solid $sec-brand-color;
+        }
+
+        @media(min-width: $xlg) {
+            max-width: 160px;
+            max-height: 160px;
+            width: 11vw;
+            height: 11vw;
+        }
+
+        &.diamond-clickable {
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $white;
+
+                .diamond__small-text p {
+                    color: $new-blue;
+                }
+            }
+        }
+
+        &__wrapper {
+            margin: 0 auto;
+            padding: 20px;
+
+            @media(min-width: $md) {
+                transform: rotate(45deg);
+                position: relative;
+                padding: 47px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__large-text {
+            text-align: center;
+
+            @media(min-width: $md) {
+                position: absolute;
+                text-align: left;
+            }
+            
+            p {
+                margin: 0;
+                line-height: 1;
+                color: $sec-brand-color;
+
+                @media(min-width: $md) {
+                    color: $white;
+                }
+            }
+        }
+
+        &__small-text {
+            text-align: center;
+            padding: 0px 5px;
+            @media(min-width: $md) {
+                position: absolute;
+                bottom: 50%;
+                right: 50%;
+                transform: translate(50%, 50%) rotate(-45deg) translateY(4.5vw);
+                width: 100%;
+                text-align: center;
+            }
+
+            @media(min-width: $xl) {
+                transform: translate(50%, 50%) rotate(-45deg) translateY(60px);
+            }
+
+            p {
+                margin: 0;
+                line-height: 1;
+                font-size: 13px;
+
+                color: $sec-brand-color;
+
+                @media(min-width: $md) {
+                    color: $white;
+                }
+
+                @include responsive-font-size (
+                    $min-font-size: 11.5px,
+                    $max-font-size: 12.5px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        &__image {
+            width: 80px;
+            margin: 0 auto;
+            margin-top: 15px;
+
+            @media(min-width: $md) {
+                position: absolute;
+                width: 6vw;
+                max-width: 80px;
+                margin: 0;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    #diamond-5-in-1-1 {
+        order: 2;
+        @media(min-width: $md) {
+            left: 40%;
+            top: 0;
+        }
+
+        @media(min-width: $xlg) {
+            left: 50%;
+            top: 0%;  
+        }
+        
+    }
+
+    #diamond-5-in-1-2 {
+        order: 3;
+        @media(min-width: $md) {
+            left: 17%;
+            top: 15.5%;
+        }
+
+        @media(min-width: $xlg) {
+            left: 30%;
+            top: 12%;
+        }
+    }
+
+    #diamond-5-in-1-3 {
+        order: 4;
+        z-index: 10;
+        @media(min-width: $md) {
+            left: 40%;
+            top: 31%;
+        }
+
+        @media(min-width: $xlg) {
+            left: 50%;
+            top: 24%;
+        }
+
+        .diamond__image {
+            max-width: 40px;
+
+            @media(min-width: $md) {
+                max-width: 30px;
+            }
+
+            @media(min-width: $lg) {
+                max-width: 50px;
+            }
+
+            @media(min-width: $xlg) {
+                max-width: 60px;
+            }
+        }
+    }
+    
+    #diamond-5-in-1-4 {
+        order: 1;
+        width: 100%;
+        background-color: $white;
+        border: 2px solid $brand-color;
+
+        @media(min-width: $md) {
+            left: 9.3%;
+            top: 48.7%;
+            max-width: 300px;
+            max-height: 300px;
+            width: 21.2vw;
+            height: 21.2vw;
+            border: none;
+            background-color: $brand-color;
+        }
+
+        @media(min-width: $xlg) {
+            left: 18.5%;
+            top: 39%;
+        }
+
+        .diamond__large-text {
+            @media(min-width: $md) {
+                width: 100%;
+                left: 15%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            
+            p {
+                display: flex;
+                align-items: center;
+                font-size: 400px;
+
+                @include responsive-font-size (
+                    $min-font-size: 60px,
+                    $max-font-size: 400px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+
+                span {
+                    font-size: 25px;
+
+                    @media(min-width: $md) {
+                        font-size: 50px;
+                    }
+
+                    &.large {
+                        color: $sec-brand-color;
+                        font-size: 400px;
+
+                        @media(min-width: $md) {
+                            color: $white;
+                            text-shadow: 0px 0px 10px $brand-color;
+                        }
+
+                        @include responsive-font-size (
+                            $min-font-size: 60px,
+                            $max-font-size: 400px,
+                            $min-screen-width: 767px,
+                            $max-screen-width: 1250px,
+                            $font-size-step: 0.1px
+                        );
+
+                        @media(min-width: $lg) {
+                            color: $brand-color;
+                            text-shadow: 0px 0px 10px $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #diamond-5-in-1-5 {
+        order: 5;
+        @media(min-width: $md) {
+            left: -6.5%;
+            top: 76.5%;
+        }
+
+        @media(min-width: $xlg) {
+            left: 10%;
+            top: 68%;
+        }
+    }
+
+    #diamond-5-in-1-6 {
+        order: 7;
+        @media(min-width: $md) {
+            left: 40%;
+            top: 76.3%;
+        }
+
+        @media(min-width: $xlg) {
+            left: 50%;
+            top: 68%;
+        }
+
+        .diamond__small-text {
+            @media(min-width: $md) {
+                transform: translate(50%,50%) rotate(0deg);
+            }
+
+            p {
+                font-family: $condensed;
+                font-size: 19px;
+                font-weight: 700;
+
+                @include responsive-font-size (
+                    $min-font-size: 15px,
+                    $max-font-size: 19px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+    }
+
+    #diamond-5-in-1-7 {
+        order: 6;
+        @media(min-width: $md) {
+            left: 17%;
+            top: 92%;
+        }
+
+        @media(min-width: $xlg) {
+            left: 30%;
+            top: 80%;
+        }
+
+        .diamond__image {
+            max-width: 55px;
+
+            @media(min-width: $md) {
+                max-width: 40px;
+            }
+
+            @media(min-width: $lg) {
+                max-width: 50px;
+            }
+
+            @media(min-width: $xlg) {
+                max-width: 60px;
+            }
+        }
+    }
+}
+
+.hide-tablet {
+    display: none;
+
+    @media(min-width: $lg) {
+        display: block;
+    }
+}
+
+
+.mobile-only {
+    @media(min-width: $md) {
+        display: none;
+    }
+}
+
+
+
+//test stuff
+// .diamond-text {
+//     &__wrapper {
+//         display: flex;
+//         flex-wrap: wrap;
+        
+//         @media(min-width: $md) {
+//             padding-bottom: 120px;
+//         }
+
+//         @media(min-width: $xlg) {
+//             padding-bottom: 0px;
+//         }
+//     }
+
+//     &__text,
+//     &__diamonds {
+//         width: 100%;
+
+//         @media(min-width: $md) {
+//             width: 50%;
+//         }
+//     }
+
+//     &__text {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+
+//         @media(min-width: $md) {
+//             padding-right: 60px;
+//         }
+//     }
+
+//     &__title {
+//         h3 {
+//             color: $sec-brand-color;
+//             font-size: 40px;
+
+//             @media(min-width: $lg) {
+//                 font-size: 60px;
+//             }
+//         }
+//     }
+
+//     &__content {
+//         p {
+//             &.title {
+//                 color: $sec-brand-color;
+//                 font-weight: 700;
+//                 margin-bottom: 5px;
+//                 font-family: $condensed;
+//                 font-size: 22px;
+//             }
+
+//             &.smaller-margin {
+//                 margin-bottom: 10px;
+//             }
+//         }
+//     }
+// }
+
+// .diamonds-5-in-1 {
+//     position: relative;
+//     width: 340px;
+//     // padding: 20px 0px;
+//     // display: flex;
+//     // justify-content: space-between;
+//     // flex-wrap: wrap;
+
+//     // @media(min-width: $md) {
+//         height: 70vw;
+//         padding-top: 100px;
+//         padding-bottom: 100px;
+//         max-height: 1000px;
+//         margin: 30px auto 85px;
+//         display: block;
+//     // }
+
+//     @media(min-width: $md) {
+//         width: 100%;
+//         margin: 50px 0px;
+//     }
+
+//     &--mobile {
+//         .diamond__small-text {
+//             p, span{
+//                 font-size: 11px !important; //overwrite responsive font for mobile layout - class added on width js detection
+//             }
+//         }
+//     }
+
+
+//     .diamond {
+//         background-color: $sec-brand-color;
+//         // width: 100%;
+//         // margin-bottom: 10px;
+//         // padding: 10px;
+//         // display: flex;
+//         // align-items: center;
+
+//         // @media(min-width: 400px) {
+//         //     width: calc(50% - 10px);
+//         // }
+
+//         // @media(min-width: $md) {
+//             position: absolute;
+//             transform: rotate(-45deg);
+//             max-width: 200px;
+//             max-height: 200px;
+//             width: 14.2vw;
+//             height: 14.2vw;
+//             margin-bottom: 0px;
+//             padding: 0px;
+//             display: block;
+//         // }
+
+//         @media(min-width: $xlg) {
+//             max-width: 160px;
+//             max-height: 160px;
+//             width: 11vw;
+//             height: 11vw;
+//         }
+
+//         &__wrapper {
+//             margin: 0 auto;
+//             padding: 20px;
+
+//             // @media(min-width: $md) {
+//                 transform: rotate(45deg);
+//                 position: relative;
+//                 padding: 47px;
+//                 width: 100%;
+//                 height: 100%;
+//             // }
+//         }
+
+//         &__large-text {
+//             text-align: center;
+
+//             // @media(min-width: $md) {
+//                 position: absolute;
+//                 text-align: left;
+//             // }
+            
+//             p {
+//                 margin: 0;
+//                 line-height: 1;
+//                 color: white;
+//             }
+//         }
+
+//         &__small-text {
+//             text-align: center;
+//             padding: 0px 5px;
+//             // @media(min-width: $md) {
+//                 position: absolute;
+//                 bottom: 50%;
+//                 right: 50%;
+//                 transform: translate(50%, 50%) rotate(-45deg) translateY(4.5vw);
+//                 width: 100%;
+//                 text-align: center;
+//             // }
+
+//             @media(min-width: $xl) {
+//                 transform: translate(50%, 50%) rotate(-45deg) translateY(60px);
+//             }
+
+//             p {
+//                 margin: 0;
+//                 line-height: 1;
+//                 color: white;
+//                 font-size: 13px;
+//                 @include responsive-font-size (
+//                     $min-font-size: 11.5px,
+//                     $max-font-size: 13px,
+//                     $min-screen-width: 767px,
+//                     $max-screen-width: 1250px,
+//                     $font-size-step: 0.1px
+//                 );
+//             }
+//         }
+
+//         &__image {
+//             width: 80px;
+//             margin: 0 auto;
+//             margin-top: 15px;
+
+//             // @media(min-width: $md) {
+//                 position: absolute;
+//                 width: 6vw;
+//                 max-width: 80px;
+//                 margin: 0;
+//                 left: 50%;
+//                 top: 50%;
+//                 transform: translate(-50%, -50%);
+//             // }
+//         }
+//     }
+
+//     #diamond-5-in-1-1 {
+//         order: 2;
+//         // @media(min-width: $md) {
+//             left: 40%;
+//             top: 0;
+//         // }
+
+//         @media(min-width: $xlg) {
+//             left: 50%;
+//             top: 0%;  
+//         }
+        
+//     }
+
+//     #diamond-5-in-1-2 {
+//         order: 3;
+//         // @media(min-width: $md) {
+//             left: 17%;
+//             top: 15.5%;
+//         // }
+
+//         @media(min-width: $xlg) {
+//             left: 30%;
+//             top: 12%;
+//         }
+//     }
+
+//     #diamond-5-in-1-3 {
+//         order: 4;
+//         // @media(min-width: $md) {
+//             left: 40%;
+//             top: 31%;
+//         // }
+
+//         @media(min-width: $xlg) {
+//             left: 50%;
+//             top: 24%;
+//         }
+
+//         .diamond__image {
+//             max-width: 40px;
+
+//             // @media(min-width: $md) {
+//                 max-width: 30px;
+//             // }
+
+//             @media(min-width: $lg) {
+//                 max-width: 50px;
+//             }
+
+//             @media(min-width: $xlg) {
+//                 max-width: 60px;
+//             }
+//         }
+//     }
+    
+//     #diamond-5-in-1-4 {
+//         order: 1;
+//         background-color: $brand-color;
+//         width: 100%;
+
+//         // @media(min-width: $md) {
+//             left: 9.3%;
+//             top: 48.7%;
+//             max-width: 300px;
+//             max-height: 300px;
+//             width: 21.2vw;
+//             height: 21.2vw;
+//         // }
+
+//         @media(min-width: $xlg) {
+//             left: 18.5%;
+//             top: 39%;
+//         }
+
+//         .diamond__large-text {
+//             // @media(min-width: $md) {
+//                 width: 100%;
+//                 left: 15%;
+//                 top: 50%;
+//                 transform: translateY(-50%);
+//             // }
+            
+//             p {
+//                 display: flex;
+//                 align-items: center;
+//                 font-size: 400px;
+
+//                 @include responsive-font-size (
+//                     $min-font-size: 60px,
+//                     $max-font-size: 400px,
+//                     $min-screen-width: 767px,
+//                     $max-screen-width: 1250px,
+//                     $font-size-step: 0.1px
+//                 );
+
+//                 span {
+//                     font-size: 25px;
+
+//                     @media(min-width: $md) {
+//                         font-size: 50px;
+//                     }
+
+//                     &.large {
+//                         color: $white;
+//                         text-shadow: 0px 0px 10px $brand-color;
+//                         font-size: 400px;
+
+//                         @include responsive-font-size (
+//                             $min-font-size: 60px,
+//                             $max-font-size: 400px,
+//                             $min-screen-width: 767px,
+//                             $max-screen-width: 1250px,
+//                             $font-size-step: 0.1px
+//                         );
+
+//                         @media(min-width: $lg) {
+//                             color: $brand-color;
+//                             text-shadow: 0px 0px 10px $white;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     #diamond-5-in-1-5 {
+//         order: 5;
+//         // @media(min-width: $md) {
+//             left: -6.5%;
+//             top: 76.5%;
+//         // }
+
+//         @media(min-width: $xlg) {
+//             left: 10%;
+//             top: 68%;
+//         }
+//     }
+
+//     #diamond-5-in-1-6 {
+//         order: 7;
+//         // @media(min-width: $md) {
+//             left: 40%;
+//             top: 76.3%;
+//         // }
+
+//         @media(min-width: $xlg) {
+//             left: 50%;
+//             top: 68%;
+//         }
+
+//         .diamond__small-text {
+//             // @media(min-width: $md) {
+//                 transform: translate(50%,50%) rotate(0deg);
+//             // }
+
+//             p {
+//                 font-family: $condensed;
+//                 font-size: 19px;
+//                 font-weight: 700;
+
+//                 @include responsive-font-size (
+//                     $min-font-size: 15px,
+//                     $max-font-size: 19px,
+//                     $min-screen-width: 767px,
+//                     $max-screen-width: 1250px,
+//                     $font-size-step: 0.1px
+//                 );
+//             }
+//         }
+//     }
+
+//     #diamond-5-in-1-7 {
+//         order: 6;
+//         // @media(min-width: $md) {
+//             left: 17%;
+//             top: 92%;
+//         // }
+
+//         @media(min-width: $xlg) {
+//             left: 30%;
+//             top: 80%;
+//         }
+
+//         .diamond__image {
+//             max-width: 30px;
+
+//             @media(min-width: $md) {
+//                 max-width: 40px;
+//             }
+
+//             @media(min-width: $lg) {
+//                 max-width: 50px;
+//             }
+
+//             @media(min-width: $xlg) {
+//                 max-width: 60px;
+//             }
+//         }
+//     }
+// }
+
+// .hide-tablet {
+//     display: none;
+
+//     @media(min-width: $lg) {
+//         display: block;
+//     }
+// }
+
+
+// .mobile-only {
+//     @media(min-width: $md) {
+//         display: none;
+//     }
+// }

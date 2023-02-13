@@ -1,0 +1,218 @@
+.careers {
+    &__category {
+
+        &:nth-of-type(odd) {
+            background-color: $bg-alt;
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        &-image {
+            width: 100%;
+            margin-bottom: 30px;
+
+            @media(min-width: $md) {
+                max-width: 300px;
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+        }
+
+        &-content {
+            width: 100%;
+
+            @media(min-width: $md) {
+                width: calc(100% - 320px);
+            }
+
+            h3, p {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        min-height: 200px;
+    }
+
+    &__loader {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 40px;
+
+        &.hidden {
+            display: none;
+        }
+    }
+
+    &__title {
+        p {
+            @include font-size(20);
+            color: $brand-color;
+            font-weight: 700;
+        }
+
+        &--space-top {
+            margin-top: 20px;
+        }
+    }
+
+    &__listings {
+        margin-top: 50px;
+    }
+
+    &__filters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__locations,
+    &__categories-select {
+        width: 100%;
+        
+        @media(min-width: 600px) {
+            width: 50%;
+        }
+    }
+
+    &__locations {
+        padding-right: 20px;
+        margin-top: 30px;
+
+        @media(min-width: 600px) {
+            margin-top: 0px;
+        }
+    }
+
+    &__job-section {
+        padding: 60px 20px 30px;
+    }
+}
+
+.job-listing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 20px 5px;
+    background-color: $white;
+    transition: background-color 0.3s ease;
+
+    @media(min-width: $md) {
+        padding: 20px;
+    }
+
+    &:hover {
+        background-color: $grey;
+        text-decoration: none;
+    }
+
+    &__title-cat {
+        width: 50%;
+
+        @media(min-width: $md) {
+            flex-grow: 1;
+            width: auto;
+        }
+    }
+
+    &__title {
+        max-width: 300px;
+        
+        p {
+            color: $sec-brand-color;
+            font-weight: 700;
+            margin: 0;
+            text-decoration: none;
+            font-size: 15px;
+
+            @media(min-width: $md) {
+                font-size: 17px;
+            }
+        }
+    }
+
+    &__category {
+        p {
+            margin: 0;
+            text-decoration: none;
+            color: $base-color;
+            font-size: 15px;
+
+            @media(min-width: $md) {
+                font-size: 17px;
+                padding-left: 10px;
+            }
+        }
+    }
+
+    &__location {
+
+        @media(min-width: $md) {
+            padding-right: 20px;
+        }
+
+        @media(min-width: $lg) {
+            width: 250px;
+        }
+
+        p {
+            margin: 0;
+            text-decoration: none;
+            color: $base-color;
+            font-size: 12px;
+
+            @media(min-width: $md) {
+                font-size: 17px;
+            }
+        }
+    }
+
+    &__time {
+        @media(min-width: $lg) {
+            width: 150px;
+        }
+
+        p {
+            margin: 0;
+            text-decoration: none;
+            color: $base-color;
+            font-size: 12px;
+
+            @media(min-width: $md) {
+                font-size: 17px;
+            }
+        }
+    }
+
+    &__loc-time {
+        text-align: right;
+
+        @media(min-width: $md) {
+            text-align: left;
+            display: flex;
+        }
+    }
+
+    &__logo {
+        width: 50px;
+        height: 50px;
+        background-image: url('../../images/bc-b.png');
+        background-size: 50px;
+        margin-right: 20px;
+        background-position: left center;
+        background-repeat: no-repeat;
+        display: none;
+
+        @media(min-width: $md) {
+            display: block;
+        }
+    }
+}

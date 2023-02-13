@@ -1,0 +1,132 @@
+/**
+ * Brand Colours
+ */
+
+$base-color: #444;
+$base-background-color: #fff;
+$bg-alt: #f8f6f7;
+$brand-color: #083A4F;
+$sec-brand-color: #429bcb;
+$new-blue: #356881;
+
+$xero: #03B2D6;
+$mission: #387289;
+
+$white: #fff;
+$grey: #F9F9F9;
+$yellow: #f2a410;
+$light-blue: #9ab3c0;
+$lighter-blue: #D6E4F2;
+
+/**
+ * Element Colours
+ */
+
+$border-color: $base-color;
+$link-color: $sec-brand-color;
+$link-color-hover: $brand-color;
+$btn-bg: $brand-color;
+$btn-text: #fff;
+$btn-bg-hover: $sec-brand-color;
+$btn-text-hover: #fff;
+
+/**
+ * UI Colours
+ */
+
+$success-color: #5CB85C;
+$info-color: $brand-color;
+$validation-error: #d93d3d;
+
+$hamburger-color: #000;
+
+/**
+ * Typography
+ */
+
+ @font-face {
+    font-family: 'helvetica-black';
+        src: url('../../fonts/helveticacondensedblack.eot'); /* IE9 Compat Modes */
+        src: url('../../fonts/helveticacondensedblack.woff') format('woff'), /* Pretty Modern Browsers */
+            url('../../fonts/helveticacondensedblack.ttf')  format('truetype'), /* Safari, Android, iOS */
+            url('../../fonts/helveticacondensedblack.svg#svgFontName') format('svg'); /* Legacy iOS */
+    }
+
+@font-face {
+    font-family: 'helvetica-new';
+        src: url('../../fonts/helveticaneueltstd-lt2.eot'); /* IE9 Compat Modes */
+        src: url('../../fonts/helveticaneueltstd-lt2.woff') format('woff'), /* Pretty Modern Browsers */
+            url('../../fonts/helveticaneueltstd-lt2.ttf')  format('truetype'); /* Legacy iOS */
+    }
+
+@font-face {
+    font-family: 'helvetica-bold';
+        src: url('../../fonts/helveticabold.woff') format('woff'), /* Pretty Modern Browsers */
+            url('../../fonts/helveticabold.woff2') format('woff2');
+    }
+
+$condensed: 'helvetica-black',
+"Times New Roman",
+Arial,
+sans-serif;
+$sans-serif-font-family: 'helvetica-light',
+"Times New Roman",
+Arial,
+sans-serif;
+$sans-serif-font-family-new: 'helvetica-new',
+"Times New Roman",
+Arial,
+sans-serif;
+$helvetica-bold: 'helvetica-bold',
+"Times New Roman",
+Arial,
+sans-serif;
+$serif-font-family: 'Aleo',
+Georgia,
+"Times New Roman",
+Times,
+serif;
+$base-font-family: $sans-serif-font-family-new;
+$base-font-size: 16;
+$base-line-height: 1.75;
+$sp-unit: ($base-font-size * $base-line-height) * 1px;
+
+/**
+ * Breakpoints
+ */
+
+$breakpoint-xxlg: 2380px;
+$breakpoint-xlg: 1920px;
+$breakpoint-lg: 1200px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 480px;
+
+/**
+ * Grid
+ */
+
+$grid-max-width: 1200px;
+$grid-columns: 12;
+$grid-gutter: $sp-unit;
+
+/**
+ * Components
+ */
+
+$border-radius: 3px;
+
+
+
+
+
+
+$xs: 420px;
+$sm: 600px;
+$md: 767px;
+$lg: 1024px;
+$xlg: 1200px;
+$xl: 1600px;
+
+$container-max: 1200px;
+
+$gutter: $sp-unit;

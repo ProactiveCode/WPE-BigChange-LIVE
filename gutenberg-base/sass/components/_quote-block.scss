@@ -1,0 +1,175 @@
+.quote-block {
+    position: relative;
+
+    &__gradient {
+        top: 0;
+        left: 20px;
+        width: calc(100% - 40px);
+        height: 100%;
+        position: absolute;
+        background: rgb(8,58,79);
+        background: linear-gradient(90deg, rgba(8,58,79,1) 0%, rgba(8,58,79,0.35) 100%);
+    }
+
+    &__text {
+        figure img {
+            padding-top: 20px;
+            height: 80px;
+            width: auto;
+            margin: 0 auto;
+
+            @media screen and (min-width: $md) {
+                margin: 0;
+            }
+        }
+       
+        width: 100%;
+        border-left: 0;
+        font-style: normal;
+        background-color: $sec-brand-color;
+        padding: 10px;
+        text-align: center;
+
+        @media screen and (min-width: $md) {
+            padding: 30px 60px;
+            position: absolute;
+            top: 0;
+            left: 20px;
+            padding: 20px;
+            width: calc(100% - 40px);
+            height: 100%;
+            background-color: transparent;
+            max-width: 500px;
+            text-align: left;
+        }
+        //REVERT 
+        /*.wp-block-group__inner-container {
+            height: 100%;
+        }*/
+
+        &-wrapper {
+            position: relative;
+            height: 100%;
+
+            @media screen and (min-width: $md) {
+                padding-top: 35px;
+            }
+
+            blockquote {
+                border-left: 0;
+                font-style: normal;
+                margin: 0;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                //justify-content: space-between;
+                justify-content: center; 
+                text-align: center !important;
+
+                @media screen and (min-width: $md) {
+                    text-align: left !important;
+                }
+
+                &:before {
+                    display: none;
+                }
+            }
+            //site disabled on MP's request
+            cite {
+                display: none;
+            }
+
+            p, cite {
+                color: $white;
+                margin: 0;
+            }
+
+            p {
+                @include font-size(20);
+
+                @media screen and (min-width: $md) {
+                    @include font-size(25);
+                }
+            }
+    
+            cite {
+                bottom: 0;
+                @include font-size(18);
+                position: absolute;
+                text-transform: uppercase;
+                font-family: $condensed;
+
+                @media screen and (min-width: $md) {
+                    @include font-size(23);
+                }
+            }
+    
+            /*&:before,
+            &:after {
+                content: '';
+                margin: 0;
+                height: 40px;
+                width: 70px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMjIgNTgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyMiA1ODsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNGRkZGRkY7fQo8L3N0eWxlPgo8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjAuOCwxLjYyIDAuOCw1Ny42MiA1Ni44LDEuNjIgIi8+Cjxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iNjQuMzgsMS42MiA2NC4zOCw1Ny42MiAxMjAuMzgsMS42MiAiLz4KPC9zdmc+Cg==");
+                background-repeat: no-repeat;
+            }
+
+            &:after {
+                left: auto;
+                top: auto;
+                right: 0;
+                bottom: 0;
+                transform: scaleX(-1);
+            }*/
+        }
+    }
+
+    .quote-block__text.long-quote {
+        max-width: 640px;
+    }
+
+    &__image {
+        max-width: none;
+        width: 100%;
+        margin-bottom: 0px;
+
+        img {
+            max-width: none;
+            width: 100%;
+            min-height: 300px;
+            object-fit: cover;
+        }
+    }
+
+    &--bigger {
+        .quote-block__image {
+            img {
+                min-height: 400px;
+            }
+        }
+
+        .quote-block__text-wrapper:after {
+            bottom: 80px;
+        }
+    }
+
+    &--biggest {
+        .quote-block__image {
+            img {
+                min-height: 450px;
+            }
+        }
+
+        .quote-block__text-wrapper:after {
+            bottom: 80px;
+        }
+
+        .quote-block__text-wrapper,
+        .quote-block__text {
+            max-width: 650px;
+        }
+    }
+}

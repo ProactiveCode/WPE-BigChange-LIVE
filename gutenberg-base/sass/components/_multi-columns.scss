@@ -1,0 +1,135 @@
+.column {
+    &--padded {
+        padding: 20px 0px;
+        @media(min-width: $md) {
+            padding: 0px 60px;
+        }
+    }
+    
+    &--padded-small {
+        padding: 20px 0px;
+        @media(min-width: $md) {
+            padding: 20px 20px;
+        }
+    }
+
+    &--padding-left {
+        padding: 20px 0px;
+        @media(min-width: $md) {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            padding-left: 40px;
+        }
+    }
+
+    &--padding-left-large {
+        padding: 20px 0px;
+        @media(min-width: $md) {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            padding-left: 40px;
+        }
+
+        @media(min-width: $lg) {
+            padding-left: 100px;
+        }
+    }
+
+
+    &--padding-large {
+        padding: 20px 0px;
+        @media(min-width: $md) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        @media(min-width: $lg) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+
+
+
+    &--padding-right {
+        padding: 20px 0px;
+        @media(min-width: $md) {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            padding-right: 40px;
+        }
+    }
+
+    &--padding-right-skip-ipad {
+        padding: 20px 0px;
+
+        @media(min-width: $md) {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            padding-right: 20px;
+        }
+
+
+        @media(min-width: $lg) {
+            padding-right: 40px;
+        }
+    }
+
+    &--padding-left-skip-ipad {
+        padding: 20px 0px;
+
+        @media(min-width: $md) {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            padding-left: 20px;
+        }
+
+
+        @media(min-width: $lg) {
+            padding-left: 40px;
+        }
+    }
+
+    &--padding-right-large {
+        padding: 20px 0px;
+        @media(min-width: $md) {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            padding-right: 40px;
+        }
+
+        @media(min-width: $lg) {
+            padding-right: 100px;
+        }
+    }
+
+    &--no-pad-bot-mobile {
+        padding-bottom: 0px !important;
+    }
+
+    &--padding-special {
+        padding: 20px 0px;
+
+        @media(min-width: $md) {
+            padding:0px;
+        }
+    }
+}
+
+.flex-swap {
+    flex-direction: column-reverse;
+
+    @media(min-width: $md) {
+		flex-direction: row;
+    }
+}
+
+.name-job-title {
+    @include font-size(12);
+    color: $brand-color;
+    font-weight: 700;
+
+    span {
+        color: $sec-brand-color;
+    }
+}

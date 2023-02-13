@@ -1,0 +1,184 @@
+body {
+    color: $base-color;
+    font-family: $base-font-family;
+    @include font-size($base-font-size);
+    line-height: 1.5;
+    -webkit-text-size-adjust: none;
+    @media(min-width: $breakpoint-sm) {
+        @include font-size(17);
+    }
+}
+
+small {
+    @include font-size(14);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    text-transform: uppercase;
+    color: $brand-color;
+
+    &.lower {
+        text-transform: none;
+    }
+}
+
+
+h1,
+h2 {
+    line-height: 1.1;
+}
+
+h3,
+h4 {
+    line-height: 1.3;
+}
+
+h1 {
+    @include font-size(30);
+    font-family: $condensed;
+
+    @media(min-width: $md) {
+        @include font-size(35);
+    }
+
+
+    span.small {
+        @include font-size(17);
+        font-family: $base-font-family;
+        display: block;
+        line-height: 1.4;
+        text-transform: initial;
+        margin-top: 10px;
+
+        @media(min-width: $md) {
+            @include font-size(22);
+        }
+    
+    }
+}
+
+h2 {
+    @include font-size(17);
+    font-family: $condensed;
+
+    &.large {
+        @include font-size(20);
+        font-family: $condensed;
+        line-height: 1.1;
+
+        @media(min-width: $md) {
+            @include font-size(25);
+        }
+
+        @media(min-width: $lg) {
+            @include font-size(40);
+        }
+    }
+    &.exlarge {
+        @include font-size(30);
+        font-family: $condensed;
+        line-height: 1.1;
+        
+        @media(min-width: $md) {
+            @include font-size(40);
+        }
+
+        @media(min-width: $lg) {
+            @include font-size(50);
+        }
+    }
+}
+
+h3 {
+    @include font-size(20);
+    font-family: $condensed;
+    line-height: 1.1;
+
+    @media(min-width: $md) {
+        @include font-size(25);
+    }
+
+    @media(min-width: $lg) {
+        @include font-size(40);
+    }
+
+    &.h3-larger {
+        margin-bottom: 10px;
+        @media(min-width: $lg) {
+            @include font-size(60);
+        }
+    }
+
+    &.smaller {
+        @media(min-width: $lg) {
+            @include font-size(30);
+        } 
+    }
+}
+
+h4 {
+    @include font-size(20);
+    font-family: $condensed;
+    line-height: 1.1;
+    margin-bottom: 10px;
+
+    @media(min-width: $md) {
+        @include font-size(25);
+    }
+}
+
+h5,
+h6 {
+    @include font-size(18);
+    font-family: $condensed;
+    margin-bottom: 10px;
+}
+
+strong {
+    font-weight: bold;
+    font-family: $helvetica-bold !important;
+}
+
+.featured-paragraph {
+    @include font-size(25);
+}
+
+.blue {
+    color: $sec-brand-color;
+}
+
+.dark-blue {
+    color: $brand-color;
+}
+
+@media(min-width: $md) {
+    body .reset-colour-dt {
+        color: $base-color !important;
+    }
+}
+
+/*.large {
+    font-size: 3rem;
+}*/
+
+.front {
+    position: relative;
+    z-index: 100;
+}
+
+.text-smaller {
+    @include font-size(17);
+}
+
+.text-larger {
+    @media(min-width: $lg) {
+        font-size: 24px;
+    }
+}
+
+br.hide-mob {
+    display: none;
+    @media(min-width: $lg) {
+        display: inherit;
+    }
+}

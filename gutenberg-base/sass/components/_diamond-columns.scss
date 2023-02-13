@@ -1,0 +1,76 @@
+.diamond-columns {
+    margin-top: 80px;
+    margin-bottom: 60px;
+
+    h3 {
+        margin-bottom: 20px;
+
+        @media(min-width: $lg) {
+            margin-bottom: 70px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__column {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        text-align: center;
+        padding: 40px;
+        margin-bottom: 30px;
+
+        @media(min-width: $md) {
+            width: calc(50% - 15px);
+        }
+
+        @media(min-width: $lg) {
+            width: 170px;
+            height: 170px;
+            padding: 0px;
+            margin-bottom: 0px;
+        }
+
+        @media(min-width: $xlg) {
+            width: 200px;
+            height: 200px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            height: 100%;
+            background-color: $sec-brand-color;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+
+            @media(min-width: $lg) {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+
+        p {
+            color: $white;
+            font-family: $condensed;
+            font-size: 24px;
+            margin: 0;
+            
+            @media(min-width: $lg) {
+                font-size: 20px;
+            }
+
+            @media(min-width: $xlg) {
+                font-size: 24px;
+            }
+        }
+    }
+}

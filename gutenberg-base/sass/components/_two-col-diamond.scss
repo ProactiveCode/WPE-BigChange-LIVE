@@ -1,0 +1,108 @@
+.two-col-diamond {
+
+    &--larger {
+        .two-col-diamond__text {
+            &:before {
+                @media(min-width: $lg) {
+                    width: 450px;
+                    height: 450px;
+                }
+            }
+        }
+    }
+
+    .wp-block-group__inner-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__text {
+        position: relative;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 0px 20px;
+        width: 100%;
+        font-weight: 700;
+        font-family: $condensed;
+        font-size: 21px;
+        line-height: 1.4;
+        color: $brand-color;
+        text-transform: uppercase;
+        
+        @media(min-width: $md) {
+            width: 320px;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            transform: translate(-50%, -50%) rotate(45deg);
+            background-color: $lighter-blue;
+            z-index: -2;
+            display: none;
+
+            @media(min-width: $md) {
+                display: block;
+            }
+        }
+    }
+
+
+    &--alert {
+        .two-col-diamond__text {
+            &:before {
+                @media(min-width: $lg) {
+                    width: 350px;
+                    height: 350px;
+                }
+            }
+        }
+
+        .two-col-diamond__text {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0px 20px;
+            font-weight: 700;
+            font-size: 17px;
+            text-transform: none;
+            text-align: left;
+            line-height: 1.4;
+            font-family: $sans-serif-font-family-new;
+            color: $base-color;
+            
+            @media(min-width: $md) {
+                width: 320px;
+            }
+
+            @media(min-width: 1200px) {
+                margin-top: -250px;
+            }
+        }
+
+        .two-col-diamond__image {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+    
+            @media(min-width: 900px) {
+                width: calc(100% - 600px);
+                max-width: none;
+                margin: 0;
+            }
+        }
+    }
+
+    &__image {
+        width: 100%;
+
+        @media(min-width: $md) {
+            width: calc(100% - 420px);
+        }
+    }
+}

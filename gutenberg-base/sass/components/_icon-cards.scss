@@ -1,0 +1,31 @@
+.icon-cards{
+    padding: 40px 0px;
+
+    &__wrapper {
+        display:flex;
+        justify-content:space-between;
+        flex-wrap:wrap;
+        margin:0 auto !important;
+    }
+
+    &__card {
+        width:calc(50% - 30px);
+        margin-bottom: 30px;
+        text-align:center;
+
+        @include respond-min($md) {
+            width:calc(25% - 30px);
+        }
+
+        img {
+            max-width:100px;
+            max-height:70px;
+            margin:0 auto;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: $white;
+        }
+    }
+}

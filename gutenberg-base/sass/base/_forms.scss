@@ -1,0 +1,393 @@
+/**
+ * Blanket input styles for normalisation
+ */
+
+input,
+select,
+textarea {
+    background-color: $base-background-color;
+    border: solid 1px $base-color;
+    border-radius: 0;
+    color: $base-color;
+    height: ($sp-unit * 1.5);
+    padding: 0 ($sp-unit / 2);
+    width: 100%;
+    -webkit-appearance: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    background: transparent;
+    border: 0;
+    line-height: normal;
+    height: auto;
+    width: auto;
+}
+
+input[type="file"] {
+    line-height: normal;
+    height: auto;
+    padding: ($sp-unit / 4) ($sp-unit / 2);
+}
+
+input[type="submit"] {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+input[disabled] {
+    background-color: whitesmoke;
+    cursor: not-allowed;
+}
+
+select {
+    line-height: normal;
+    padding: 0;
+    padding-left: ($sp-unit / 2);
+}
+
+textarea {
+    min-height: ($sp-unit * 4);
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+
+/**
+ * Form utility classes
+ */
+
+.checkbox,
+.radio {
+    display: block;
+    padding-left: $sp-unit;
+    &.inline {
+        display: inline-block;
+    }
+    >input {
+        float: left;
+        margin-left: -($sp-unit);
+        margin-top: 4px;
+    }
+}
+
+.form__group {
+    display: block;
+    margin-bottom: $sp-unit;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: ($sp-unit / 2);
+}
+
+
+/**
+ * Input Group
+ *
+ * Allows for prepend/append of elements 
+ * (such as icons) on an input.
+ */
+
+.input-group {
+    position: relative;
+    >input {
+        padding: 0 ($sp-unit * 2);
+    }
+    .input-group__addon {
+        line-height: ($sp-unit * 1.5);
+        height: ($sp-unit * 1.5);
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: ($sp-unit * 1.5);
+        &:first-child {
+            left: 0;
+        }
+        &:last-child {
+            right: 0;
+        }
+    }
+}
+
+.search-form {
+    // margin: 0 0 $sp-unit*2;
+}
+
+.search-wrap {
+    @extend %clearfix;
+    .screen-reader-text {
+        display: block;
+    }
+    .search-field {
+        margin: 0 0 $sp-unit/2;
+        @media screen and (min-width: $breakpoint-md) {
+            width: 75%;
+            margin: 0;
+            float: left;
+        }
+    }
+    .search-button {
+        padding: 0;
+        border: 0;
+        border-radius: 2px;
+        background-image: url('../../images/search.svg');
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        background-position: center center;
+        text-indent: -9999px;
+        @media screen and (min-width: $breakpoint-md) {
+            width: 20%;
+            float: right;
+        }
+    }
+}
+
+/* Customize the label (the container) */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked ~ .checkmark {
+            background-color: $brand-color;
+        }
+    }      
+}
+
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+}
+  
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+.checkbox-container .checkmark:after {
+    left: 8px;
+    top: 4px;
+    width: 8px;
+    height: 14px;
+    border: solid $white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+//CF7 forms
+//Form styles
+.contact-form .wpcf7 {
+    input, select, textarea {
+        border: 0;
+        font-weight: 600;
+        // text-transform: uppercase;
+        font-family: $sans-serif-font-family-new;
+        &::placeholder {
+            color: $base-color;
+            text-transform: uppercase;
+        }
+    }
+    textarea {
+        padding: 20px;
+    }
+
+    p:last-of-type {
+        text-align: right;
+    }
+    .ajax-loader {
+        position: absolute;
+        margin-left: -20px;
+        margin-top: 5px;
+    }
+    .wpcf7-response-output {
+        text-align: right;
+        margin-right: 0;
+    }
+}
+
+.network-contact {
+    input, select, textarea {
+        border: 0;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: $sans-serif-font-family-new;
+        &::placeholder {
+            color: $base-color;
+        }
+    }
+
+    select {
+        color: $base-color;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 900px;
+        margin: 0 auto;
+
+        p {
+            width: 100%;
+
+            @media(min-width: $md) {
+                width: calc(50% - 7.5px);
+            }
+
+            &:last-of-type {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                input {
+                    width: 100%;
+
+                    @media(min-width: $md) {
+                        max-width: calc(50% - 7.5px);
+                    }
+                }
+            }
+        }
+
+        .ajax-loader {
+            position: absolute;
+            margin-left: -20px;
+            margin-top: 5px;
+        }
+
+        .wpcf7-response-output {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+        }
+    }
+}
+
+.wpcf7 {
+    //add select span class names here to add dropdown arrow
+    .existing-customer,
+    .preferred-date,
+    .Whichmodulehaveyouattended  {
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg width='26' height='15' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3Ebackground%3C/title%3E%3Crect fill='none' id='canvas_background' height='402' width='582' y='-1' x='-1'/%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpolygon id='svg_1' points='23.83650016784668,-0.0020003318786621094 13.000500679016113,10.833999678492546 2.1635000705718994,-0.0020003318786621094 0.07950020581483841,2.081999585032463 13.000500679016113,15.001999899744987 15.084500312805176,12.918000265955925 25.920499801635742,2.081999585032463 ' fill='%23444444'/%3E%3C/g%3E%3C/svg%3E");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            pointer-events: none;
+            margin-top: 2px;
+        }
+
+        select {
+            padding-right: 40px;
+        }
+    }
+}
+
+.thank-you-form {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+    .wpcf7 { 
+        p {
+            padding: 20px;
+            background-color: $white;
+            border-radius: 10px;
+            border: 2px solid $base-color; 
+
+            &.submit-wrapper,
+            &.script-wrapper {
+                background-color: transparent;
+                border: none;
+            }
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        br {
+            display: none;
+        }
+    
+        .email-border-bottom {
+            border: none;
+            border-bottom: 1px dotted $base-color;
+        }
+
+        .Whichmodulehaveyouattended {
+            select {
+                border: none;
+                font-size: 20px;
+                padding-left: 0px;
+            }
+        }
+
+        .wpcf7-list-item {
+            display: block;
+            margin: 0;
+            margin-bottom: 10px;
+            
+            span {
+                font-size: 17px;
+                margin-left: 15px;
+            }
+
+            label {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .wpcf7-response-output {
+            margin-top: -130px;
+        }
+
+        input[type="checkbox"] {
+            padding: 0;
+            width: 15px;
+            height: 15px;
+            border: 1px solid $base-color;
+            appearance: auto;
+            margin-top: 2px;
+            margin-right: 5px;
+        }
+
+        textarea {
+            border-radius: 10px;
+        }
+    }
+}

@@ -1,0 +1,257 @@
+.diamonds-mission {
+    position: relative;
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media(min-width: $md) {
+        height: 70vw;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        max-height: 800px;
+        margin: 100px 0px 50px;
+        display: block;
+    }
+
+    &--mobile {
+        .diamond__small-text {
+            p, span{
+                font-size: 17px !important; //overwrite responsive font for mobile layout - class added on width js detection
+            }
+        }
+    }
+
+
+    .diamond {
+        background-color: $sec-brand-color;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+
+        @media(min-width: 400px) {
+            width: calc(50% - 5px);
+        }
+
+        @media(min-width: $md) {
+            position: absolute;
+            transform: rotate(-45deg);
+            max-width: 250px;
+            max-height: 250px;
+            width: 18.2vw;
+            height: 18.2vw;
+            margin-bottom: 0px;
+            padding: 0px;
+            display: block;
+        }
+
+        &__wrapper {
+            margin: 0 auto;
+            padding: 20px;
+
+            @media(min-width: $md) {
+                transform: rotate(45deg);
+                position: relative;
+                padding: 15px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            img {
+                width: 100%;
+                max-width: 40px;
+                margin: 0 auto;
+                margin-bottom: 10px;
+
+                @media(min-width: $lg) {
+                    max-width: 70px;
+                }
+            }
+        }
+
+        &__med-text {
+            text-align: center;
+            
+            p {
+                margin: 0;
+                line-height: 1;
+                color: white;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-family: $condensed;
+                text-align: center;
+                font-size: 30px;
+
+                @include responsive-font-size (
+                    $min-font-size: 18px,
+                    $max-font-size: 30px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        &__small-text {
+            text-align: center;
+            padding: 0px 5px;
+
+            @media(min-width: $md) {
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            p {
+                margin: 0;
+                line-height: 1;
+                color: white;
+                font-size: 13px;
+                @include responsive-font-size (
+                    $min-font-size: 13px,
+                    $max-font-size: 16px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+    }
+
+    #diamond-mission-1 {
+        order: 1;
+
+        @media(max-width: $md) {
+            width: 100%;
+        }
+
+        @media(min-width: $md) {
+            left: 6%;
+            top: 40.5%;
+            transform: rotate(-45deg);
+            max-width: 350px;
+            max-height: 350px;
+            width: 24.2vw;
+            height: 24.2vw;
+            background-image: url("https://www.bigchange.com/wp-content/uploads/2021/06/bg-icon-mission-smaller.svg");
+            background-size: 65px;
+            background-color: $mission;
+        }
+
+        @media(min-width: $lg) {
+            background-size: 115px;
+        }
+    }
+
+    #diamond-mission-2 {
+        order: 2;
+
+        @media(min-width: $md) {
+            left: 15.5%;
+            top: 0%;
+        }
+    }
+
+    #diamond-mission-3 {
+        order: 3;
+
+        @media(min-width: $md) {
+            left: 30.5%;
+            top: 23.5%;
+        }
+
+        .diamond__image {
+            max-width: 40px;
+
+            @media(min-width: $md) {
+                max-width: 30px;
+            }
+
+            @media(min-width: $lg) {
+                max-width: 50px;
+            }
+        }
+    }
+    
+    #diamond-mission-4 {
+        order: 4;
+
+        @media(min-width: $md) {
+            left: 45.5%;
+            top: 0%;
+        }
+    }
+
+    #diamond-mission-5 {
+        order: 5;
+
+        @media(min-width: $md) {
+            left: 30.5%;
+            top: 70%;
+            background-color: $brand-color;
+        }
+    }
+
+    #diamond-mission-6 {
+        order: 6;
+
+        @media(min-width: $md) {
+            left: 45.5%;
+            top: 46.5%;
+        }
+    }
+
+    #diamond-mission-7 {
+        order: 7;
+
+        @media(min-width: $md) {
+            left: 60.5%;
+            top: 23.5%;
+        }
+    }
+
+    #diamond-mission-8 {
+        order: 8;
+
+        @media(max-width: $md) {
+            width: 100%;
+        }
+
+        @media(min-width: $md) {
+            left: 61%;
+            top: 67%;
+            max-width: 300px;
+            max-height: 300px;
+            width: 21.2vw;
+            height: 21.2vw;
+            background-color: $mission;
+            background-image: url("https://www.bigchange.com/wp-content/uploads/2021/06/bg-icon-mission-smaller.svg");
+            background-size: 55px;
+        }
+
+        @media(min-width: $lg) {
+            background-size: 100px;
+        }
+    }
+}
+
+.hide-tablet {
+    display: none;
+
+    @media(min-width: $lg) {
+        display: block;
+    }
+}
+
+
+.mobile-only {
+    @media(min-width: $md) {
+        display: none;
+    }
+}

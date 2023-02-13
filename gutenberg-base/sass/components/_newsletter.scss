@@ -1,0 +1,47 @@
+.newsletter-images {
+    display: flex;
+    justify-content: space-between;
+    max-width: 980px;
+    margin: 50px auto;
+    flex-wrap: wrap;
+
+    &__single {
+        margin: 10px 0;
+
+        @media only screen and (max-width: 500px) {
+            width: 100% !important;
+        }
+    }
+
+    &__video {
+        position: relative;
+    }
+    &__vimeo {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+    }
+
+    &__video-text {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+        background-color: rgba($color: $white, $alpha: 0.3);
+        padding: 10px 0px;
+
+        p {
+            margin: 0;
+            font-size: 24px;
+            color: $brand-color;
+        }
+    }
+}
+
+.newsletter-video,
+.newsletter-video video {
+    width: 100%;
+}

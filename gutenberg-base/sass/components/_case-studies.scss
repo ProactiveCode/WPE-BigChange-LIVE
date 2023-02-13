@@ -1,0 +1,365 @@
+.case-studies {
+
+
+    &__wrapper {
+        position: relative;
+        min-height: 200px;
+    }
+
+    &__upper {
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 50px;
+
+        &-wrapper {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            //uncomment for countries
+            // @media(min-width: $md) {
+            //     width: 50%;
+            // }
+
+            @media(min-width: $md) {
+                width: 25%;
+            }
+        }
+    }
+
+    &__featured {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+
+        &-content {
+            width: 100%;
+            margin-bottom: 40px;
+
+            @media(min-width: $md) {
+                width: calc(50% - 20px);
+                padding-right: 20px;
+                margin-bottom: 0px;
+            }
+
+            @media(min-width: $lg) {
+                width: calc(40% - 50px);
+                padding-right: 50px;
+            }
+
+            .card__logo {
+                margin-bottom: 30px;
+                width: 100%;
+                max-width: 100px;
+                padding: 0px 0px;
+            }
+
+            .card__title {
+                margin-bottom: 5px;
+                text-decoration: none;
+
+                a {
+                    text-decoration: none;
+                }
+
+                h3 {
+                    color: $sec-brand-color;
+                }
+            }
+
+            .card__link {
+                position: relative;
+                padding: 0px 0px;
+                bottom: auto;
+                left: auto;
+                margin-top: 10px;
+            }
+
+            .card__category {
+                margin-top: 5px;
+                margin-bottom: 20px;
+
+                p {
+                    padding: 0px;
+                    color: $sec-brand-color;
+                    background-color: transparent;
+                    font-size: 17px;
+                    margin: 0;
+                    margin-right: 5px;
+
+                    &:before {
+                        display: none;
+                    }
+
+                    &:after {
+                        content: ', ';
+                    }
+
+                    &:last-of-type {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .card__title,
+            .card__category,
+            .card__content {
+                padding: 0px 0px;
+            }
+        }
+
+        &-image {
+            width: 100%;
+
+            @media(min-width: $md) {
+                width: 50%;
+            }
+
+            @media(min-width: $lg) {
+                width: 60%;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    //uncomment for countries
+    //,&__country
+    &__industry {
+        position: relative;
+        width: 100%;
+        margin-bottom: 5px;
+
+        @media(min-width: $md) {
+            //uncomment for countries
+            // width: calc(50% - 7.5px);
+            // margin-right: 15px;
+            margin-bottom: 0px;
+        }
+
+        select {
+            padding: 0px 30px 0px 10px;
+            @include font-size(18);
+            border: 2px solid $brand-color;
+            cursor: pointer;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            width: 3px;
+            height: 3px;
+            border: solid $brand-color;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 2px;
+            transform: rotate(45deg) translateY(-50%);
+            margin-top: -3px;
+            pointer-events: none;
+        }
+    }
+
+    &__country {
+        margin-right: 0px;
+    }
+
+    &__results {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0px -5px;
+
+        @media(min-width: $md) {
+            margin: 0px -10px;
+        }
+
+        .card {
+            width: calc(100% - 10px);
+            height: auto;
+            margin-bottom: 20px;
+            padding: 0px 0px 60px;
+            background-color: #E9EFF7;
+        
+            @media(min-width: $md) {
+                width: calc(50% - 20px);
+                margin-bottom: 40px;
+            }
+        
+            @media(min-width: $lg) {
+                width: calc(33.3333% - 20px);
+            }
+
+            .card__title {
+                margin-bottom: 5px;
+
+                h3 {
+                    color: $sec-brand-color;
+                }
+            }
+
+            .card__category {
+                margin-top: 5px;
+                margin-bottom: 20px;
+
+                p {
+                    padding: 0px;
+                    color: $sec-brand-color;
+                    background-color: transparent;
+                    font-size: 17px;
+                    margin: 0;
+                    margin-right: 5px;
+
+                    &:before {
+                        display: none;
+                    }
+
+                    &:after {
+                        content: ', ';
+                    }
+
+                    &:last-of-type {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .card__title,
+            .card__category,
+            .card__content {
+                padding: 0px 10px;
+
+                @media(min-width: $md) {
+                    padding: 0px 20px;
+                }
+            }
+        }
+    }
+
+    &__load-more {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0px;
+
+        &.hidden {
+            display: none;
+        }
+    }
+
+    &__loader {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 40px;
+
+        &.hidden {
+            display: none;
+        }
+    }
+
+    .small-banner {
+        margin-top: 100px;
+    }
+}
+
+.no-posts {
+    text-align: center;
+    font-weight: 700;
+    font-family: $helvetica-bold;
+}
+
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+
+    div {
+        animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        transform-origin: 40px 40px;
+        
+        &:after {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: $brand-color;
+            margin: -4px 0 0 -4px;
+        }
+    
+        &:nth-child(1) {
+            animation-delay: -0.036s;
+        }
+        &:nth-child(1):after {
+            top: 63px;
+            left: 63px;
+        }
+        &:nth-child(2) {
+            animation-delay: -0.072s;
+        }
+        &:nth-child(2):after {
+            top: 68px;
+            left: 56px;
+        }
+        &:nth-child(3) {
+            animation-delay: -0.108s;
+        }
+        &:nth-child(3):after {
+            top: 71px;
+            left: 48px;
+        }
+        &:nth-child(4) {
+            animation-delay: -0.144s;
+        }
+        &:nth-child(4):after {
+            top: 72px;
+            left: 40px;
+        }
+        &:nth-child(5) {
+            animation-delay: -0.18s;
+        }
+        &:nth-child(5):after {
+            top: 71px;
+            left: 32px;
+        }
+        &:nth-child(6) {
+            animation-delay: -0.216s;
+        }
+        &:nth-child(6):after {
+            top: 68px;
+            left: 24px;
+        }
+        &:nth-child(7) {
+            animation-delay: -0.252s;
+        }
+        &:nth-child(7):after {
+            top: 63px;
+            left: 17px;
+        }
+        &:nth-child(8) {
+            animation-delay: -0.288s;
+        }
+        &:nth-child(8):after {
+            top: 56px;
+            left: 12px;
+        }
+        @keyframes loader {
+            0% {
+            transform: rotate(0deg);
+            }
+            100% {
+            transform: rotate(360deg);
+            }
+        } 
+    }
+}

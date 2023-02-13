@@ -1,0 +1,252 @@
+.ditl {
+
+    &__truck {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 60px;
+        height: 50px;
+        transform: translateX(-50%) translateY(-20px);
+        z-index: 10;
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 162 128.2' style='enable-background:new 0 0 162 128.2;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFFFF;%7D .st1%7Bfill:%233B6579;%7D%0A%3C/style%3E%3Cg%3E%3Cpath class='st0' d='M-0.5,2.9v75.4c0,1.3,1.1,2.4,2.4,2.4h22.8v19.4c0,1.3,1.1,2.4,2.4,2.4h7h0.1c0,0.3,0,0.5,0,0.8 c0,9.8,8,17.8,17.8,17.8s17.8-8,17.8-17.8c0-0.3,0-0.5,0-0.8h27.4c0,0.3,0,0.5,0,0.8c0,9.8,8,17.8,17.8,17.8s17.8-8,17.8-17.8 c0-0.3,0-0.5,0-0.8h20.7c1.3,0,2.4-1.1,2.4-2.4V45c0-0.6-0.2-1.2-0.7-1.7l-20.5-20.5c-0.5-0.5-1.1-0.7-1.7-0.7H95.4v-5.7h13.3 c1.3,0,2.4-1.1,2.4-2.4V2.9c0-0.6-0.2-1.3-0.7-1.7c-1-1-1.8-1.8-108.4-0.7C0.7,0.5-0.3,1.6-0.5,2.9z'/%3E%3C/g%3E%3Cg%3E%3Cg%3E%3Cpath class='st1' d='M132.9,105.7c0-1.3,1.1-2.4,2.4-2.4h21V51.5l-19.1-19.1h-36.7v51.5c0,1.3-1.1,2.4-2.4,2.4s-2.4-1.1-2.4-2.4 V30c0-1.3,1.1-2.4,2.4-2.4h40l0,0c0.7,0,1.2,0.2,1.7,0.7l20.6,20.5c0.5,0.5,0.7,1.1,0.7,1.7v55.2c0,1.3-1.1,2.4-2.4,2.4h-23.4 C134,108.1,132.9,107,132.9,105.7z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M70.2,105.7c0-1.3,1.1-2.4,2.4-2.4h32.1c1.3,0,2.4,1.1,2.4,2.4s-1.1,2.4-2.4,2.4H72.6 C71.3,108.1,70.2,107,70.2,105.7z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M102.4,108.9c0-9.8,8-17.8,17.8-17.8s17.8,8,17.8,17.8s-8,17.8-17.8,17.8 C110.3,126.7,102.4,118.7,102.4,108.9z M107.2,108.9c0,7.2,5.9,13.1,13,13.1s13-5.9,13-13.1s-5.8-13.1-13-13.1 C113,95.8,107.2,101.7,107.2,108.9z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M39.4,108.9c0-9.8,8-17.8,17.8-17.8s17.8,8,17.8,17.8s-8,17.8-17.8,17.8S39.4,118.7,39.4,108.9z M44.1,108.9 c0,7.2,5.9,13.1,13.1,13.1s13.1-5.9,13.1-13.1s-5.9-13.1-13.1-13.1S44.1,101.7,44.1,108.9z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M29.9,105.7V83.9c0-1.3,1.1-2.4,2.4-2.4h65.8c1.3,0,2.4,1.1,2.4,2.4s-1.1,2.4-2.4,2.4H34.7v17h4.6 c1.3,0,2.4,1.1,2.4,2.4s-1.1,2.4-2.4,2.4h-6.9C31.1,108.1,30,107,29.9,105.7z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M4.9,83.9V8.4C4.9,7.1,6,6,7.3,6c106.6-1,107.4-0.2,108.3,0.7c0.4,0.4,0.7,1.1,0.7,1.7v11.2 c0,1.3-1.1,2.4-2.4,2.4h-13.4v8.1c0,1.3-1.1,2.4-2.4,2.4s-2.4-1.1-2.4-2.4V19.6c0-1.3,1.1-2.4,2.4-2.4h13.3v-6.6 C100.6,10.1,47,10.4,9.5,10.8v70.7h22.8c1.3,0,2.4,1.1,2.4,2.4s-1.1,2.4-2.4,2.4H7.2C5.9,86.3,4.8,85.2,4.9,83.9z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M82.7,49.5L67,22.4c-0.6-1.2-0.2-2.6,0.9-3.3c1.2-0.6,2.6-0.2,3.3,0.9l15.6,27.1c0.6,1.2,0.2,2.6-0.9,3.3 c-0.4,0.2-0.8,0.3-1.2,0.3C83.9,50.7,83.1,50.2,82.7,49.5z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M69,49.5L53.4,22.4c-0.6-1.2-0.2-2.6,0.9-3.3c1.2-0.6,2.6-0.2,3.3,0.9l15.6,27.1c0.6,1.2,0.2,2.6-0.9,3.3 c-0.4,0.2-0.8,0.3-1.2,0.3C70.3,50.7,69.5,50.2,69,49.5z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M54.9,49.5L39.3,22.4c-0.6-1.2-0.2-2.6,0.9-3.3c1.2-0.6,2.6-0.2,3.3,0.9l15.6,27.1c0.6,1.2,0.2,2.6-0.9,3.3 c-0.4,0.2-0.8,0.3-1.2,0.3C56.2,50.7,55.4,50.2,54.9,49.5z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0s ease;
+
+        // @media(min-width: $lg) {
+        //     width: 60px;
+        //     height: 50px;
+        // }
+
+        @media(min-width: 1300px) {
+            width: 100px;
+            height: 80px;
+        }
+
+        &.is-visible {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__options {
+        display: flex;
+        justify-content: center;
+        margin: 25px 10px;
+        flex-wrap: wrap;
+        text-align: center;
+
+        @media(min-width: $md) {
+            margin: 50px 10px;
+            text-align: left;
+        }
+
+        a {
+            position: relative;
+            text-decoration: none;
+            color: $light-blue;
+            text-transform: uppercase;
+            font-family: $condensed;
+            font-weight: 700;
+            transition: color 0.3s ease;
+            @include font-size(20);
+            width: 100%;
+
+            @media(min-width: $md) {
+                width: auto;
+                margin-right: 10px;
+                padding-right: 10px;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                right: 0px;
+                top: 50%;
+                width: 2px;
+                height: 60%;
+                transform: translateY(-50%);
+                background-color: $brand-color;
+                display: none;
+
+                @media(min-width: $md) {
+                    display: block;
+                }
+            }
+
+            &:last-of-type {
+                margin-right: 0px;
+                padding-right: 0px;
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                color: $brand-color;
+            }
+
+            &.active {
+                color: $brand-color;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__bar {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        width: 100%;
+        max-width: 1250px;
+        padding: 0 20px;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    &__bar-inner {
+        position: absolute;
+        left: 30px;
+        height: 100%;
+        background-color: $sec-brand-color;
+        width: 10px;
+
+        @media(min-width: 1300px) {
+            left: 10px;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $sec-brand-color;
+        }
+
+        &:after {
+            bottom: 0;
+            top: auto;
+            transform: translateX(-50%) translateY(50%);
+        }
+    }
+
+    .item {
+        padding: 40px 20px;
+        background-color: $white;
+
+        &:nth-of-type(even) {
+            background-color: $grey;
+        }
+
+        &__container {
+            display: flex;
+            align-items: center;
+            padding-left: 50px;
+            flex-wrap: wrap;
+
+            @media(min-width: $md) {
+                flex-wrap: nowrap;
+            }
+
+            @media(min-width: $lg) {
+                padding-left: 90px;
+            }
+        }
+
+        &__content {
+            padding: 0px 30px;
+            width: 100%;
+            text-align: center;
+
+            @media(min-width: $md) {
+                max-width: 400px;
+                text-align: left;
+            }
+
+            @media(min-width: $lg) {
+                padding: 0px 50px;
+            }
+        }
+        
+        &__text {
+            h4 {
+                margin: 0;
+                font-family: $condensed;
+                font-weight: 700;
+                color: $sec-brand-color;
+            }
+        }
+
+        &__icon {
+            min-width: 60px;
+            min-height: 60px;
+            position: relative;
+            margin: 0 auto;
+            margin-bottom: 30px;
+
+            @media(min-width: $md) {
+                margin: 0;
+            }
+
+            @media(min-width: $lg) {
+                min-width: 120px;
+                min-height: 120px;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 100%;
+                height: 100%;
+                transform: translate(-50%, -50%) rotate(45deg);
+                background-color: $sec-brand-color;
+            }
+
+            img {
+                left: 50%;
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                max-width: 50px;
+                max-height: 50px;
+                z-index: 100;
+                transform: translate(-50%, -50%);
+
+                @media(min-width: $lg) {
+                    max-width: 120px;
+                    max-height: 120px;
+                }
+            }
+        }
+
+        &__image {
+            flex-grow: 1;
+
+            img {
+                width: auto !important; //overwrite owlcarousel
+                max-width: 220px;
+                margin: 0 auto;
+                max-height: 200px;
+
+                @media(min-width: $lg) {
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,603 @@
+.quotes-slider {
+    background-color: $brand-color;
+
+    &--small {
+        .quotes-slider__quote.quote {
+            min-height: unset;
+        }
+
+        .quotes-slider__quote.quote .quote__square {
+
+            @media(min-width: $md) {
+                max-width: 600px;
+            }
+
+            @media(min-width: $xlg) {
+                max-width: 830px;
+            }
+        }
+
+        &.quotes-slider--square .quotes-slider__quote.quote .quote__square {
+
+            @media(min-width: $md) {
+                max-width: 450px;
+            }
+
+            @media(min-width: $xlg) {
+                max-width: 450px;
+            }
+
+            @media(min-width: 1500px) {
+                max-width: 700px;
+            }
+
+            @media(min-width: 1920px) {
+                max-width: 50%;
+            }
+        }
+
+        .quotes-slider__quote .quote__image {
+            max-height: 350px;
+
+            img {
+                object-fit: cover;
+                height: 100%;
+                object-position: center;
+
+                @media(min-width: $md) {
+                    object-position: 35% top;
+                }
+
+                @media(min-width: $lg) {
+                    object-fit: contain;
+                    object-position: 80% top;
+                }
+                
+            }
+        }
+    }
+
+    &--taller {
+        .quotes-slider__quote .quote__image {
+            max-height: 650px;
+        }
+    }
+
+    &--fill-bg {
+        .quotes-slider__quote .quote__image {
+            img {
+                object-fit: cover;
+                height: 100%;
+                object-position: center;
+
+                @media(min-width: $md) {
+                    object-position: center;
+                }
+
+                @media(min-width: $lg) {
+                    object-fit: cover;
+                    object-position: center;
+                }
+                
+            }
+        }
+    }
+
+    &--blue {
+        .quote .quote__square-wrapper:before {
+            background-color: $brand-color;
+            opacity: 0;
+            @media(min-width: $md) {
+                opacity: 1;
+            }
+        }
+
+        .quote .quote__text,
+        .quote .quote__text h4,
+        .quote .quote__text p,
+        .quote .quote__job p {
+            color: $white;
+        }
+    }
+
+    &--square {
+        .quote .quote__square {
+            @media(min-width: $md) {
+                max-width: 450px;
+            }
+
+            @media(min-width: 1500px) {
+                max-width: 700px;
+            }
+
+            @media(min-width: 1920px) {
+                max-width: 50%;
+            }
+
+            &-wrapper {
+
+                &:before {
+                    height: 100%;
+                    @media(min-width: $md) {
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+
+        .quote .quote__text-wrapper {
+            @media(min-width: $md) {
+                max-width: 450px;
+            }
+
+            @media(min-width: $xlg) {
+                max-width: 300px;
+            }
+        }
+    }
+
+    &--square-full {
+        .quote .quote__square {
+            max-width: none !important;
+            width: 100% !important;
+
+            &-wrapper {
+                &:before {
+                    height: 100%;
+                    @media(min-width: $md) {
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+
+        .quote .quote__text-wrapper {
+            @media(min-width: $md) {
+                max-width: 450px;
+            }
+
+            @media(min-width: $xlg) {
+                max-width: 450px;
+            }
+        }
+    }
+
+    &--transparency {
+        .quote .quote__square-wrapper:before {
+            opacity: 0;
+            @media(min-width: $md) {
+                opacity: 0.9;
+            }
+        }
+
+       &.quotes-slider--square-full .quote .quote__square-wrapper:before {
+            opacity: 0;
+            @media(min-width: $md) {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    &--max-width {
+        .quote .quote__arrow {
+            width: 100%;
+            max-width: 1250px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @media(max-width: $md) {
+                position: relative;
+                transform: none;
+                background-color: $sec-brand-color;
+                left: 0;
+                padding: 20px 0px;
+            }
+        }
+
+        .quote .quote__text-wrapper {
+            padding-left: 20px;
+        }
+
+        .quote .quote__text {
+            margin: 0 auto;
+            text-align: center;
+            max-width: 400px;
+
+            @media(min-width: $md) {
+                margin: 0;
+                text-align: left;
+            }
+
+            @media(min-width: $xl) {
+                max-width: 350px;
+            }
+        }
+    }
+
+    &--bg-square {
+        margin-top: 0px;
+
+        .quote .quote__square {
+            width: 100%;
+            max-width: 1250px !important;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .quote .quote__square .quote__square-wrapper:before {
+            opacity: 0;
+            @media(min-width: $md) {
+                transform: translateY(-50%) rotate(45deg);
+                width: 400px;
+                height: 400px;
+                padding-bottom: 0%;
+            }
+        }
+
+        .quotes-slider__quote.quote {
+            overflow: visible;
+        }
+
+        .quotes-slider__quote .quote__image img {
+            object-fit: cover;
+            width: 100%;
+            height: 350px;
+        }
+    }
+
+    &--no-square {
+        .quotes-slider__quote .quote__square {
+            display: none;
+        }
+
+        .quotes-slider__quote .quote__text p {
+            color: $white;
+        }
+
+        .quotes-slider__quote .quote__accred-wrapper .quote__job p {
+            color: $white;
+        }        
+    }
+
+    .owl-stage {
+        display: flex; 
+    }
+
+    .owl-nav {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        margin-top: -30px;
+        display: none;
+        max-width: 1250px;
+
+        @media(min-width: $md) {
+            display: block;
+        }
+        
+
+        .owl-nav-right,
+        .owl-nav-left {
+            position: absolute;
+            right: 40px;
+
+            &__wrapper {
+                width: 30px;
+                height: 30px;
+                position: relative;
+
+                @media(min-width: $md) {
+                    width: 40px;
+                    height: 40px;
+                }
+                
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    // border: 1px solid $white;
+                    // transform: rotate(-45deg);
+                    transition: transform 0.3s ease;
+                    // background-color: $brand-color;
+                    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 400 400' style='enable-background:new 0 0 400 400;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;stroke:%23FFFFFF;stroke-width:2.846;%7D .st1%7Bfill:%23FFFFFF;%7D%0A%3C/style%3E%3Cg%3E%3Crect x='78.1' y='85.2' transform='matrix(0.7071 -0.7071 0.7071 0.7071 -84.9041 195.0227)' class='st0' width='229.6' height='229.6'/%3E%3Cpolyline class='st1' points='198.1,377.7 370.6,205.1 375.7,200 370.6,194.9 198.1,22.3 '/%3E%3Cpolyline class='st0' points='198.1,377.7 370.6,205.1 375.7,200 370.6,194.9 198.1,22.3 '/%3E%3C/g%3E%3C/svg%3E%0A");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    opacity: 1;
+                    transition: opacity 0.3s ease;
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 0; 
+                    height: 0; 
+                    border-top: 8px solid transparent;
+                    border-bottom: 8px solid transparent;
+                    border-left: 8px solid $white;
+                    display: none;
+                }
+
+                &:hover {
+                    &:before {
+                        transform: rotate(0deg);
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+
+        .owl-nav-right {
+            left: 0;
+            right: auto;
+            display: none;
+
+            &__wrapper {
+                &:after {
+                    border-right: 8px solid $white;
+                    border-left: none;
+                }
+
+                &:hover {
+                    &:before {
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .owl-dots {
+        text-align: center;
+        padding-top: 20px;
+
+        .owl-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $brand-color;
+            border: 2px solid $sec-brand-color;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            &.active {
+                background-color: $sec-brand-color;
+            }
+        }
+    }
+
+    &__title {
+        text-align: center;
+
+        p {
+            color: $white;
+            @include font-size(25);
+            font-weight: 700;
+            font-family: $helvetica-bold;
+            line-height: 1.2;
+
+            @media(min-width: $md) {
+                @include font-size(50);
+            }
+        }
+    }
+
+    .container {
+        padding: 0px;
+    }
+
+    .quote {
+        width: 100%;
+        height: 100%;
+        min-height: 400px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+
+        &__arrow {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+
+            @media(max-width: $md) {
+                position: relative;
+                transform: none;
+                background-color: $sec-brand-color;
+            }
+        }
+
+        &__logo {
+            margin-top: 15px;
+            img {
+                width: auto;
+                max-height: 70px;
+                max-width: 150px;
+                margin: 0 auto;
+
+                @media(min-width: $md) {
+                    margin: 0;
+                }
+            }
+        }
+
+        &__quote-image {
+            width: 50px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+
+            @media(min-width: $md) {
+                margin: 0;
+                margin-bottom: 10px;
+            }
+            
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        &__square {
+            position: absolute;
+            left: 0%;
+            top: 0;
+            height: 100%;
+            width: 100%;
+
+            @media(min-width: $lg) {
+                width: 65%;
+            }
+
+            @media(min-width: $xlg) {
+                width: 50%;
+            }
+
+            &-wrapper {
+                position: relative;
+                height: 100%;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $white;
+                    opacity: .8;
+
+                    @media(min-width: $md) {
+                        top: 50%;
+                        width: 100%;
+                        height: auto;
+                        padding-bottom: 100%;
+                        background-color: $white;
+                        opacity: 1;
+                        transform: translateY(-50%) translateX(-250px) rotate(45deg);
+                    }
+                }
+            }
+        }
+
+        &__text-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            padding-left: 10px;
+            position: relative;
+            z-index: 100;
+
+            @media(min-width: $md) {
+                width: 65%;
+                padding-left: 75px;
+            }
+        }
+
+        &__text {
+            @include font-size(22);
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            color: $brand-color;
+            position: relative;
+            padding: 30px 0px;
+
+            p {
+                margin: 0px;
+            }
+
+            &:before,
+            &:after {
+                content: '';
+                margin: 0;
+                height: 40px;
+                width: 60px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMjIgNTgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyMiA1ODsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNGRkZGRkY7fQo8L3N0eWxlPgo8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjAuOCwxLjYyIDAuOCw1Ny42MiA1Ni44LDEuNjIgIi8+Cjxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iNjQuMzgsMS42MiA2NC4zOCw1Ny42MiAxMjAuMzgsMS42MiAiLz4KPC9zdmc+Cg==");
+                background-repeat: no-repeat;
+            }
+
+            &:after {
+                left: auto;
+                top: auto;
+                right: 0;
+                bottom: 0;
+                transform: scaleX(-1);
+            }
+
+            &--not-quote {
+                padding: 0px;
+
+                &:before,
+                &:after {
+                    display: none;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+
+        &__image {
+            width: 100%;
+            height: 100%;
+            max-height: 500px;
+
+            img {
+                object-fit: cover;
+                height: 100%;
+            }
+
+            &--right {
+                img {
+                    object-position: right !important;
+                }
+            }
+        }
+
+        &__accred-wrapper {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            padding-top: 15px;
+        }
+
+        &__job {
+            width: 100%;
+            text-align: center;
+
+            @media(min-width: $md) {
+                width: auto;
+                text-align: left;
+            }
+
+            p {
+                color: $brand-color;
+                @include font-size(20);
+                margin: 0;
+                font-family: $condensed;
+            }
+        }
+    }
+}

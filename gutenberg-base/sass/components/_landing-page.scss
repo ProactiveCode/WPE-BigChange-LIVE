@@ -1,0 +1,44 @@
+.landing-page {
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__text {
+        width: calc(60% - 20px);
+    }
+
+    &__menu {
+        width: calc(40% - 20px);
+    }
+
+    &__menu-wrapper {
+        position: sticky;
+        top: 150px;
+    }
+}
+
+
+.hero__banner.new-landing-page {
+    .hero__bg {
+        &:after {
+            @media(min-width: $md) {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .hero__pre-title {
+        margin-bottom: 3px;
+
+        p {
+            @media(min-width: $md) {
+                font-size: 35px;
+                font-weight: 300;
+                text-transform: none;
+            }
+        }
+    }
+}

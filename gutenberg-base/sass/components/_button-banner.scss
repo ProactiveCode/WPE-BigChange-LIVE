@@ -1,0 +1,29 @@
+.button-banner {
+    position: fixed;
+    bottom: 0;
+    background-color: rgba($color: #3c657b, $alpha: 0.8);
+    width: 100%;
+    padding: 10px 0px;
+    z-index: 999;
+    display: none;
+
+    @media(min-width: $md) {
+        display: block;
+    }
+
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__button {
+        margin-right: 20px;
+    }
+}
+.page-template-template-ppc-normal,
+.page-template-template-ppc-capterra {
+    .button-banner, .intercom-lightweight-app {
+        display: none;
+    }
+}
