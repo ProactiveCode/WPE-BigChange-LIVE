@@ -26,13 +26,14 @@ jobs:
           username: ${{ secrets.FTP_USERNAME_DEV }}
           server: ${{ secrets.FTP_SERVER_DEV }}
           port: 2222 # default is 22
+          password: ${{ secrets.FTP_PASSWORD_DEV }}
           #ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY_DEV }}
  
           
           # will put all file under this path
-          local_path: './wp-content/*'
+          local_path: './gutenberg-base/*'
           # files will copy to under remote_path
-          remote_path: /var/www/html/wp-content/
+          remote_path: /wp-content/themes/gutenberg-base/
           
           # sftp args
           args: '-o ConnectTimeout=5'
