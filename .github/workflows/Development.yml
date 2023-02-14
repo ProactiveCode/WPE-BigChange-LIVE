@@ -1,0 +1,40 @@
+name: CI-SFTP
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ Development ]
+#  pull_request:
+#    branches: [ Development ]
+ 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+ 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "SFTP"
+  deploy-via-sftp:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+          
+      - name: SFTP Deploy
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          username: ${{ secrets.FTP_USERNAME_DEV }}
+          server: ${{ secrets.FTP_SERVER_DEV }}
+          port: ${{ secrets.FTP_PORT }}
+          sftp_only: true
+          password: ${{ secrets.FTP_PASSWORD_DEV }}
+          #ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY_DEV }}
+ 
+          
+          # will put all file under this path
+          local_path: './gutenberg-base/*'
+          # files will copy to under remote_path
+          remote_path: /wp-content/themes/gutenberg-base/
+          
+          # sftp args
+          args: '-o ConnectTimeout=5'
