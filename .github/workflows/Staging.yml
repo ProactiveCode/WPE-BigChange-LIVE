@@ -4,7 +4,7 @@ name: CI-SFTP
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ Production ]
+    branches: [ Staging ]
 #  pull_request:
 #    branches: [ Development ]
  
@@ -23,11 +23,11 @@ jobs:
       - name: SFTP Deploy
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          username: ${{ secrets.FTP_USERNAME_PROD }}
-          server: ${{ secrets.FTP_SERVER_PROD }}
+          username: ${{ secrets.FTP_USERNAME_STAGE }}
+          server: ${{ secrets.FTP_SERVER_STAGE }}
           port: ${{ secrets.FTP_PORT }}
           sftp_only: true
-          password: ${{ secrets.FTP_PASSWORD_PROD }}
+          password: ${{ secrets.FTP_PASSWORD_STAGE }}
           #ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY_DEV }}
  
           
