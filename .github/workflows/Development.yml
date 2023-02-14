@@ -32,9 +32,9 @@ jobs:
  
           
           # will put all file under this path
-          local_path: './wp-content/*'
+          local_path: './gutenberg-base/*'
           # files will copy to under remote_path
-          remote_path: /wp-content/
+          remote_path: /wp-content/gutenberg-base/
           
           # sftp args
           args: '-o ConnectTimeout=5'
