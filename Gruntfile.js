@@ -1,7 +1,7 @@
 module.exports = grunt => {
     grunt.initConfig({
 
-        theme_path: '/gutenberg-base',
+        theme_path: 'gutenberg-base',
 
         // Compile any SCSS file that doesn't have the partial indicator _
         // By default just the style.scss file in the root of the sass dir

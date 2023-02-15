@@ -46,7 +46,7 @@ if(gotLang == 1) { lang =  final; }
 
   console.log('redirecting to - ' + lang);  
 
-    if (window.location.href == "https://bigchangev3.proactivecode.com/") {
+    if (window.location.href == "https://www.bigchange.com/") {
         home = true;
     }
 
