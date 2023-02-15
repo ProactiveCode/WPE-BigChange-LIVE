@@ -1,0 +1,198 @@
+.updated-cards {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media(min-width: $md) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        width: 100%;
+        margin-bottom: 30px;
+
+        @media(min-width: $md) {
+            width: calc(50% - 15px);
+            position: relative;
+            padding-bottom: 80px;
+        }
+
+        @media(min-width: $lg) {
+            width: calc(33.3333% - 15px);
+        }
+
+        &.updated-cards__card--white {
+            padding: 30px;
+            padding-bottom: 80px;
+            background-color: $white;
+            box-shadow: 0 1px 2px rgba($new-brand-color,0.15), 
+            0 2px 4px rgba($new-brand-color,0.15), 
+            0 4px 8px rgba($new-brand-color,0.15), 
+            0 8px 16px rgba($new-brand-color,0.15),
+            0 16px 32px rgba($new-brand-color,0.15), 
+            0 32px 64px rgba($new-brand-color,0.15);
+
+            .updated-cards__desc {
+                h1,h2,h3,h4,h5,h6,p,ol,ul,li,span {
+                    margin: 0;
+                    color: $base-color;
+                }
+            }
+        }
+
+        &.updated-cards__card--home {
+            padding-bottom: 30px;
+
+            @media(min-width: $md) {
+                padding-bottom: 80px;
+            }
+
+            @media(min-width: $lg) {
+                padding: 45px 45px 100px;
+            }
+
+            .updated-cards__title {
+                margin-bottom: 20px;
+
+                @media(min-width: $lg) {
+                    margin-bottom: 0;
+                }
+
+                h3 {
+                    margin: 0;
+                    font-size: 20px;
+                    text-transform: none;
+                    font-family: $base-font-family;
+                    color: $new-dark-blue;
+                }
+            }
+
+            .updated-cards__upper-title {
+                p {
+                    font-size: 26px;
+                }
+            }
+        }
+
+        &.updated-cards__card--smaller {
+            .updated-cards__image {
+                height: 120px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                img {
+                    max-width: 120px;
+                    min-height: 120px;
+                }
+            }
+        }
+
+        &.updated-cards__card--leader {
+            padding: 20px;
+            box-shadow: 0px 0px 8px #9CBCD7;
+
+            .updated-cards__title {
+                text-align: left;
+                
+                h3 {
+                    color: $new-dark-blue;
+                }
+            }
+
+            .updated-cards__upper-title {
+                text-align: left;
+
+                p {
+                    color: $new-dark-blue;
+                    font-weight: 300;
+                    font-size: 17px;
+                    font-family: $sans-serif-font-family-new;
+                    text-transform: none;
+                }
+            }
+
+            .updated-cards__desc {
+                text-align: left;
+                padding: 0;
+                margin-bottom: 0;
+
+                h1,h2,h3,h4,h5,h6,p,span,li,ul,ol,div {
+                    color: rgba($new-dark-blue,0.7);
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    &__upper-title {
+        text-align: center;
+        margin-bottom: 20px;
+
+        p {
+            margin: 0;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-family: $new-condensed;
+            color: $new-sec-brand-color;
+            line-height: 1.2;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        margin-bottom: 20px;
+
+        img {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        text-align: center;
+
+        h3 {
+            margin: 0;
+            font-size: 28px;
+            text-transform: uppercase;
+            font-family: $new-condensed;
+            color: $new-dark-blue;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 20px;
+        text-align: center;
+        padding: 0 15px;
+
+        @media(min-width: $md) {
+            padding: 0 30px;
+        }
+
+        h1,h2,h3,h4,h5,h6,p,ol,ul,li,span {
+            margin: 0;
+            color: $new-brand-color;
+            font-weight: 700;
+        }
+    }
+
+    &__button {
+        text-align: center;
+
+        @media(min-width: $md) {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 30px;
+            width: calc(100% - 60px);
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.inner-button-banner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &--larger {
+        @media(min-width: $lg) {
+            padding-top:30px;
+            padding-bottom:30px;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        
+        @media(min-width: $md) {
+            width: auto;
+        }
+    }
+
+    &__text {
+        width: 100%;
+        margin-bottom: 20px;
+
+        @media(min-width: $md) {
+            width: calc(100% - 250px);
+            margin-bottom: 0;
+        }
+
+        h1,h2,h3,h4,h5,h6,p,ul,li,span,ol {
+            color: $white;
+            text-transform: uppercase;
+            font-size: 24px;
+            margin: 0;
+            line-height: 1.1;
+            font-family: $new-condensed;
+        }
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}

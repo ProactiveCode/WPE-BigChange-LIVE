@@ -18,6 +18,12 @@ export function init(){
     if($('.page-template-template-ceo-blog').length > 0) {
         getPosts(s.category, s.filter, s.paged);
     }
+
+    // if($('.page-template-template-big-community').length > 0) {
+    //     getPosts(s.category, s.filter, s.paged);
+    // }
+
+
     
 }
 
@@ -40,6 +46,7 @@ function bindUIActions(){
 
 //// FUNCTIONS
 function getPosts(cat, filter, paged) {
+    var url = window.location.href;
     $.ajax({
         url : "/wp-admin/admin-ajax.php",
         type : 'post',
@@ -47,7 +54,8 @@ function getPosts(cat, filter, paged) {
             action: 'get_ceo_blog',
             cat: cat,
             sort: filter,
-            paged: paged
+            paged: paged,
+            url: url
         },
         dataType:'html',
         success : function(response) {    

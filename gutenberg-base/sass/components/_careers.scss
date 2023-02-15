@@ -216,3 +216,58 @@
         }
     }
 }
+
+.job-listing-container,
+.whr-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.new-job-listing,
+.whr-item {
+    width: 100%;
+    width: 100%;
+    box-shadow: 0 1px 2px rgba($new-brand-color,0.15), 
+        0 2px 4px rgba($new-brand-color,0.15), 
+        0 4px 8px rgba($new-brand-color,0.15), 
+        0 8px 16px rgba($new-brand-color,0.15),
+        0 16px 32px rgba($new-brand-color,0.15), 
+        0 32px 64px rgba($new-brand-color,0.15);
+    padding: 40px;
+    margin-bottom: 30px;
+    
+    @media(min-width: $md) {
+        width: calc(50% - 20px);
+    }
+
+    @media(min-width: $lg) {
+        width: calc(33.3333% - 20px);
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    a {
+        color: $new-brand-color;
+    }
+
+    &__location,
+    &__time {
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.whr-group {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.whr-items,
+.whr-info {
+    list-style-type: none;
+    margin: 0;
+}

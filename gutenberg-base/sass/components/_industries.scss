@@ -1,0 +1,174 @@
+.industries {
+    padding-bottom: 40px;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 30px;
+
+        h1,h2,h3,h4,h5,h6 {
+            @include font-size(20);
+            font-family: $condensed;
+            line-height: 1.1;
+
+            @media(min-width: $md) {
+                @include font-size(25);
+            }
+
+            @media(min-width: $lg) {
+                @include font-size(40);
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .industry {
+            width: 100%;
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+
+            @media(min-width: $md) {
+                width: calc(50% - 20px);
+                padding-bottom: 70px;
+            }
+
+            @media(min-width: $lg) {
+                width: calc(25% - 20px);
+                margin-bottom: 0;
+                max-width: none;
+                margin: 0;
+            }
+
+            &__name {
+                text-align: center;
+                margin-bottom: 20px;
+                
+                p {
+                    font-size: 24px;
+                    font-family: $condensed;
+                    font-weight: 700;
+                    color: $white;
+                    margin: 0;
+
+                    @media(min-width: $lg) {
+                        font-size: 22px;
+                    }
+
+                    @media(min-width: $xlg) {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            &__description {
+                margin-top: 40px;
+
+                p {
+                    // font-weight: 700;
+                    font-size: 20px;
+                    color: $white;
+                    margin: 0;
+                }
+            }
+
+            &__button {
+                margin-top: 40px;
+
+                @media(min-width: $md) {
+                    margin-top: 0;
+                }
+
+                a {
+                    font-size: 20px;
+                    width: 100%;
+                }
+
+                @media(min-width: $md) {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__lower-title {
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 70px;
+
+        p {
+            font-size: 25px;
+            letter-spacing: 4px;
+            color: $white;
+            font-family: $condensed;
+            margin: 0;
+        }
+    }
+
+    &__lower-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    &__select {
+        width: 100%;
+        position: relative;
+        margin-bottom: 10px;
+
+        @media(min-width: $md) {
+            width: calc(60% - 10px);
+            margin-right: 10px;
+            margin-bottom: 0;
+        }
+
+        select {
+            height: 40px;
+            font-size: 18px;
+            border-radius: 5px;
+            background-color: $white;
+            border: none;
+            color: $very-light-blue;
+            padding-right: 25px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 20px;
+            background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 272.2 400' style='enable-background:new 0 0 272.2 400;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill-rule:evenodd;clip-rule:evenodd;fill:%23020203;%7D%0A%3C/style%3E%3Cg id='Page-1'%3E%3Cg id='Core' transform='translate(-469.000000, -9.000000)'%3E%3Cg id='arrow-drop-down' transform='translate(469.000000, 9.500000)'%3E%3Cpath id='Shape' class='st0' d='M0,263.4l136.1,136.1l136.1-136.1H0z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cg id='Page-1_00000173879706632028667480000017618416632622962082_'%3E%3Cg id='Core_00000129198907727614907830000014321573908507131296_' transform='translate(-469.000000, -9.000000)'%3E%3Cg id='arrow-drop-down_00000106860280436202038600000011066247568399269309_' transform='translate(469.000000, 9.500000)'%3E%3Cpath id='Shape_00000019666379160165101090000010877364528631870125_' class='st0' d='M272.2,135.6L136.1-0.5L0,135.6H272.2z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+            background-size: contain;
+            pointer-events: none;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__lower-button {
+        width: 100%;
+
+        @media(min-width: $md) {
+            width: calc(40% - 10px);
+            margin-left: 10px;
+        }
+
+        a {
+            width: 100%;
+        }
+    }
+}

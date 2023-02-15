@@ -1,0 +1,3154 @@
+// diamonds 
+
+// [] $md - 767px
+
+
+.diamonds {
+    position: relative;
+    width: 100%;
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media(min-width: 767px) {
+        height: 55vw;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        max-height: 800px;
+        margin-bottom: 150px;
+        margin-top: 90px;
+        display: block;
+    }
+
+    &--mobile {
+
+        #diamond-8 {
+            order: 9;
+            width: 100%;
+        }
+
+        br {
+            display: none !important;
+        }
+
+        .diamond__large-text {
+            p, span {
+                font-size: 50px !important; //overwrite responsive font for mobile layout - class added on width js detection
+            }
+
+            &--reversed {
+                p, span {
+                    font-size: 20px !important; //overwrite responsive font for mobile layout - class added on width js detection
+                }
+            }
+        }
+
+        .diamond__med-text {
+            p, span {
+                font-size: 20px !important; //overwrite responsive font for mobile layout - class added on width js detection
+            }
+        }
+
+        .diamond__small-text {
+            p, span{
+                font-size: 20px !important; //overwrite responsive font for mobile layout - class added on width js detection
+            }
+        }
+    }
+
+
+    #diamond-1,
+    #diamond-4,
+    #diamond-7,
+    #diamond-9 {
+    
+        @media(min-width: 767px) {
+            max-width: 250px;
+            max-height: 250px;
+            height: 17.5vw;
+            width: 17.5vw;
+        }    
+    }
+
+    #diamond-2 {
+
+        @media(min-width: 767px) {
+            max-width: 200px;
+            max-height: 200px;
+            width: 14.2vw;
+            height: 14.2vw;
+        } 
+    }
+
+    #diamond-3 {
+
+        @media(min-width: 767px) {
+            max-width: 220px;
+            max-height: 220px;
+            width: 14.5vw;
+            height: 14.5vw;
+        } 
+    }
+    
+    #diamond-5 {
+
+        @media(min-width: 767px) {
+            max-width: 350px;
+            max-height: 350px;
+            width: 24.4vw;
+            height: 24.4vw;
+        } 
+    }
+
+    #diamond-8 {
+ 
+        @media(min-width: 767px) {
+            max-width: 300px;
+            max-height: 300px;
+            width: 21.2vw;
+            height: 21.2vw;
+        } 
+    }
+
+
+    #diamond-6 {
+        @media(min-width: 767px) {
+            max-width: 270px;
+            max-height: 270px;
+            width: 19vw;
+            height: 19vw;
+        } 
+    }
+    
+
+    #diamond-1 {
+        left: 57.7%;
+        top: 0%;  
+
+        .diamond__large-text {
+            left: 12%;
+            top: 20%;
+
+            @media(min-width: $lg) {
+                top: 28%;
+            }
+
+            p {
+                font-size: 30px;
+                @include responsive-font-size (
+                    $min-font-size: 50px,
+                    $max-font-size: 100px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__med-text {
+            top: 17%;
+            left: 60%;
+            display: none;
+
+            @media(min-width: 767px) {
+                display: block;
+            }
+
+            @media(min-width: $lg) {
+                top: 25%;
+            }
+
+            p {
+                font-size: 20px;
+                @include responsive-font-size (
+                    $min-font-size: 40px,
+                    $max-font-size: 80px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__small-text {
+            left: 60%;
+            top: 44%;
+
+            @media(min-width: $lg) {
+                top: 55%;
+            }
+
+            p {
+                font-size: 20px;
+                @include responsive-font-size (
+                    $min-font-size: 14px,
+                    $max-font-size: 20px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__image {
+            @media(min-width: 767px) {
+                bottom: -10%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    #diamond-2 {
+        left: 17.5%;
+        top: 45.5%;
+
+        .diamond__large-text {
+            @media(min-width: 767px) {
+                top: 50%;
+                transform: translateY(-50%);
+                left: 5%;
+            }
+
+            p {
+                @include responsive-font-size (
+                    $min-font-size: 60px,
+                    $max-font-size: 140px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__small-text {
+            top: 50%;
+            left: 50%;
+
+            p {
+                @include responsive-font-size (
+                    $min-font-size: 20px,
+                    $max-font-size: 30px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__image {
+            top: 3%;
+            right: 10%;
+        }
+    }
+
+    #diamond-3 {
+        left: 3.5%;
+        top: 25%;
+
+        .diamond__large-text {
+            @media(min-width: 767px) {
+                top: 50%;
+                transform: translateY(-50%);
+                left: 3%;
+            }
+
+            p {
+                @include responsive-font-size (
+                    $min-font-size: 70px,
+                    $max-font-size: 140px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__med-text {
+            top: 28%;
+            left: 40%;
+            width: 100%;
+
+            @media(min-width: $lg) {
+                top: 23%;
+            }
+
+            p {
+                @include responsive-font-size (
+                    $min-font-size: 13px,
+                    $max-font-size: 25px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+
+            span {
+                display: block;
+                font-size: 20px;
+
+                @include responsive-font-size (
+                    $min-font-size: 13px,
+                    $max-font-size: 20px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__small-text {
+            top: 50%;
+            left: 40%;
+
+            @media(min-width: $lg) {
+                top: 60%;
+            }
+
+            @media(min-width: $xlg) {
+                top: 58%;
+            }
+
+            p {
+                @include responsive-font-size (
+                    $min-font-size: 11px,
+                    $max-font-size: 15px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__image {
+            @media(min-width: 767px) {
+                top: -10%;
+                left: 50%;
+                max-width: 40px;
+                transform: translateX(-50%);
+            }
+
+            @media(min-width: $xlg) {
+                top: -10%;
+                left: 50%;
+                max-width: 60px;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    #diamond-4 {
+        left: 15.5%;
+        top: 0%;
+
+        .diamond__large-text {
+            top: 48%;
+            left: 32%;
+
+            p {
+                @include responsive-font-size (
+                    $min-font-size: 15px,
+                    $max-font-size: 35px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__small-text {
+            top: 25%;
+            left: 32%;
+
+            @media(min-width: $xlg) {
+                top: 32%;
+            }
+
+            p {
+                @include responsive-font-size (
+                    $min-font-size: 11px,
+                    $max-font-size: 17px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__image {
+            @media(min-width: 767px) {
+                top: 50%;
+                transform: translateY(-50%);
+                left: -8%;
+            }
+        }
+    }
+
+    #diamond-5 {
+        left: 32.5%;
+        top: 17%;
+
+        .diamond__large-text {
+            @media(min-width: 767px) {
+                top: -3%;
+                left: 0px;
+            }
+
+            @media(min-width: 1100px) {
+                top: -10%;
+                left: -5%;
+            }
+
+            @media(min-width: 1350px) {
+                top: -3%;
+                left: 0px;
+            }
+
+            p {
+                height: 0.75em;
+                @include responsive-font-size (
+                    $min-font-size: 160px,
+                    $max-font-size: 350px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 5px
+                );
+            }
+        }
+
+        .diamond__med-text {
+            @media(min-width: 767px) {
+                top: 33%;
+                left: 28%;
+                transform: rotate(-90deg);
+            }
+
+            p {
+                @include responsive-font-size (
+                    $min-font-size: 15px,
+                    $max-font-size: 35px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__small-text {
+            top: 70%;
+            left: 40%;
+
+            @media screen and (min-width: 900px) {
+                left: 46%;
+            }
+
+            p {
+                @include responsive-font-size (
+                    $min-font-size: 13px,
+                    $max-font-size: 17px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__image {
+            top: 23%;
+            left: 60%;
+
+            @media(min-width: $xlg) {
+                max-width: 100px;
+                width: 10vw;
+            }
+        }
+    }
+
+    #diamond-6 {
+        left: 73.75%;
+        top: 22%;
+
+        .diamond__med-text {
+            top: 26%;
+            left: 2%;
+
+            p {
+                @include responsive-font-size (
+                    $min-font-size: 20px,
+                    $max-font-size: 45px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__small-text {
+            top: 59%;
+            left: 2%;
+
+            p {
+                @include responsive-font-size (
+                    $min-font-size: 15px,
+                    $max-font-size: 20px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__image {
+            top: 8%;
+            left: 60%;
+
+            @media(min-width: $xlg) {
+                max-width: 120px;
+                width: 10vw;
+            }
+        }
+    }
+
+    #diamond-7 {
+        left: 57.7%;
+        top: 46.8%;
+
+        .diamond__large-text {
+            top: 25%;
+            left: -14%;
+
+            p {
+                @include responsive-font-size (
+                    $min-font-size: 60px,
+                    $max-font-size: 125px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__med-text {
+            top: 38%;
+            left: 48%;
+
+            @media(min-width: $lg) {
+                top: 46%;
+            }
+
+            p {
+                @include responsive-font-size (
+                    $min-font-size: 14px,
+                    $max-font-size: 22px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__small-text {
+            left: 48%;
+            top: 58%;
+
+            @media(min-width: $lg) {
+                top: 64%;
+            }
+
+            p {
+                @include responsive-font-size (
+                    $min-font-size: 12px,
+                    $max-font-size: 15px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__image {
+            @media(min-width: 767px) {
+                top: -5%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    #diamond-8 {
+        left: 71%;
+        top: 71.5%;
+
+        .diamond__med-text {
+            @media(min-width: 767px) {
+                top: 24%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                text-align: center;
+            }
+
+            p {
+                @include responsive-font-size (
+                    $min-font-size: 19px,
+                    $max-font-size: 45px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__small-text {
+            @media(min-width: 767px) {
+                top: 15%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                text-align: center;
+            }
+
+            p {
+                @include responsive-font-size (
+                    $min-font-size: 14px,
+                    $max-font-size: 20px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__image {
+            @media(min-width: 767px) {
+                top: 47%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    #diamond-9 {
+        left: 27.75%;
+        top: 66%;
+
+        .diamond__med-text {
+            @media(min-width: 767px) {
+                left: 8%;
+                top: 26%;
+                text-align: right;
+            }
+
+            @media(min-width: $xlg) {
+                left: 18%;
+            }
+
+            p {
+                @include responsive-font-size (
+                    $min-font-size: 15px,
+                    $max-font-size: 25px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        .diamond__image {
+            left: 56%;
+            top: 40%;
+
+            @media(min-width: $xlg) {
+                left: 46%;
+                top: 29%;
+                max-width: 150px;
+                width: 10vw;
+            }
+        }
+    }
+
+    .diamond {
+        background-color: $sec-brand-color;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+
+        @media(min-width: 400px) {
+            width: calc(50% - 5px);
+        }
+
+        @media(min-width: 767px) {
+            position: absolute;
+            transform: rotate(-45deg);
+            width: 250px;
+            height: 250px;
+            margin-bottom: 0px;
+            padding: 0px;
+            display: block;
+        }
+
+        &__wrapper {
+            margin: 0 auto;
+            padding: 20px;
+
+            @media(min-width: 767px) {
+                transform: rotate(45deg);
+                position: relative;
+                padding: 60px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__large-text {
+            text-align: center;
+
+            @media(min-width: 767px) {
+                position: absolute;
+                text-align: left;
+            }
+            
+            p {
+                margin: 0;
+                line-height: 1;
+                color: white;
+            }
+        }
+
+        &__med-text {
+            text-align: center;
+            @media(min-width: 767px) {
+                position: absolute;
+                text-align: left;
+            }
+
+            p {
+                margin: 0;
+                line-height: 1;
+                color: white;
+            }
+        }
+
+        &__small-text {
+            text-align: center;
+            @media(min-width: 767px) {
+                position: absolute;
+                text-align: left;
+                top: 130px;
+                left: 150px;
+            }
+
+            p {
+                margin: 0;
+                line-height: 1;
+                color: white;
+            }
+        }
+
+        &__image {
+            width: 80px;
+            margin: 0 auto;
+            margin-top: 15px;
+
+            @media(min-width: 767px) {
+                position: absolute;
+                width: 6vw;
+                max-width: 80px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.hide-tablet {
+    display: none;
+
+    @media(min-width: $lg) {
+        display: block;
+    }
+}
+
+
+.mobile-only {
+    @media(min-width: 767px) {
+        display: none;
+    }
+}
+
+
+// diamond-columns
+
+.diamond-columns {
+    margin-top: 80px;
+    margin-bottom: 60px;
+
+    h1,h2,h3,h4,h5,h6 {
+        margin-bottom: 20px;
+        @include font-size(20);
+        font-family: $condensed;
+        line-height: 1.1;
+
+        @media(min-width: 767px) {
+            @include font-size(25);
+        }
+
+        @media(min-width: $lg) {
+            @include font-size(40);
+            margin-bottom: 70px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__column {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        text-align: center;
+        padding: 40px;
+        margin-bottom: 30px;
+
+        @media(min-width: 767px) {
+            width: calc(50% - 15px);
+        }
+
+        @media(min-width: $lg) {
+            width: 170px;
+            height: 170px;
+            padding: 0px;
+            margin-bottom: 0px;
+        }
+
+        @media(min-width: $xlg) {
+            width: 200px;
+            height: 200px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            height: 100%;
+            background-color: $sec-brand-color;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+
+            @media(min-width: $lg) {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+
+        p {
+            color: $white;
+            font-family: $condensed;
+            font-size: 24px;
+            margin: 0;
+            
+            @media(min-width: $lg) {
+                font-size: 20px;
+            }
+
+            @media(min-width: $xlg) {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+// damonds-5-in-1.scss
+
+.diamond-text {
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        
+        @media(min-width: 767px) {
+            padding-bottom: 120px;
+        }
+
+        @media(min-width: $xlg) {
+            padding-bottom: 0px;
+        }
+    }
+
+    &__text,
+    &__diamonds {
+        width: 100%;
+
+        @media(min-width: 767px) {
+            width: 50%;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media(min-width: 767px) {
+            padding-right: 60px;
+        }
+    }
+
+    &__title {
+        h1,h2,h3,h4,h5,h6 {
+            color: $sec-brand-color;
+            font-size: 40px;
+
+            @media(min-width: $lg) {
+                font-size: 60px;
+            }
+        }
+    }
+
+    &__content {
+        p {
+            &.title {
+                color: $sec-brand-color;
+                font-weight: 700;
+                margin-bottom: 5px;
+                font-family: $condensed;
+                font-size: 22px;
+            }
+
+            &.smaller-margin {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.diamonds-5-in-1 {
+    position: relative;
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media(min-width: 767px) {
+        height: 70vw;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        max-height: 1000px;
+        margin: 50px 0px;
+        display: block;
+    }
+
+    &--mobile {
+        .diamond__small-text {
+            p, span{
+                font-size: 17px !important; //overwrite responsive font for mobile layout - class added on width js detection
+            }
+        }
+    }
+
+
+    .diamond {
+        background-color: $white;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        border: 2px solid $brand-color;
+
+        @media(min-width: 400px) {
+            width: calc(50% - 5px);
+        }
+
+        @media(min-width: 767px) {
+            position: absolute;
+            transform: rotate(-45deg);
+            max-width: 200px;
+            max-height: 200px;
+            width: 14.2vw;
+            height: 14.2vw;
+            margin-bottom: 0px;
+            padding: 0px;
+            background-color: $sec-brand-color;
+            display: block;
+            border: 2px solid $sec-brand-color;
+        }
+
+        @media(min-width: $xlg) {
+            max-width: 160px;
+            max-height: 160px;
+            width: 11vw;
+            height: 11vw;
+        }
+
+        &.diamond-clickable {
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $white;
+
+                .diamond__small-text p {
+                    color: $new-blue;
+                }
+            }
+        }
+
+        &__wrapper {
+            margin: 0 auto;
+            padding: 20px;
+
+            @media(min-width: 767px) {
+                transform: rotate(45deg);
+                position: relative;
+                padding: 47px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__large-text {
+            text-align: center;
+
+            @media(min-width: 767px) {
+                position: absolute;
+                text-align: left;
+            }
+            
+            p {
+                margin: 0;
+                line-height: 1;
+                color: $sec-brand-color;
+
+                @media(min-width: 767px) {
+                    color: $white;
+                }
+            }
+        }
+
+        &__small-text {
+            text-align: center;
+            padding: 0px 5px;
+            @media(min-width: 767px) {
+                position: absolute;
+                bottom: 50%;
+                right: 50%;
+                transform: translate(50%, 50%) rotate(-45deg) translateY(4.5vw);
+                width: 100%;
+                text-align: center;
+            }
+
+            @media(min-width: $xl) {
+                transform: translate(50%, 50%) rotate(-45deg) translateY(60px);
+            }
+
+            p {
+                margin: 0;
+                line-height: 1;
+                font-size: 13px;
+
+                color: $sec-brand-color;
+
+                @media(min-width: 767px) {
+                    color: $white;
+                }
+
+                @include responsive-font-size (
+                    $min-font-size: 11.5px,
+                    $max-font-size: 12.5px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        &__image {
+            width: 80px;
+            margin: 0 auto;
+            margin-top: 15px;
+
+            @media(min-width: 767px) {
+                position: absolute;
+                width: 6vw;
+                max-width: 80px;
+                margin: 0;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    #diamond-5-in-1-1 {
+        order: 2;
+        @media(min-width: 767px) {
+            left: 40%;
+            top: 0;
+        }
+
+        @media(min-width: $xlg) {
+            left: 50%;
+            top: 0%;  
+        }
+        
+    }
+
+    #diamond-5-in-1-2 {
+        order: 3;
+        @media(min-width: 767px) {
+            left: 17%;
+            top: 15.5%;
+        }
+
+        @media(min-width: $xlg) {
+            left: 30%;
+            top: 12%;
+        }
+    }
+
+    #diamond-5-in-1-3 {
+        order: 4;
+        z-index: 10;
+        @media(min-width: 767px) {
+            left: 40%;
+            top: 31%;
+        }
+
+        @media(min-width: $xlg) {
+            left: 50%;
+            top: 24%;
+        }
+
+        .diamond__image {
+            max-width: 40px;
+
+            @media(min-width: 767px) {
+                max-width: 30px;
+            }
+
+            @media(min-width: $lg) {
+                max-width: 50px;
+            }
+
+            @media(min-width: $xlg) {
+                max-width: 60px;
+            }
+        }
+    }
+    
+    #diamond-5-in-1-4 {
+        order: 1;
+        width: 100%;
+        background-color: $white;
+        border: 2px solid $brand-color;
+
+        @media(min-width: 767px) {
+            left: 9.3%;
+            top: 48.7%;
+            max-width: 300px;
+            max-height: 300px;
+            width: 21.2vw;
+            height: 21.2vw;
+            border: none;
+            background-color: $brand-color;
+        }
+
+        @media(min-width: $xlg) {
+            left: 18.5%;
+            top: 39%;
+        }
+
+        .diamond__large-text {
+            @media(min-width: 767px) {
+                width: 100%;
+                left: 15%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            
+            p {
+                display: flex;
+                align-items: center;
+                font-size: 400px;
+
+                @include responsive-font-size (
+                    $min-font-size: 60px,
+                    $max-font-size: 400px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+
+                span {
+                    font-size: 25px;
+
+                    @media(min-width: 767px) {
+                        font-size: 50px;
+                    }
+
+                    &.large {
+                        color: $sec-brand-color;
+                        font-size: 400px;
+
+                        @media(min-width: 767px) {
+                            color: $white;
+                            text-shadow: 0px 0px 10px $brand-color;
+                        }
+
+                        @include responsive-font-size (
+                            $min-font-size: 60px,
+                            $max-font-size: 400px,
+                            $min-screen-width: 767px,
+                            $max-screen-width: 1250px,
+                            $font-size-step: 0.1px
+                        );
+
+                        @media(min-width: $lg) {
+                            color: $brand-color;
+                            text-shadow: 0px 0px 10px $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #diamond-5-in-1-5 {
+        order: 5;
+        @media(min-width: 767px) {
+            left: -6.5%;
+            top: 76.5%;
+        }
+
+        @media(min-width: $xlg) {
+            left: 10%;
+            top: 68%;
+        }
+    }
+
+    #diamond-5-in-1-6 {
+        order: 7;
+        @media(min-width: 767px) {
+            left: 40%;
+            top: 76.3%;
+        }
+
+        @media(min-width: $xlg) {
+            left: 50%;
+            top: 68%;
+        }
+
+        .diamond__small-text {
+            @media(min-width: 767px) {
+                transform: translate(50%,50%) rotate(0deg);
+            }
+
+            p {
+                font-family: $condensed;
+                font-size: 19px;
+                font-weight: 700;
+
+                @include responsive-font-size (
+                    $min-font-size: 15px,
+                    $max-font-size: 19px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+    }
+
+    #diamond-5-in-1-7 {
+        order: 6;
+        @media(min-width: 767px) {
+            left: 17%;
+            top: 92%;
+        }
+
+        @media(min-width: $xlg) {
+            left: 30%;
+            top: 80%;
+        }
+
+        .diamond__image {
+            max-width: 55px;
+
+            @media(min-width: 767px) {
+                max-width: 40px;
+            }
+
+            @media(min-width: $lg) {
+                max-width: 50px;
+            }
+
+            @media(min-width: $xlg) {
+                max-width: 60px;
+            }
+        }
+    }
+}
+
+.hide-tablet {
+    display: none;
+
+    @media(min-width: $lg) {
+        display: block;
+    }
+}
+
+
+.mobile-only {
+    @media(min-width: 767px) {
+        display: none;
+    }
+}
+
+
+
+//test stuff
+// .diamond-text {
+//     &__wrapper {
+//         display: flex;
+//         flex-wrap: wrap;
+        
+//         @media(min-width: 767px) {
+//             padding-bottom: 120px;
+//         }
+
+//         @media(min-width: $xlg) {
+//             padding-bottom: 0px;
+//         }
+//     }
+
+//     &__text,
+//     &__diamonds {
+//         width: 100%;
+
+//         @media(min-width: 767px) {
+//             width: 50%;
+//         }
+//     }
+
+//     &__text {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+
+//         @media(min-width: 767px) {
+//             padding-right: 60px;
+//         }
+//     }
+
+//     &__title {
+//         h3 {
+//             color: $sec-brand-color;
+//             font-size: 40px;
+
+//             @media(min-width: $lg) {
+//                 font-size: 60px;
+//             }
+//         }
+//     }
+
+//     &__content {
+//         p {
+//             &.title {
+//                 color: $sec-brand-color;
+//                 font-weight: 700;
+//                 margin-bottom: 5px;
+//                 font-family: $condensed;
+//                 font-size: 22px;
+//             }
+
+//             &.smaller-margin {
+//                 margin-bottom: 10px;
+//             }
+//         }
+//     }
+// }
+
+// .diamonds-5-in-1 {
+//     position: relative;
+//     width: 340px;
+//     // padding: 20px 0px;
+//     // display: flex;
+//     // justify-content: space-between;
+//     // flex-wrap: wrap;
+
+//     // @media(min-width: 767px) {
+//         height: 70vw;
+//         padding-top: 100px;
+//         padding-bottom: 100px;
+//         max-height: 1000px;
+//         margin: 30px auto 85px;
+//         display: block;
+//     // }
+
+//     @media(min-width: 767px) {
+//         width: 100%;
+//         margin: 50px 0px;
+//     }
+
+//     &--mobile {
+//         .diamond__small-text {
+//             p, span{
+//                 font-size: 11px !important; //overwrite responsive font for mobile layout - class added on width js detection
+//             }
+//         }
+//     }
+
+
+//     .diamond {
+//         background-color: $sec-brand-color;
+//         // width: 100%;
+//         // margin-bottom: 10px;
+//         // padding: 10px;
+//         // display: flex;
+//         // align-items: center;
+
+//         // @media(min-width: 400px) {
+//         //     width: calc(50% - 10px);
+//         // }
+
+//         // @media(min-width: 767px) {
+//             position: absolute;
+//             transform: rotate(-45deg);
+//             max-width: 200px;
+//             max-height: 200px;
+//             width: 14.2vw;
+//             height: 14.2vw;
+//             margin-bottom: 0px;
+//             padding: 0px;
+//             display: block;
+//         // }
+
+//         @media(min-width: $xlg) {
+//             max-width: 160px;
+//             max-height: 160px;
+//             width: 11vw;
+//             height: 11vw;
+//         }
+
+//         &__wrapper {
+//             margin: 0 auto;
+//             padding: 20px;
+
+//             // @media(min-width: 767px) {
+//                 transform: rotate(45deg);
+//                 position: relative;
+//                 padding: 47px;
+//                 width: 100%;
+//                 height: 100%;
+//             // }
+//         }
+
+//         &__large-text {
+//             text-align: center;
+
+//             // @media(min-width: 767px) {
+//                 position: absolute;
+//                 text-align: left;
+//             // }
+            
+//             p {
+//                 margin: 0;
+//                 line-height: 1;
+//                 color: white;
+//             }
+//         }
+
+//         &__small-text {
+//             text-align: center;
+//             padding: 0px 5px;
+//             // @media(min-width: 767px) {
+//                 position: absolute;
+//                 bottom: 50%;
+//                 right: 50%;
+//                 transform: translate(50%, 50%) rotate(-45deg) translateY(4.5vw);
+//                 width: 100%;
+//                 text-align: center;
+//             // }
+
+//             @media(min-width: $xl) {
+//                 transform: translate(50%, 50%) rotate(-45deg) translateY(60px);
+//             }
+
+//             p {
+//                 margin: 0;
+//                 line-height: 1;
+//                 color: white;
+//                 font-size: 13px;
+//                 @include responsive-font-size (
+//                     $min-font-size: 11.5px,
+//                     $max-font-size: 13px,
+//                     $min-screen-width: 767px,
+//                     $max-screen-width: 1250px,
+//                     $font-size-step: 0.1px
+//                 );
+//             }
+//         }
+
+//         &__image {
+//             width: 80px;
+//             margin: 0 auto;
+//             margin-top: 15px;
+
+//             // @media(min-width: 767px) {
+//                 position: absolute;
+//                 width: 6vw;
+//                 max-width: 80px;
+//                 margin: 0;
+//                 left: 50%;
+//                 top: 50%;
+//                 transform: translate(-50%, -50%);
+//             // }
+//         }
+//     }
+
+//     #diamond-5-in-1-1 {
+//         order: 2;
+//         // @media(min-width: 767px) {
+//             left: 40%;
+//             top: 0;
+//         // }
+
+//         @media(min-width: $xlg) {
+//             left: 50%;
+//             top: 0%;  
+//         }
+        
+//     }
+
+//     #diamond-5-in-1-2 {
+//         order: 3;
+//         // @media(min-width: 767px) {
+//             left: 17%;
+//             top: 15.5%;
+//         // }
+
+//         @media(min-width: $xlg) {
+//             left: 30%;
+//             top: 12%;
+//         }
+//     }
+
+//     #diamond-5-in-1-3 {
+//         order: 4;
+//         // @media(min-width: 767px) {
+//             left: 40%;
+//             top: 31%;
+//         // }
+
+//         @media(min-width: $xlg) {
+//             left: 50%;
+//             top: 24%;
+//         }
+
+//         .diamond__image {
+//             max-width: 40px;
+
+//             // @media(min-width: 767px) {
+//                 max-width: 30px;
+//             // }
+
+//             @media(min-width: $lg) {
+//                 max-width: 50px;
+//             }
+
+//             @media(min-width: $xlg) {
+//                 max-width: 60px;
+//             }
+//         }
+//     }
+    
+//     #diamond-5-in-1-4 {
+//         order: 1;
+//         background-color: $brand-color;
+//         width: 100%;
+
+//         // @media(min-width: 767px) {
+//             left: 9.3%;
+//             top: 48.7%;
+//             max-width: 300px;
+//             max-height: 300px;
+//             width: 21.2vw;
+//             height: 21.2vw;
+//         // }
+
+//         @media(min-width: $xlg) {
+//             left: 18.5%;
+//             top: 39%;
+//         }
+
+//         .diamond__large-text {
+//             // @media(min-width: 767px) {
+//                 width: 100%;
+//                 left: 15%;
+//                 top: 50%;
+//                 transform: translateY(-50%);
+//             // }
+            
+//             p {
+//                 display: flex;
+//                 align-items: center;
+//                 font-size: 400px;
+
+//                 @include responsive-font-size (
+//                     $min-font-size: 60px,
+//                     $max-font-size: 400px,
+//                     $min-screen-width: 767px,
+//                     $max-screen-width: 1250px,
+//                     $font-size-step: 0.1px
+//                 );
+
+//                 span {
+//                     font-size: 25px;
+
+//                     @media(min-width: 767px) {
+//                         font-size: 50px;
+//                     }
+
+//                     &.large {
+//                         color: $white;
+//                         text-shadow: 0px 0px 10px $brand-color;
+//                         font-size: 400px;
+
+//                         @include responsive-font-size (
+//                             $min-font-size: 60px,
+//                             $max-font-size: 400px,
+//                             $min-screen-width: 767px,
+//                             $max-screen-width: 1250px,
+//                             $font-size-step: 0.1px
+//                         );
+
+//                         @media(min-width: $lg) {
+//                             color: $brand-color;
+//                             text-shadow: 0px 0px 10px $white;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     #diamond-5-in-1-5 {
+//         order: 5;
+//         // @media(min-width: 767px) {
+//             left: -6.5%;
+//             top: 76.5%;
+//         // }
+
+//         @media(min-width: $xlg) {
+//             left: 10%;
+//             top: 68%;
+//         }
+//     }
+
+//     #diamond-5-in-1-6 {
+//         order: 7;
+//         // @media(min-width: 767px) {
+//             left: 40%;
+//             top: 76.3%;
+//         // }
+
+//         @media(min-width: $xlg) {
+//             left: 50%;
+//             top: 68%;
+//         }
+
+//         .diamond__small-text {
+//             // @media(min-width: 767px) {
+//                 transform: translate(50%,50%) rotate(0deg);
+//             // }
+
+//             p {
+//                 font-family: $condensed;
+//                 font-size: 19px;
+//                 font-weight: 700;
+
+//                 @include responsive-font-size (
+//                     $min-font-size: 15px,
+//                     $max-font-size: 19px,
+//                     $min-screen-width: 767px,
+//                     $max-screen-width: 1250px,
+//                     $font-size-step: 0.1px
+//                 );
+//             }
+//         }
+//     }
+
+//     #diamond-5-in-1-7 {
+//         order: 6;
+//         // @media(min-width: 767px) {
+//             left: 17%;
+//             top: 92%;
+//         // }
+
+//         @media(min-width: $xlg) {
+//             left: 30%;
+//             top: 80%;
+//         }
+
+//         .diamond__image {
+//             max-width: 30px;
+
+//             @media(min-width: 767px) {
+//                 max-width: 40px;
+//             }
+
+//             @media(min-width: $lg) {
+//                 max-width: 50px;
+//             }
+
+//             @media(min-width: $xlg) {
+//                 max-width: 60px;
+//             }
+//         }
+//     }
+// }
+
+// .hide-tablet {
+//     display: none;
+
+//     @media(min-width: $lg) {
+//         display: block;
+//     }
+// }
+
+
+// .mobile-only {
+//     @media(min-width: 767px) {
+//         display: none;
+//     }
+// }
+
+// diamonds-culture.scss
+
+.diamonds-culture {
+    position: relative;
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media(min-width: 767px) {
+        height: 70vw;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        max-height: 800px;
+        margin: 100px 0px 50px;
+        display: block;
+    }
+
+    &--mobile {
+        .diamond__small-text {
+            p, span{
+                font-size: 17px !important; //overwrite responsive font for mobile layout - class added on width js detection
+            }
+        }
+    }
+
+
+    .diamond {
+        background-color: $brand-color;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+
+        @media(min-width: 400px) {
+            width: calc(50% - 5px);
+        }
+
+        @media(min-width: 767px) {
+            position: absolute;
+            transform: rotate(-45deg);
+            max-width: 350px;
+            max-height: 350px;
+            width: 24.2vw;
+            height: 24.2vw;
+            margin-bottom: 0px;
+            padding: 0px;
+            display: block;
+        }
+
+        @media(min-width: 1250px) {
+            max-width: 300px;
+            max-height: 300px;
+            width: 23.2vw;
+            height: 23.2vw;
+        }
+
+        @media(min-width: 1400px) {
+            max-width: 300px;
+            max-height: 300px;
+            width: 21.2vw;
+            height: 21.2vw;
+        }
+
+        &__wrapper {
+            margin: 0 auto;
+            padding: 20px;
+
+            @media(min-width: 767px) {
+                transform: rotate(45deg);
+                position: relative;
+                padding: 15px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            img {
+                width: 100%;
+                max-width: 40px;
+                margin: 0 auto;
+                margin-bottom: 10px;
+
+                @media(min-width: $lg) {
+                    max-width: 70px;
+                }
+            }
+        }
+
+        &__med-text {
+            text-align: center;
+            
+            p {
+                margin: 0;
+                line-height: 1;
+                color: white;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-family: $condensed;
+                text-align: center;
+                font-size: 30px;
+
+                @include responsive-font-size (
+                    $min-font-size: 18px,
+                    $max-font-size: 30px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        &__small-text {
+            text-align: center;
+            padding: 0px 5px;
+
+            @media(min-width: 767px) {
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            p {
+                margin: 0;
+                line-height: 1;
+                color: white;
+                font-size: 13px;
+                @include responsive-font-size (
+                    $min-font-size: 13px,
+                    $max-font-size: 16px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+    }
+
+    #diamond-culture-1 {
+        order: 1;
+
+        @media(max-width: 767px) {
+            width: 100%;
+        }
+
+        @media(min-width: 767px) {
+            left: 6%;
+            top: 25.5%;
+            transform: rotate(-45deg);
+            max-width: 350px;
+            max-height: 350px;
+            width: 24.2vw;
+            height: 24.2vw;
+            background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 329.1 329.1' style='enable-background:new 0 0 329.1 329.1;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bopacity:0.29;clip-path:url(%23SVGID_2_);%7D .st1%7Bclip-path:url(%23SVGID_4_);fill:%23366883;%7D .st2%7Bclip-path:url(%23SVGID_6_);fill:%23366883;%7D%0A%3C/style%3E%3Cg%3E%3Cdefs%3E%3Crect id='SVGID_1_' x='-82' y='-111.3' transform='matrix(0.7071 -0.7071 0.7071 0.7071 -60.4654 168.6889)' width='510.7' height='537.2'/%3E%3C/defs%3E%3CclipPath id='SVGID_2_'%3E%3Cuse xlink:href='%23SVGID_1_' style='overflow:visible;'/%3E%3C/clipPath%3E%3Cg class='st0'%3E%3Cg%3E%3Cdefs%3E%3Crect id='SVGID_3_' x='-69.6' y='-69.6' transform='matrix(0.7071 -0.7071 0.7071 0.7071 -68.1555 164.5401)' width='468.2' height='468.2'/%3E%3C/defs%3E%3CclipPath id='SVGID_4_'%3E%3Cuse xlink:href='%23SVGID_3_' style='overflow:visible;'/%3E%3C/clipPath%3E%3Cpolygon class='st1' points='0,329.1 329.1,329.1 329.1,195.8 266.6,195.8 266.6,266.6 62.5,266.6 62.5,62.5 266.6,62.5 266.6,133.3 329.1,133.3 329.1,0 0,0 '/%3E%3C/g%3E%3C/g%3E%3Cg class='st0'%3E%3Cg%3E%3Cdefs%3E%3Crect id='SVGID_5_' x='175.6' y='113.1' transform='matrix(0.7071 -0.7071 0.7071 0.7071 -49.842 208.7547)' width='102.9' height='102.9'/%3E%3C/defs%3E%3CclipPath id='SVGID_6_'%3E%3Cuse xlink:href='%23SVGID_5_' style='overflow:visible;'/%3E%3C/clipPath%3E%3Cpolygon class='st2' points='187.6,195.8 266.6,195.8 266.5,133.3 187.6,133.3 '/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        @media(min-width: 1300px) {
+            left: 4%;
+            top: 23.5%;
+        }
+
+        @media(min-width: 1400px) {
+            left: 2%;
+            top: 22.5%;
+        }
+
+        .diamond__wrapper {
+            // @media(min-width: 767px) {
+            //     padding: 30px;
+            // }
+
+            // @media(min-width: $lg) {
+            //     padding: 30px 10px 30px 80px;
+            // }
+        }
+    }
+
+    #diamond-culture-2 {
+        order: 2;
+        @media(min-width: 767px) {
+            left: 17%;
+            top: 15.5%;
+        }
+
+        @media(min-width: 767px) {
+            left: 29%;
+            top: 2%;
+        }
+    }
+
+    #diamond-culture-3 {
+        order: 3;
+        @media(min-width: 767px) {
+            left: 40%;
+            top: 31%;
+        }
+
+        @media(min-width: 767px) {
+            left: 26%;
+            top: 53%;
+        }
+
+        .diamond__image {
+            max-width: 40px;
+
+            @media(min-width: 767px) {
+                max-width: 30px;
+            }
+
+            @media(min-width: $lg) {
+                max-width: 50px;
+            }
+
+            @media(min-width: 767px) {
+                max-width: 60px;
+            }
+        }
+    }
+    
+    #diamond-culture-4 {
+        order: 4;
+        // background-color: $brand-color;
+
+        @media(min-width: 767px) {
+            left: 9.3%;
+            top: 48.7%;
+        }
+
+        @media(min-width: 767px) {
+            left: 48%;
+            top: 30%;
+        }
+
+        .diamond__large-text {
+            @media(min-width: 767px) {
+                width: 100%;
+                left: 15%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            
+            p {
+                display: flex;
+                align-items: center;
+                font-size: 400px;
+
+                @include responsive-font-size (
+                    $min-font-size: 60px,
+                    $max-font-size: 400px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+
+                span {
+                    font-size: 25px;
+
+                    @media(min-width: 767px) {
+                        font-size: 50px;
+                    }
+
+                    &.large {
+                        color: $white;
+                        text-shadow: 0px 0px 10px $brand-color;
+                        font-size: 400px;
+
+                        @include responsive-font-size (
+                            $min-font-size: 60px,
+                            $max-font-size: 400px,
+                            $min-screen-width: 767px,
+                            $max-screen-width: 1250px,
+                            $font-size-step: 0.1px
+                        );
+
+                        @media(min-width: $lg) {
+                            color: $brand-color;
+                            text-shadow: 0px 0px 10px $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #diamond-culture-5 {
+        order: 5;
+        @media(min-width: 767px) {
+            left: -6.5%;
+            top: 76.5%;
+        }
+
+        @media(min-width: 767px) {
+            left: 72%;
+            top: 9.5%;
+        }
+    }
+
+    #diamond-culture-6 {
+        order: 6;
+
+        @media(max-width: 767px) {
+            width: 100%;
+        }
+
+        @media(min-width: 767px) {
+            left: 40%;
+            top: 76.3%;
+            background-color: $sec-brand-color;
+            background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 329.1 329.1' style='enable-background:new 0 0 329.1 329.1;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bopacity:0.29;clip-path:url(%23SVGID_2_);%7D .st1%7Bclip-path:url(%23SVGID_4_);fill:%23366883;%7D .st2%7Bclip-path:url(%23SVGID_6_);fill:%23366883;%7D%0A%3C/style%3E%3Cg%3E%3Cdefs%3E%3Crect id='SVGID_1_' x='-82' y='-111.3' transform='matrix(0.7071 -0.7071 0.7071 0.7071 -60.4654 168.6889)' width='510.7' height='537.2'/%3E%3C/defs%3E%3CclipPath id='SVGID_2_'%3E%3Cuse xlink:href='%23SVGID_1_' style='overflow:visible;'/%3E%3C/clipPath%3E%3Cg class='st0'%3E%3Cg%3E%3Cdefs%3E%3Crect id='SVGID_3_' x='-69.6' y='-69.6' transform='matrix(0.7071 -0.7071 0.7071 0.7071 -68.1555 164.5401)' width='468.2' height='468.2'/%3E%3C/defs%3E%3CclipPath id='SVGID_4_'%3E%3Cuse xlink:href='%23SVGID_3_' style='overflow:visible;'/%3E%3C/clipPath%3E%3Cpolygon class='st1' points='0,329.1 329.1,329.1 329.1,195.8 266.6,195.8 266.6,266.6 62.5,266.6 62.5,62.5 266.6,62.5 266.6,133.3 329.1,133.3 329.1,0 0,0 '/%3E%3C/g%3E%3C/g%3E%3Cg class='st0'%3E%3Cg%3E%3Cdefs%3E%3Crect id='SVGID_5_' x='175.6' y='113.1' transform='matrix(0.7071 -0.7071 0.7071 0.7071 -49.842 208.7547)' width='102.9' height='102.9'/%3E%3C/defs%3E%3CclipPath id='SVGID_6_'%3E%3Cuse xlink:href='%23SVGID_5_' style='overflow:visible;'/%3E%3C/clipPath%3E%3Cpolygon class='st2' points='187.6,195.8 266.6,195.8 266.5,133.3 187.6,133.3 '/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        @media(min-width: 767px) {
+            left: 67%;
+            top: 58%;
+        }
+
+        .diamond__small-text {
+            @media(min-width: 767px) {
+                transform: translate(50%,50%) rotate(0deg);
+            }
+
+            p {
+                font-family: $condensed;
+                font-size: 19px;
+                font-weight: 700;
+
+                @include responsive-font-size (
+                    $min-font-size: 15px,
+                    $max-font-size: 19px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+    }
+}
+
+.hide-tablet {
+    display: none;
+
+    @media(min-width: $lg) {
+        display: block;
+    }
+}
+
+
+.mobile-only {
+    @media(min-width: 767px) {
+        display: none;
+    }
+}
+
+// diamonds-mission.scss
+
+.diamonds-mission {
+    position: relative;
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media(min-width: 767px) {
+        height: 70vw;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        max-height: 800px;
+        margin: 100px 0px 50px;
+        display: block;
+    }
+
+    &--mobile {
+        .diamond__small-text {
+            p, span{
+                font-size: 17px !important; //overwrite responsive font for mobile layout - class added on width js detection
+            }
+        }
+    }
+
+
+    .diamond {
+        background-color: $sec-brand-color;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+
+        @media(min-width: 400px) {
+            width: calc(50% - 5px);
+        }
+
+        @media(min-width: 767px) {
+            position: absolute;
+            transform: rotate(-45deg);
+            max-width: 250px;
+            max-height: 250px;
+            width: 18.2vw;
+            height: 18.2vw;
+            margin-bottom: 0px;
+            padding: 0px;
+            display: block;
+        }
+
+        &__wrapper {
+            margin: 0 auto;
+            padding: 20px;
+
+            @media(min-width: 767px) {
+                transform: rotate(45deg);
+                position: relative;
+                padding: 15px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            img {
+                width: 100%;
+                max-width: 40px;
+                margin: 0 auto;
+                margin-bottom: 10px;
+
+                @media(min-width: $lg) {
+                    max-width: 70px;
+                }
+            }
+        }
+
+        &__med-text {
+            text-align: center;
+            
+            p {
+                margin: 0;
+                line-height: 1;
+                color: white;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-family: $condensed;
+                text-align: center;
+                font-size: 30px;
+
+                @include responsive-font-size (
+                    $min-font-size: 18px,
+                    $max-font-size: 30px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        &__small-text {
+            text-align: center;
+            padding: 0px 5px;
+
+            @media(min-width: 767px) {
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            p {
+                margin: 0;
+                line-height: 1;
+                color: white;
+                font-size: 13px;
+                @include responsive-font-size (
+                    $min-font-size: 13px,
+                    $max-font-size: 16px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+    }
+
+    #diamond-mission-1 {
+        order: 1;
+
+        @media(max-width: 767px) {
+            width: 100%;
+        }
+
+        @media(min-width: 767px) {
+            left: 6%;
+            top: 40.5%;
+            transform: rotate(-45deg);
+            max-width: 350px;
+            max-height: 350px;
+            width: 24.2vw;
+            height: 24.2vw;
+            background-image: url("https://bigchangev3.proactivecode.com/wp-content/uploads/2021/06/bg-icon-mission-smaller.svg");
+            background-size: 65px;
+            background-color: $mission;
+        }
+
+        @media(min-width: $lg) {
+            background-size: 115px;
+        }
+    }
+
+    #diamond-mission-2 {
+        order: 2;
+
+        @media(min-width: 767px) {
+            left: 15.5%;
+            top: 0%;
+        }
+    }
+
+    #diamond-mission-3 {
+        order: 3;
+
+        @media(min-width: 767px) {
+            left: 30.5%;
+            top: 23.5%;
+        }
+
+        .diamond__image {
+            max-width: 40px;
+
+            @media(min-width: 767px) {
+                max-width: 30px;
+            }
+
+            @media(min-width: $lg) {
+                max-width: 50px;
+            }
+        }
+    }
+    
+    #diamond-mission-4 {
+        order: 4;
+
+        @media(min-width: 767px) {
+            left: 45.5%;
+            top: 0%;
+        }
+    }
+
+    #diamond-mission-5 {
+        order: 5;
+
+        @media(min-width: 767px) {
+            left: 30.5%;
+            top: 70%;
+            background-color: $brand-color;
+        }
+    }
+
+    #diamond-mission-6 {
+        order: 6;
+
+        @media(min-width: 767px) {
+            left: 45.5%;
+            top: 46.5%;
+        }
+    }
+
+    #diamond-mission-7 {
+        order: 7;
+
+        @media(min-width: 767px) {
+            left: 60.5%;
+            top: 23.5%;
+        }
+    }
+
+    #diamond-mission-8 {
+        order: 8;
+
+        @media(max-width: 767px) {
+            width: 100%;
+        }
+
+        @media(min-width: 767px) {
+            left: 61%;
+            top: 67%;
+            max-width: 300px;
+            max-height: 300px;
+            width: 21.2vw;
+            height: 21.2vw;
+            background-color: $mission;
+            background-image: url("https://bigchangev3.proactivecode.com/wp-content/uploads/2021/06/bg-icon-mission-smaller.svg");
+            background-size: 55px;
+        }
+
+        @media(min-width: $lg) {
+            background-size: 100px;
+        }
+    }
+}
+
+.hide-tablet {
+    display: none;
+
+    @media(min-width: $lg) {
+        display: block;
+    }
+}
+
+
+.mobile-only {
+    @media(min-width: 767px) {
+        display: none;
+    }
+}
+
+// diamonds-onboarding 
+
+.diamonds-onboarding {
+    position: relative;
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media(min-width: 767px) {
+        height: 70vw;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        max-height: 800px;
+        margin: 100px 0px 50px;
+        display: block;
+    }
+
+    &--mobile {
+        .diamond__small-text {
+            p, span{
+                font-size: 17px !important; //overwrite responsive font for mobile layout - class added on width js detection
+            }
+        }
+    }
+
+
+    .diamond {
+        background-color: $sec-brand-color;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+
+        @media(min-width: 400px) {
+            width: calc(50% - 5px);
+        }
+
+        @media(min-width: 767px) {
+            position: absolute;
+            transform: rotate(-45deg);
+            max-width: 250px;
+            max-height: 250px;
+            width: 18.2vw;
+            height: 18.2vw;
+            margin-bottom: 0px;
+            padding: 0px;
+            display: block;
+        }
+
+        // @media(min-width: 1250px) {
+        //     max-width: 250px;
+        //     max-height: 250px;
+        //     width: 23.2vw;
+        //     height: 23.2vw;
+        // }
+
+        // @media(min-width: 1400px) {
+        //     max-width: 250px;
+        //     max-height: 250px;
+        //     width: 18.2vw;
+        //     height: 18.2vw;
+        // }
+
+        &__wrapper {
+            margin: 0 auto;
+            padding: 20px;
+
+            @media(min-width: 767px) {
+                transform: rotate(45deg);
+                position: relative;
+                padding: 15px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            img {
+                width: 100%;
+                max-width: 40px;
+                margin: 0 auto;
+                margin-bottom: 10px;
+
+                @media(min-width: $lg) {
+                    max-width: 70px;
+                }
+            }
+        }
+
+        &__med-text {
+            text-align: center;
+            
+            p {
+                margin: 0;
+                line-height: 1;
+                color: white;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-family: $condensed;
+                text-align: center;
+                font-size: 30px;
+
+                @include responsive-font-size (
+                    $min-font-size: 18px,
+                    $max-font-size: 30px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+
+        &__small-text {
+            text-align: center;
+            padding: 0px 5px;
+
+            @media(min-width: 767px) {
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            p {
+                margin: 0;
+                line-height: 1;
+                color: white;
+                font-size: 13px;
+                @include responsive-font-size (
+                    $min-font-size: 13px,
+                    $max-font-size: 16px,
+                    $min-screen-width: 767px,
+                    $max-screen-width: 1250px,
+                    $font-size-step: 0.1px
+                );
+            }
+        }
+    }
+
+    #diamond-onboarding-1 {
+        order: 1;
+
+        @media(min-width: 767px) {
+            left: 2%;
+            top: 19.5%;
+        }
+
+        // @media(min-width: 1200px) {
+        //     left: 6%;
+        //     top: 25.5%;
+        // }
+
+        @media(min-width: 1200px) {
+            left: 1%;
+            top: 23.5%;
+        }
+    }
+
+    #diamond-onboarding-2 {
+        order: 7;
+
+        @media(min-width: 767px) {
+            left: 16%;
+            top: 0%;
+            overflow:hidden;
+        }
+
+        .diamond__wrapper {
+            padding: 0px;
+        }
+
+        .diamond__wrapper img {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            max-width: none;
+
+            @media(min-width: 767px) {
+                width: 140%;
+                height: 140%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    #diamond-onboarding-3 {
+        order: 2;
+
+        @media(min-width: 767px) {
+            left: 16%;
+            top: 39%;
+            overflow: hidden;
+            background-color: $new-blue;
+        }
+
+        @media(min-width: 1200px) {
+            left: 16%;
+            top: 46.5%;
+        }
+    }
+    
+    #diamond-onboarding-4 {
+        order: 3;
+
+        @media(min-width: 767px) {
+            left: 30%;
+            top: 19.5%;
+        }
+
+        @media(min-width: 1200px) {
+            left: 31%;
+            top: 23.5%;
+        }
+    }
+
+    #diamond-onboarding-5 {
+        order: 8;
+
+        @media(min-width: 767px) {
+            left: 44%;
+            top: 39.5%;
+            overflow: hidden;
+        }
+
+        @media(min-width: 1200px) {
+            left: 46%;
+            top: 46.5%;
+        }
+
+        .diamond__wrapper {
+            padding: 0px;
+        }
+
+        .diamond__wrapper img {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            max-width: none;
+
+            @media(min-width: 767px) {
+                width: 140%;
+                height: 140%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    #diamond-onboarding-6 {
+        order: 4;
+
+        @media(min-width: 767px) {
+            left: 58%;
+            top: 19.5%;
+        }
+
+        @media(min-width: 1200px) {
+            left: 61%;
+            top: 23.5%;
+        }
+    }
+
+    #diamond-onboarding-7 {
+        order: 5;
+        @media(min-width: 767px) {
+            left: 71.5%;
+            top: 0.5%;
+            background-color: $new-blue;
+        }
+
+        @media(min-width: 1200px) {
+            left: 76%;
+            top: 0.5%;
+        }
+    }
+
+    #diamond-onboarding-8 {
+        order: 6;
+        @media(min-width: 767px) {
+            left: 44%;
+            top: 0.5%;
+            background-color: $new-blue;
+        }
+
+        @media(min-width: 1200px) {
+            left: 46%;
+            top: 0.5%;
+        }
+    }
+}
+
+.hide-tablet {
+    display: none;
+
+    @media(min-width: $lg) {
+        display: block;
+    }
+}
+
+
+.mobile-only {
+    @media(min-width: 767px) {
+        display: none;
+    }
+}
+
+// layout.scss
+
+html body.cyprus-override {
+
+.diamonds {    
+        #diamond-1 {    
+            .diamond__small-text {
+                p {
+                    font-size: 20px;
+                    @include responsive-font-size (
+                        $min-font-size: 11px,
+                        $max-font-size: 14px,
+                        $min-screen-width: 767px,
+                        $max-screen-width: 1250px,
+                        $font-size-step: 0.1px
+                    );
+                }
+            }
+        }
+    
+        #diamond-2 {
+    
+            .diamond__small-text {
+                left: 39%;
+
+                @media(min-width: $lg) {
+                    left: 50%;
+                }
+
+                p {
+                    @include responsive-font-size (
+                        $min-font-size: 11px,
+                        $max-font-size: 16px,
+                        $min-screen-width: 767px,
+                        $max-screen-width: 1250px,
+                        $font-size-step: 0.1px
+                    );
+                }
+            }
+        }
+    
+        #diamond-3 {
+    
+            .diamond__large-text {
+                p {
+                    @include responsive-font-size (
+                        $min-font-size: 40px,
+                        $max-font-size: 100px,
+                        $min-screen-width: 767px,
+                        $max-screen-width: 1250px,
+                        $font-size-step: 0.1px
+                    );
+                }
+            }
+    
+            .diamond__med-text {
+                @media(min-width: 767px) {
+                    left: 23%;
+                }
+
+                @media(min-width: $lg) {
+                    left: 40%;
+                }
+
+                p {
+                    @include responsive-font-size (
+                        $min-font-size: 10px,
+                        $max-font-size: 14px,
+                        $min-screen-width: 767px,
+                        $max-screen-width: 1250px,
+                        $font-size-step: 0.1px
+                    );
+                }
+    
+                span {
+                    @include responsive-font-size (
+                        $min-font-size: 10px,
+                        $max-font-size: 14px,
+                        $min-screen-width: 767px,
+                        $max-screen-width: 1250px,
+                        $font-size-step: 0.1px
+                    );
+                }
+            }
+    
+            .diamond__small-text {
+                @media(min-width: 767px) {
+                    left: 23%;
+                    top: 55%;
+                }
+
+                @media(min-width: $lg) {
+                    left: 40%;
+                }
+                p {
+                    @include responsive-font-size (
+                        $min-font-size: 10px,
+                        $max-font-size: 14px,
+                        $min-screen-width: 767px,
+                        $max-screen-width: 1250px,
+                        $font-size-step: 0.1px
+                    );
+                }
+            }
+        }
+    
+        #diamond-4 {
+            .diamond__large-text {
+                p {
+                    @include responsive-font-size (
+                        $min-font-size: 12px,
+                        $max-font-size: 24px,
+                        $min-screen-width: 767px,
+                        $max-screen-width: 1250px,
+                        $font-size-step: 0.1px
+                    );
+                }
+            }
+    
+            .diamond__small-text {
+                p {
+                    @include responsive-font-size (
+                        $min-font-size: 10px,
+                        $max-font-size: 14px,
+                        $min-screen-width: 767px,
+                        $max-screen-width: 1250px,
+                        $font-size-step: 0.1px
+                    );
+                }
+            }
+        }
+    
+        #diamond-5 {
+    
+            .diamond__med-text {
+                @media(min-width: 767px) {
+                    top: 22%;
+                    left: 20%;
+                    transform: rotate(-90deg);
+                }
+    
+                p {
+                    @include responsive-font-size (
+                        $min-font-size: 15px,
+                        $max-font-size: 22px,
+                        $min-screen-width: 767px,
+                        $max-screen-width: 1250px,
+                        $font-size-step: 0.1px
+                    );
+                }
+            }
+
+            .diamond__small-text {
+                @media(min-width: 767px) {
+                    top: 77%;
+                    left: 25%;
+                }
+
+                @media(min-width: $lg) {
+                    top: 84%;
+                }
+            }
+
+            .diamond__image {
+                top: 23%;
+                left: 65%;
+    
+                @media(min-width: $xlg) {
+                    max-width: 100px;
+                    width: 10vw;
+                }
+            }
+        }
+    
+        #diamond-6 {    
+            .diamond__med-text {
+                top: 36%;
+                p {
+                    @include responsive-font-size (
+                        $min-font-size: 16px,
+                        $max-font-size: 24px,
+                        $min-screen-width: 767px,
+                        $max-screen-width: 1250px,
+                        $font-size-step: 0.1px
+                    );
+                }
+            }
+
+            .diamond__small-text {
+                left: 19%;
+            }
+        }
+    
+        #diamond-7 {
+    
+            .diamond__med-text {
+    
+                p {
+                    @include responsive-font-size (
+                        $min-font-size: 10px,
+                        $max-font-size: 14px,
+                        $min-screen-width: 767px,
+                        $max-screen-width: 1250px,
+                        $font-size-step: 0.1px
+                    );
+                }
+            }
+    
+            .diamond__small-text {
+    
+                p {
+                    @include responsive-font-size (
+                        $min-font-size: 10px,
+                        $max-font-size: 14px,
+                        $min-screen-width: 767px,
+                        $max-screen-width: 1250px,
+                        $font-size-step: 0.1px
+                    );
+                }
+            }
+
+            .diamond__image {
+                max-width: 38px;
+
+                @media(min-width: $lg) {
+                    max-width: 85px;
+                }
+            }
+        }
+
+        #diamond-8 {
+    
+            .diamond__med-text {
+                top: 30%;
+
+                p {
+                    @include responsive-font-size (
+                        $min-font-size: 19px,
+                        $max-font-size: 30px,
+                        $min-screen-width: 767px,
+                        $max-screen-width: 1250px,
+                        $font-size-step: 0.1px
+                    );
+                }
+            }
+        }
+    
+        #diamond-9 {
+    
+            .diamond__med-text {
+                @media(min-width: $xlg) {
+                    left: 8%;
+                    text-align: left;
+                }
+
+                p {
+                    @include responsive-font-size (
+                        $min-font-size: 13px,
+                        $max-font-size: 18px,
+                        $min-screen-width: 767px,
+                        $max-screen-width: 1250px,
+                        $font-size-step: 0.1px
+                    );
+                }
+            }
+        }
+    
+    }
+
+    .diamonds-culture {
+        .diamond {
+            &__med-text {
+                p {
+                    font-size: 24px;
+    
+                    @include responsive-font-size (
+                        $min-font-size: 14px,
+                        $max-font-size: 24px,
+                        $min-screen-width: 767px,
+                        $max-screen-width: 1250px,
+                        $font-size-step: 0.1px
+                    );
+                }
+            }
+
+            &__small-text {
+                text-align: center;
+                padding: 0px 5px;
+    
+                @media(min-width: 767px) {
+                    padding: 0px 15px;
+                }
+    
+                p {
+                    font-size: 10.5px;
+                    @include responsive-font-size (
+                        $min-font-size: 10.5px,
+                        $max-font-size: 14px,
+                        $min-screen-width: 767px,
+                        $max-screen-width: 1250px,
+                        $font-size-step: 0.1px
+                    );
+                }
+            }
+        }
+    }
+
+}
+
+// languages.scss
+
+html:lang(fr-FR) {
+  
+
+      .diamonds #diamond-9 .diamond__med-text p {
+        @include responsive-font-size (
+            $min-font-size: 15px,
+            $max-font-size: 21px,
+            $min-screen-width: 767px,
+            $max-screen-width: 1250px,
+            $font-size-step: 0.1px
+        );
+    }
+
+    .diamond-columns__column p {
+        @media(min-width: $xlg) {
+            font-size: 20px;
+        }
+    }
+
+
+
+
+}
+
+body[data-lang="en"] {
+
+// diamonds 5 in 1
+
+    .diamond-text {
+        &__title {
+            h1,h2,h3,h4,h5,h6 {
+                color: $new-sec-brand-color;
+            }
+        }
+    
+        &__content {
+            p {
+                &.title {
+                    color: $new-sec-brand-color;
+                    font-family: $new-condensed;
+                }
+            }
+        }
+    }
+    
+    .diamonds-5-in-1 {
+        .diamond {
+            border: 2px solid $new-brand-color;
+    
+            @media(min-width: 767px) {
+                background-color: $new-sec-brand-color;
+                border: 2px solid $new-sec-brand-color;
+            }
+
+            &.diamond-clickable {
+                &:hover {
+                    .diamond__small-text p {
+                        color: $new-dark-blue;
+                    }
+                }
+            }
+    
+            &__large-text {
+                p {
+                    color: $new-sec-brand-color;
+                }
+            }
+    
+            &__small-text {    
+                p {
+                    color: $new-sec-brand-color;
+                }
+            }
+        }
+    
+        #diamond-5-in-1-4 {
+            border: 2px solid $new-brand-color;
+    
+            @media(min-width: 767px) {
+                background-color: $new-brand-color;
+            }
+    
+            .diamond__large-text {
+                p {
+                    span {
+                        &.large {
+                            color: $new-sec-brand-color;
+
+                            @media(min-width: 767px) {
+                                text-shadow: 0px 0px 10px $new-brand-color;
+                            }
+    
+                            @media(min-width: $lg) {
+                                color: $new-brand-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        #diamond-5-in-1-6 {
+            .diamond__small-text {
+                p {
+                    font-family: $new-condensed;
+                }
+            }
+        }
+    }
+
+    //dia culture
+
+    .diamonds-culture {    
+        .diamond {
+            background-color: $new-brand-color;
+    
+            &__med-text {
+                p {
+                    font-family: $new-condensed;
+                }
+            }
+        }
+
+        #diamond-culture-4 {
+            .diamond__large-text {
+                p {
+                    span {
+                        &.large {
+                            text-shadow: 0px 0px 10px $new-brand-color;
+    
+                            @media(min-width: $lg) {
+                                color: $new-brand-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        #diamond-culture-6 {
+            @media(min-width: 767px) {
+                background-color: $new-sec-brand-color;
+            }
+
+            .diamond__small-text {
+                p {
+                    font-family: $new-condensed;
+                }
+            }
+        }
+    }
+
+    //dia missions
+
+    .diamonds-mission {
+        .diamond {
+            background-color: $new-sec-brand-color;
+
+            &__med-text {
+                p {
+                    font-family: $new-condensed;
+                }
+            }
+        }
+
+        #diamond-mission-5 {
+            @media(min-width: 767px) {
+                background-color: $new-brand-color;
+            }
+        }
+    }
+
+
+
+}

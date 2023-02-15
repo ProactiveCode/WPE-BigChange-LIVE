@@ -82,6 +82,7 @@ function bindUIActions(){
 
 //// FUNCTIONS
 function getPosts(cats, locs, type) {
+    var url = window.location.href;
     $.ajax({
         url : "/wp-admin/admin-ajax.php",
         type : 'post',
@@ -90,6 +91,7 @@ function getPosts(cats, locs, type) {
             cats: cats,
             locs: locs,
             type: type,
+            url: url
         },
         dataType:'html',
         success : function(response) {    
@@ -101,4 +103,4 @@ function getPosts(cats, locs, type) {
             }, 200);            
         },
     });
-}
+} 

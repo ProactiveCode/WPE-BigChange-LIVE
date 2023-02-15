@@ -1,0 +1,458 @@
+.leeds-united-hospitality {
+    position: relative;
+    padding: 5px 0;
+    max-width: 1450px !important;
+
+    &__details {
+        p {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__top-graphic {
+        top: 0;
+        width: 100%;
+        max-width: 650px;
+        display: none;
+
+        @media(min-width: $md) {
+            display: unset;
+            position: absolute;
+            max-width: 400px;
+        }
+
+        @media(min-width: $lg) {
+            max-width: 550px;
+        }
+
+        @media(min-width: $xlg) {
+            max-width: 650px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 650px;
+        }
+    }
+
+    &__top-graphic-mobile {
+        top: 0;
+        width: calc(100% - 10px);
+        max-width: 650px;
+
+        @media(min-width: $md) {
+            display: none;
+        }
+    }
+
+    &__bottom-graphic {
+        bottom: 168px;
+        right: 0;
+        width: 100%;
+        max-width: 650px;
+
+        @media(min-width: $md) {
+            display: none;
+        }
+
+        @media(min-width: $lg) {
+            position: absolute;
+            display: block;
+            max-width: 400px;
+            bottom: 400px;
+        }
+
+        @media(min-width: $xlg) {
+            max-width: 650px;
+            bottom: 168px;
+
+        }
+
+        img {
+            width: 100%;
+            max-width: 650px;
+        }
+    }
+
+
+    &__first-line {
+        margin-left: 0;
+        text-transform: none;
+        font-size: 32px;
+        margin-bottom: 5px;
+        color: $sec-brand-color;
+        font-family: helvetica-bold,"Times New Roman",Arial,sans-serif;
+
+        @media(min-width: $md) {
+            margin-left: 75px;
+            font-size: 30px;
+        }
+
+        @media(min-width: $lg) {
+            margin-left: 75px;
+            font-size: 42px;
+        }
+    }
+
+    &__second-line {
+        margin-left: 0;
+        text-transform: none;
+        font-size: 32px;
+        color: $sec-brand-color;
+        font-family: helvetica-bold,"Times New Roman",Arial,sans-serif;
+
+        @media(min-width: $md) {
+            margin-left: 175px;
+            font-size: 30px;
+        }
+
+        @media(min-width: $lg) {
+            margin-left: 225px;
+            font-size: 42px;
+        }
+    }
+
+    &__third-line {
+        font-size: 26px;
+        font-weight: 700;
+        margin-left: 0;
+
+        @media(min-width: $md) {
+            margin-left: 275px;
+            font-size: 18px;
+        }
+
+        @media(min-width: $lg) {
+            margin-left: 300px;
+            font-size: 24px;
+        }
+
+        @media(min-width: $xlg) {
+            margin-left: 225px;
+            font-size: 26px;
+        }
+
+    }
+    &__fourth-line {
+        font-size: 24px;
+        margin-left: 0;
+
+        @media(min-width: $md) {
+            margin-left: 350px;
+            font-size: 17px;
+        }
+
+        @media(min-width: $lg) {
+            margin-left: 300px;
+            font-size: 24px;
+        }
+    }
+    &__fifth-line {
+        font-size: 22px;
+        margin-left: 0;
+
+        @media(min-width: $md) {
+            margin-left: 400px;
+            font-size: 15px;
+        }
+
+        @media(min-width: $lg) {
+            margin-left: 375px;
+            font-size: 22px;
+        }
+
+        @media(min-width: $xlg) {
+            margin-left: 375px;
+            font-size: 22px;
+        }
+
+    }
+    &__sixth-line {
+        font-size: 20px;
+        margin-left: 0;
+
+        @media(min-width: $md) {
+            margin-left: 400px;
+            font-size: 14px;
+        }
+
+        @media(min-width: $lg) {
+            margin-left: 475px;
+            font-size: 20px;
+        }
+
+        @media(min-width: $xlg) {
+            margin-left: 450px;
+            font-size: 20px;
+        }
+    }
+
+
+    &__prize-details {
+        
+
+        @media(min-width: $md) {
+            width: 50%;
+            float: right;
+        }
+
+        @media(min-width: $lg) {
+            width: 450px;
+        }
+
+        @media(min-width: $xlg) {
+            width: 50%;
+            float: right;
+        }
+
+        p {
+            padding-left: 30px;
+            font-size: 15px;
+            margin-bottom: 15px;
+
+            @media(min-width: $md) {
+                font-size: 12px;
+                margin-bottom: 10px;
+
+            }
+
+            @media(min-width: $lg) {
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
+        }
+
+        ul {
+            margin-bottom: 15px;
+        }
+
+        .leeds-united-hospitality__h3-upper {
+            color: $sec-brand-color;
+            padding-left: 30px;
+            font-size: 25px;
+            margin: 15px 0;
+
+            @media(min-width: $md) {
+                font-size: 20px;
+                margin: 8px 0;
+            }
+
+            @media(min-width: $lg) {
+                font-size: 25px;
+                margin: 15px 0;
+            }
+        }
+
+        .leeds-united-hospitality__h3-lower {
+            color: $sec-brand-color;
+            padding-left: 30px;
+            margin-bottom: 5px;
+            text-transform: none;
+            font-size: 24px;
+            font-family: helvetica-new,"Times New Roman",Arial,sans-serif;
+
+            @media(min-width: $md) {
+                font-size: 20px;
+            }
+
+            @media(min-width: $lg) {
+                font-size: 30px;
+            }
+        }
+
+        .bc-icon-list {
+
+            @media(min-width: $md) {
+                font-size: 13px;
+            }
+
+            @media(min-width: $lg) {
+                font-size: unset;
+            }
+        }
+    }
+
+    &__prize-details-lower {
+        
+        @media(min-width: $md) {
+            width: 50%;
+            float: right;
+            clear: right;
+        }
+
+        @media(min-width: $lg) {
+            width: 450px;
+            margin-bottom: 30px;
+        }
+
+        @media(min-width: $xlg) {
+            width: 50%;
+            float: right;
+            margin-bottom: 100px;
+
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        .kevin-keegan-games{
+            position: relative;
+            font-size: 25px;
+            font-weight: 700;
+            padding-left: 50px;
+
+            @media(min-width: $md) {
+                font-size: 19px;
+            }
+
+            @media(min-width: $lg) {
+                font-size: 25px;
+            }
+
+                &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 40px;
+                height: 40px;
+                background-repeat: no-repeat;
+                background-image:  url("data:image/svg+xml;charset=utf8,%3Csvg id='Layer_2' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 296.07 305.51'%3E%3Cdefs%3E%3Cstyle%3E.cls-1{fill:%23b69c6c;}%3C/style%3E%3C/defs%3E%3Cpolygon class='cls-1' points='7.43 152.75 148.03 12.15 204.98 69.09 178.26 95.81 148.03 65.58 60.86 152.75 148.03 239.93 235.21 152.75 204.98 122.52 231.69 95.81 288.64 152.75 148.04 293.36 7.43 152.75'/%3E%3Crect class='cls-1' x='150.89' y='107.15' width='47.72' height='37.78' transform='translate(-37.94 160.48) rotate(-45)'/%3E%3C/svg%3E");
+                background-size: contain;
+                background-position: center;
+            }
+        }
+
+        .games-notice {
+            font-family: helvetica-black,"Times New Roman",Arial,sans-serif;
+            font-size: 22px;
+            margin-bottom: 30px;
+            display: none;
+
+            @media(min-width: $md) {
+                font-size: 14px;
+                display: block;
+            }
+
+            @media(min-width: $lg) {
+                font-size: 22px;
+            }
+        }
+    }
+
+    &__games-title {
+
+        clear: right;
+        width: 100%;
+        margin-bottom: 75px;
+        padding-left: 50px;
+        font-size: 25px;
+        display: none;
+
+        @media(min-width: $md) {
+            clear: right;
+            width: 100%;
+            display: block;
+        }
+
+        p {
+            font-style: italic;
+            font-weight: 700;
+            width: 100%;
+            text-align: center;
+
+            @media(min-width: $md) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__form{
+
+        &-container {
+            background-color: #244283;
+        }
+
+        &-title {
+            padding-top: 20px;
+            padding-left: 10px;
+
+            @media(min-width: $md) {
+                padding-left: 50px;
+            }
+
+            h4 {
+                color: #ffffff;
+                font-family: helvetica-bold,"Times New Roman",Arial,sans-serif;
+                text-transform: none;
+                font-size: 25px;
+                margin-bottom: 0;
+                margin-top: 10px;
+            }
+        }
+
+        &-actual {
+            width: 100%;
+            max-width: 750px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            @media(min-width: $md) {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+
+
+            .hs-submit .actions {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__tscs {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media(min-width: $md) {
+            flex-wrap: nowrap;
+        }
+
+        &-left {
+            width: 100%;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 25px;
+
+            @media(min-width: $md) {
+                width: 50%;
+                margin-left: 50px;
+
+            }
+
+            p {
+                margin-bottom: 0;
+                font-size: 9px;
+            }
+        }
+
+        &-right {
+            width: 100%;
+            margin-right: 10px;
+            margin-left: 10px;
+
+            @media(min-width: $md) {
+                width: 50%;
+                margin-top: 25px;
+                margin-left: 20px;
+                margin-right: 150px;
+            }
+
+            p {
+                margin-bottom: 0;
+                font-size: 9px;
+            }
+        }
+    }
+}

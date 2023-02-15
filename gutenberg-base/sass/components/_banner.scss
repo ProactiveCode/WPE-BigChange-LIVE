@@ -57,7 +57,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: right;
-        background-color: #356782;
+        background-color: $sec-brand-color;
 
         @media(min-width: $lg) {
             background-size: 60% 100%;
