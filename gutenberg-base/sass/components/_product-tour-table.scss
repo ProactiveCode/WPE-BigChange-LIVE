@@ -24,11 +24,16 @@
             width: auto;
             margin-bottom: 0px;
         }
-
-        h3 {
+ 
+        h1,h2,h3,h4,h5,h6 {
             color: $white;
-            margin: 0px;
-        }   
+            font-size: 20px;
+            margin: 0;
+
+            @media(min-width: $lg) {
+                font-size: 30px;
+            }
+        }
     }
 
     &__lower {
@@ -215,7 +220,7 @@
 
     &__title {
         margin-bottom: 10px;
-        h3 {
+        h1,h2,h3,h4,h5,h6 {
             color: $sec-brand-color;
             font-size: 20px;
             margin: 0;

@@ -29,7 +29,7 @@
 
         &--mobile {
             @media(max-width: $md) {
-                display: block;
+                display: none;
             }
         }
 

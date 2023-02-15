@@ -12,43 +12,43 @@ export function init(){
 }
 //// ACTIONS
 function bindUIActions(){
-    if($('body').hasClass('home') && !readCookie('emShown') && readCookie('barClosedReset')) {
-        var homeTimer = setInterval(myTimer, 1000);
+    if($('body').hasClass('home') && readCookie('barClosedReset') && $('body').data('lang') != 'fr') {
+        // var homeTimer = setInterval(myTimer, 1000);
     }
     
     function myTimer() {
         s.timer++;
 
-        if(s.timer == 30) {
+        if(s.timer == 3) {
             $('.em-modal').addClass('is-open');
             $('body').addClass('modal-active');
-            myStopFunction();
+            // myStopFunction();
 
             var cookieval = 'true';
             var date = new Date();
             date.setTime(date.getTime() + (90 * 24 * 60 * 60 * 1000));
             var expires = "; expires=" + date.toGMTString();             
-            document.cookie = "emShown=" + cookieval + expires + "; path=/";
+            document.cookie = "webmodalShown=" + cookieval + expires + "; path=/";
         }
     }
 
-    function myStopFunction() {
-        clearInterval(homeTimer);
-    }
+    // function myStopFunction() {
+    //     clearInterval(homeTimer);
+    // }
 
 
-    if(!readCookie('userloggedin')) {
-        $('head').append('<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0104/7741.js" async="async"></script>');
-    }
+    // if(!readCookie('userloggedin')) {
+    //     $('head').append('<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0104/7741.js" async="async"></script>');
+    // }
 
     $('.login, .menu-item-sign-in').on('click touchstart', function() {
-        var iframeCount = $('.login-modal .bc-modal__inner iframe').length;
-        myStopFunction();
+        // var iframeCount = $('.login-modal .bc-modal__inner iframe').length;
+        // // myStopFunction();
 
-        if (iframeCount == 0) {
-            var loginsrc = '<iframe id="loginIFrame" width="420" height="420" scrolling="no" frameborder="0" src="https://client.bigchange.com/loginframe.aspx"></iframe>';
-            $('.login-modal .bc-modal__inner').append(loginsrc);
-        }
+        // if (iframeCount == 0) {
+        //     var loginsrc = '<iframe id="loginIFrame" width="420" height="420" scrolling="no" frameborder="0" src="https://client.bigchange.com/loginframe.aspx"></iframe>';
+        //     $('.login-modal .bc-modal__inner').append(loginsrc);
+        // }
 
         var cookieval = 'true';
         var date = new Date();
@@ -67,13 +67,17 @@ function bindUIActions(){
 
     $('.demo, .menu-item-demo').on('click touchstart', function() {
         $('.demo-modal').addClass('is-open');
+        $('body').addClass('prevent-menu');
         $('body').addClass('modal-active');
-        myStopFunction();
+        // myStopFunction();
     });
 
-    $('.demo-modal .bc-modal__close, .demo-modal .bc-modal__bg').on('click touchstart', function() {
+    $('.demo-modal .bc-modal__close, .demo-modal .bc-modal__bg').on('click touchstart', function(e) {
         $('.demo-modal').removeClass('is-open');
         $('body').removeClass('modal-active');
+        setTimeout(() => {
+            $('body').removeClass('prevent-menu');
+        }, 2000);
     });
 
 
@@ -88,7 +92,7 @@ function bindUIActions(){
         $('.video-modal iframe').attr('src', src);
         $('.video-modal').addClass('is-open');
         $('body').addClass('modal-active');
-        myStopFunction();
+        // myStopFunction();
     });
 
     $('.video-modal .bc-modal__close, .video-modal .bc-modal__bg').on('click touchstart', function() {
@@ -100,7 +104,7 @@ function bindUIActions(){
     $('.callback').on('click touchstart', function() {
         $('.callback-modal').addClass('is-open');
         $('body').addClass('modal-active');
-        myStopFunction();
+        // myStopFunction();
     });
 
     $('.callback-modal .bc-modal__close, .callback-modal .bc-modal__bg').on('click touchstart', function() {
@@ -238,6 +242,49 @@ function bindUIActions(){
     //     }
     // });
 
+
+    //store code - 
+    // setTimeout(() => {
+    //     let lang = window.navigator.languages ? window.navigator.languages[0] : null;
+    //     lang = lang || window.navigator.language || window.navigator.browserLanguage || window.navigator.userLanguage;
+    //     var home = false;
+    //     var classes = $('body').attr('class');
+    //     var classesSplit = classes.split(' ');
+    //     var count = 0;
+    //     var gotLang = 0;
+    //     var currentLang = '';
+    //     $(classesSplit).each(function() { 
+    //         if (classesSplit[count].indexOf("lang-") >= 0) {
+    // gotLang = 10;
+    //             currentLang = classesSplit[count]; 
+    //         } 
+    //         count++; 
+    //     });
+    //     var final = currentLang.split('-')[1];
+
+    // if(gotLang == 1) { lang =  final; }
+
+    //   console.log('redirecting to - ' + lang);
+
+    // if (window.location.href == "https://www.bigchange.com/") {
+    //       home = true;
+    // }
+
+    // if(!readCookie('cancelgeo') && home == true) {
+    // if(lang == 'fr' || lang == 'FR' || lang == 'fr-FR' || lang == 'fr-fr') {
+    // window.location.href = 'https://www.bigchange.com/fr/';
+    // }
+    // if(lang == 'el-CY' || lang == 'el-cy' || lang == 'gr' || lang == 'GR'  || lang == 'el' || lang == 'EL') {
+    // window.location.href = 'https://www.bigchange.com/cy/';
+    // }
+    // if(lang == 'en-NZ' || lang == 'en-nz' || lang == 'nz' || lang == 'NZ') {
+    // window.location.href = 'https://www.bigchange.com/nz/';
+    // }
+    // if(lang == 'en-US' || lang == 'en-us' || lang == 'us' || lang == 'US') {
+    // window.location.href = 'https://www.bigchange.com/us/';
+    // }
+    // }
+    // }, 1000);
     
     var getUrlParameter = function getUrlParameter(sParam) {
         var sPageURL = window.location.search.substring(1),
@@ -268,11 +315,13 @@ function bindUIActions(){
 
 
     var wpcf7Elm = document.querySelector( '#wpcf7-f18639-o2' );
+
+    var dataURL = $('.site').data('site');
  
     if(wpcf7Elm) {
         wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {
             setTimeout(() => {
-                document.location.href = 'https://www.bigchange.com/pricing-files/';
+                document.location.href = dataURL + '/pricing-files/';
             }, 1000);
         }, false );
     }

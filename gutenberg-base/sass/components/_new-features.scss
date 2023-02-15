@@ -37,6 +37,17 @@
 
     &__title {
         margin-bottom: 10px;
+
+        h1,h2,h3,h4,h5,h6 {
+            @include font-size(20);
+            font-family: $condensed;
+            line-height: 1.1;
+            margin-bottom: 10px;
+
+            @media(min-width: $md) {
+                @include font-size(25);
+            }
+        }
     }
 
     &__text {

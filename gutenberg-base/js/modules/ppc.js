@@ -52,11 +52,13 @@ export function init(){
     // });
 
     var pricingppc = document.querySelector( '.pricing-ppc .wpcf7' );
- 
+
+    var ppcDataURL = $('.site').data('site');
+
     if(pricingppc) {
         pricingppc.addEventListener( 'wpcf7mailsent', function( event ) {
             setTimeout(() => {
-                document.location.href = 'https://www.bigchange.com/pricing-files/';
+                document.location.href = ppcDataURL + '/pricing-files/';
             }, 1000);
         }, false );
     }
@@ -66,7 +68,7 @@ export function init(){
     if(ppcTop) {
         ppcTop.addEventListener( 'wpcf7mailsent', function( event ) {
             setTimeout(() => {
-                document.location.href = 'https://www.bigchange.com/thank-you/?ref=ppc-hero';
+                document.location.href = ppcDataURL + '/thank-you/?ref=ppc-hero';
             }, 1000);
         }, false );
     }
@@ -76,7 +78,7 @@ export function init(){
     if(ppcLower) {
         ppcLower.addEventListener( 'wpcf7mailsent', function( event ) {
             setTimeout(() => {
-                document.location.href = 'https://www.bigchange.com/thank-you/?ref=ppc-lower';
+                document.location.href = ppcDataURL + '/thank-you/?ref=ppc-lower';
             }, 1000);
         }, false );
     }
@@ -86,7 +88,7 @@ export function init(){
     if(wpcf7Elm) {
         wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {
             setTimeout(() => {
-                document.location.href = 'https://www.bigchange.com/thank-you/';
+                document.location.href = ppcDataURL + '/thank-you/';
             }, 1000);
         }, false );
     }
@@ -96,7 +98,7 @@ export function init(){
     if(wpcf7Elm2) {
         wpcf7Elm2.addEventListener( 'wpcf7mailsent', function( event ) {
             setTimeout(() => {
-                document.location.href = 'https://www.bigchange.com/capterra-thank-you/';
+                document.location.href = ppcDataURL + '/capterra-thank-you/';
             }, 1000);
         }, false );
     }
@@ -106,7 +108,7 @@ export function init(){
     if(wpcf7Elm10) {
         wpcf7Elm10.addEventListener( 'wpcf7mailsent', function( event ) {
             setTimeout(() => {
-                document.location.href = 'https://www.bigchange.com/thank-you/';
+                document.location.href = ppcDataURL + '/thank-you/';
             }, 1000);
         }, false );
     }
@@ -116,7 +118,7 @@ export function init(){
     if(wpcf7Elm11) {
         wpcf7Elm11.addEventListener( 'wpcf7mailsent', function( event ) {
             setTimeout(() => {
-                document.location.href = 'https://www.bigchange.com/capterra-thank-you/';
+                document.location.href = ppcDataURL + '/capterra-thank-you/';
             }, 1000);
         }, false );
     }
@@ -128,7 +130,7 @@ export function init(){
             setTimeout(() => {
                 var thanksURL = document.location.href + '?success=1';
                 document.location.href = thanksURL;
-                // document.location.href = 'https://www.bigchange.com/thank-you/';
+                // document.location.href = ppcDataURL + '/thank-you/';
             }, 1000);
         }, false );
     }
@@ -140,7 +142,7 @@ export function init(){
             setTimeout(() => {
                 var thanksURL = document.location.href + '?success=1';
                 document.location.href = thanksURL;
-                // document.location.href = 'https://www.bigchange.com/thank-you/';
+                // document.location.href = ppcDataURL + '/thank-you/';
             }, 1000);
         }, false );
     }
@@ -152,7 +154,7 @@ export function init(){
             setTimeout(() => {
                 var thanksURL = document.location.href + '?success=1';
                 document.location.href = thanksURL;
-                // document.location.href = 'https://www.bigchange.com/thank-you/';
+                // document.location.href = ppcDataURL + '/thank-you/';
             }, 1000);
         }, false );
     }
@@ -164,7 +166,7 @@ export function init(){
             setTimeout(() => {
                 var thanksURL = document.location.href + '?success=1';
                 document.location.href = thanksURL;
-                // document.location.href = 'https://www.bigchange.com/thank-you/';
+                // document.location.href = ppcDataURL + '/thank-you/';
             }, 1000);
         }, false );
     }
@@ -174,9 +176,9 @@ export function init(){
     if(wpcf7Elm8) {
         wpcf7Elm8.addEventListener( 'wpcf7mailsent', function( event ) {
             setTimeout(() => {
-                var thanksURL = 'https://www.bigchange.com/email-marketing-thank-you/';
+                var thanksURL = ppcDataURL + '/email-marketing-thank-you/';
                 document.location.href = thanksURL;
-                // document.location.href = 'https://www.bigchange.com/thank-you/';
+                // document.location.href = ppcDataURL + '/thank-you/';
             }, 1000);
         }, false );
     }

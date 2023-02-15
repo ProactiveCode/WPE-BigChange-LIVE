@@ -160,6 +160,7 @@
         width: 30px;
         height: 30px;
         position: relative;
+        transition: opacity 0.3s ease;
 
         &:after {
             content: '';
@@ -177,6 +178,8 @@
             &:after {
                 transform: rotate(0deg);
             }
+
+            opacity: 0.5;
         }
 
         &:last-of-type {
@@ -189,6 +192,12 @@
             top: 50%;
             transform: translate(-50%, -50%);
             width: 40px;
+        }
+
+        &--linkedin {
+            img {
+                width: 20px;
+            }
         }
 
         &--email {
@@ -217,6 +226,28 @@
         }
     }
 
+    &__breadcrumbs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 40px;
+
+        a,p {
+            margin: 0;
+            margin-right: 5px;
+            font-size: 14px;
+            color: $new-brand-color;
+        }
+
+        a {
+            font-weight: 700;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
     &__name {
         p {
             font-weight: 700;
@@ -227,7 +258,7 @@
     &__title {
         text-align: center;
         padding-bottom: 40px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         position: relative;
 
         h1 {
@@ -250,9 +281,9 @@
     }
 
     &__content {
-        h2:first-of-type {
-            font-style: italic;
-        }
+        // h2:first-of-type {
+        //     font-style: italic;
+        // }
 
         ul,ol {
             margin-left: 25px;
@@ -298,4 +329,437 @@
         width: 100%;
         height: 100%;
     }
+}
+
+.cs-main {
+    margin-top: 60px;
+
+    &__sticky {
+        position: sticky;
+        top: 70px;
+    }
+
+    &__sidebar-bc {
+        background-image: url('https://www.bigchange.com/wp-content/uploads/2022/09/bc-bg-man.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: block;
+        text-decoration: none;
+        padding-top: 250px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &-text {
+            text-align: center;
+            padding-bottom: 20px;
+
+            p {
+                color: $white;
+                font-family: $new-condensed;
+                margin: 0;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__sidebar {
+        margin-bottom: 40px;
+        
+        table {
+            tr {
+                background-color: $white !important;
+            }
+        }
+
+        &-title {
+            h3 {
+                color: $new-sec-brand-color;
+                font-size: 24px;
+                margin: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        &-text {
+            p, li {
+                font-size: 16px;
+                margin: 0;
+            }
+
+            ul {
+                margin-left: 16px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+        margin-bottom: 40px;
+
+        @media(min-width: $md) {
+            width: calc(50% - 20px);
+            margin-bottom: 0;
+        }
+
+        @media(min-width: $lg) {
+            width: calc(66.66666% - 20px);
+        }
+
+        h2, h2 a {
+            font-size: 28px;
+            color: $new-sec-brand-color;
+            font-family: $sans-serif-font-family-new !important;
+            text-transform: none;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: $new-sec-brand-color;
+        }
+
+        // h6:first-of-type {
+        //     margin-top: ;
+        // }
+    }
+
+    &__sidebar {
+        width: 100%;
+        
+        @media(min-width: $md) {
+            width: calc(50% - 20px);
+        }
+
+        @media(min-width: $lg) {
+            width: calc(33.33333% - 20px);
+        }
+    }
+}
+
+.cs-discover {
+    position: relative;
+
+    &__text {
+        margin-top: 30px;
+
+        @media(min-width: $lg) {
+            position: absolute;
+            left: 40px;
+            top: 20px;
+            z-index: 10;
+            margin-top: 0;
+        }
+
+        p {
+            font-family: $new-condensed;
+            font-size: 22px;
+            margin: 0;
+            margin-bottom: 10px;
+            color: $new-dark-blue;
+            line-height: 1.2;
+
+            @media(min-width: $xlg) {
+                font-size: 30px;
+            }
+
+            span {
+                color: $new-sec-brand-color;
+            }
+        }
+
+        a.btn-normal.demo {
+            margin-top: 15px;
+            border-color: $new-sec-brand-color;
+            background-color: $new-sec-brand-color;
+        }
+    }
+
+}
+
+.cs-unstoppable {
+    text-align: center;
+
+    &__btns {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        a {
+            margin: 10px;
+        }
+    }
+}
+
+.cs-header {
+    &__wrapper {
+        background-color: $another-blue;
+        padding: 50px 0px;
+
+        @media(min-width: $md) {
+            background-image: url('https://www.bigchange.com/wp-content/uploads/2022/02/quote-bg-updated.jpg');
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-position: right top;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    }
+
+    &__extra {
+        background-color: $new-yellow;
+        padding: 40px 0;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        &-text {
+            width: 100%;
+            margin-bottom: 25px;
+
+            @media(min-width: $md) {
+                width: calc(50% - 20px);
+                margin-bottom: 0;
+            }
+
+            @media(min-width: $lg) {
+                width: calc(66.66666% - 20px);
+            }
+
+            p {
+                color: $new-dark-blue;
+                font-weight: 700;
+                font-size: 24px;
+                margin: 0;
+                font-family: $helvetica-bold;
+            }
+        }
+
+        &-logo {
+            width: 100%;
+
+            @media(min-width: $md) {
+                width: calc(50% - 20px);
+            }
+
+            @media(min-width: $lg) {
+                width: calc(33.33333% - 20px);
+            }
+
+            img {
+                width: 100%;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__title,
+    &__text {
+        h1,p {
+            color: $white;
+        }
+    }
+
+    &__title {
+        margin-bottom: 25px;
+
+        @media(min-width: $md) {
+            margin-bottom: 60px;
+        }
+
+        p {
+            font-family: $new-condensed;
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__text {
+        margin-bottom: 25px;
+
+        @media(min-width: $md) {
+            margin-bottom: 60px;
+        }
+        
+        h1 {
+            font-size: 30px;
+        
+            @media(min-width: $md) {
+                font-size: 40px;
+            }
+
+            @media(min-width: $lg) {
+                font-size: 45px;
+            }
+        }
+    }
+
+    &__stats {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        // max-width: 400px;
+
+        // display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__stat:not(:first-child) {
+        padding-left: 0px;
+
+        @media(min-width: $md) { 
+
+            padding-left: 0px;
+        }
+       
+    }
+    
+    &__stat:nth-child(2) {
+
+        width: 100%;
+
+        @media(min-width: $md) { 
+
+            width: 40%;
+        }
+       
+    }
+
+    &__stat:nth-child(1), &__stat:nth-child(3) {
+
+        width: 100%;
+        
+        @media(min-width: $md) { 
+
+            width: 30%;
+        }
+       
+    }
+
+    &__stat {
+        padding-right: 20px;
+        // width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+
+        @media(min-width: $lg) {
+            // width: calc(33.3333% - 20px);
+            // margin-right: 30px;
+            margin-bottom: 0;
+            // padding: 0px 15px;
+        }
+        
+        &:before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            height: 70%;
+            transform: translateY(-50%);
+            width: 2px;
+            background-color: $white;
+            display: none;
+
+            @media(min-width: $lg) {
+                display: block;
+            }
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+            &:before {
+                display: none;
+            }
+        }
+
+        &-stat {
+            p {
+                color: $green;
+                font-family: $new-condensed;
+                font-size: 30px;
+                margin: 0;
+                line-height: 1;
+
+                @media(min-width: $md) {
+                    font-size: 40px;
+                }
+            }
+        }
+
+        &-image {
+            margin-bottom: 5px;
+            img {
+                max-width: 80px;
+                max-height: 70px;
+            }
+        }
+
+        &-desc {
+            p {
+                margin: 0;
+                color: $white;
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__text-wrap,
+    &__image {
+        width: 100%;
+
+        @media(min-width: $md) {
+            width: calc(50% - 40px);
+        }
+    }
+
+    &__text-wrap {
+        margin-bottom: 40px;
+
+        @media(min-width: $md) {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.single-post h1 { 
+
+    font-size: 2.5rem;
+}
+
+.single-post h2 { 
+    font-size: 1.7rem;
+
+}
+
+.single-post h3 {
+
+    font-size: 1.5rem;
+} 
+
+.single-post h4 { 
+
+    font-size: 1.3rem;
 }

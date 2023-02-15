@@ -1,0 +1,405 @@
+.pl-games-list {
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        @media(min-width: $md) {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        @media(min-width: $lg) {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+
+    &__single {
+        width: 33.3333%;
+        display: flex;
+        margin-bottom: 35px;
+
+    }
+
+    &__home-img, &__away-img {
+        display: flex;
+        align-items: center;
+        transform: translateY(-25px);
+
+        img {
+            width: 42px;
+        }
+    }
+
+    &__home-img {
+        margin-right: 5px;
+        margin-left: 10px;
+    }
+
+    &__away-img {
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+
+    &__game-info {
+        width: 100%;
+        max-width: 170px;
+        font-size: 13px;
+
+        @media(min-width: $md) {
+            font-size: unset;
+        }
+
+        .pl-games-list__game-teams {
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 0;
+            text-align: center;
+            line-height: 1.1;
+        }
+
+        .pl-games-list__enter-btn {
+            text-align: center;
+            margin-top: 8px;
+
+            a.btn-normal {
+                padding: 7px 22px;
+                font-size: 13px;
+                font-size: 0.8125rem;
+            }
+        }
+    }
+
+    &__first-row {
+        width: 50%;
+
+        @media(min-width: $md) {
+            width: 33.3333%;
+            margin-left: 0;
+        }
+
+        @media(min-width: $lg) {
+            margin-left: 75px;
+            width: calc(33.3333% - 25px);
+        }
+
+        @media(min-width: $xlg) {
+            margin-left: 375px;
+            width: calc(33.3333% - 125px);
+        }
+
+        &-singles {
+            width: 50%;
+
+            @media(min-width: $md) {
+                width: 33.3333%;
+            }
+
+            @media(min-width: $lg) {
+                width: calc(33.3333% - 25px);
+            }
+    
+            @media(min-width: $xlg) {
+                width: calc(33.3333% - 125px);
+            }
+        }
+    }
+
+    &__second-row {
+        width: 50%;
+
+        @media(min-width: $md) {
+            width: 33.3333%;
+            margin-left: 0;
+        }
+
+        @media(min-width: $lg) {
+            margin-left: 75px;
+            width: calc(33.3333% - 25px);
+        }
+
+        @media(min-width: $xlg) {
+            margin-left: 225px;
+            width: calc(33.3333% - 75px);
+        }
+
+        &-singles {
+            width: 50%;
+
+            @media(min-width: $md) {
+                width: 33.3333%;
+            }
+
+            @media(min-width: $lg) {
+                width: calc(33.3333% - 25px);
+            }
+    
+            @media(min-width: $xlg) {
+                width: calc(33.3333% - 75px);
+
+            }
+        }
+    }
+
+    &__third-row{
+        width: 50%;
+
+        @media(min-width: $md) {
+            width: 33.3333%;
+            margin-left: 0;
+        }
+
+        @media(min-width: $lg) {
+            margin-left: 75px;
+            width: calc(33.3333% - 25px);
+        }
+
+        @media(min-width: $xlg) {
+            width: calc(33.3333% - 213.3333px);
+            margin-left: 40px;
+
+        }
+
+        &-singles {
+            width: 50%;
+
+            @media(min-width: $md) {
+                width: 33.3333%;
+            }
+    
+            @media(min-width: $lg) {
+                width: calc(33.3333% - 25px);
+            }
+    
+            @media(min-width: $xlg) {
+                width: calc(33.3333% - 213.3333px);
+
+            }
+        }
+
+        &-last {
+            width: 50%;
+
+            @media(min-width: $md) {
+                width: 33.3333%;
+                margin-right: 0;
+            }
+
+            @media(min-width: $lg) {
+                width: calc(33.3333% - 25px);
+                margin-right: 0;
+            }
+    
+            @media(min-width: $xlg) {
+                width: calc(33.3333% - 213.3333px);
+                margin-right: 600px;
+            }
+        }
+    }
+
+    &__fourth-row{
+        width: 50%;
+
+        @media(min-width: $md) {
+            width: 33.3333%;
+            margin-left: 0;
+        }
+
+        @media(min-width: $lg) {
+            margin-left: 75px;
+            width: calc(33.3333% - 25px);
+        }
+
+        @media(min-width: $xlg) {
+            width: calc(33.3333% - 213.3333px);
+            margin-left: 40px;
+
+        }
+
+        &-singles {
+            width: 50%;
+
+            @media(min-width: $md) {
+                width: 33.3333%;
+            }
+    
+            @media(min-width: $lg) {
+                width: calc(33.3333% - 25px);
+            }
+    
+            @media(min-width: $xlg) {
+                width: calc(33.3333% - 213.3333px);
+
+            }
+        }
+
+        &-last {
+            width: 50%;
+
+            @media(min-width: $md) {
+                width: 33.3333%;
+                margin-right: 0;
+            }
+
+            @media(min-width: $lg) {
+                width: calc(33.3333% - 25px);
+                margin-right: 0;
+            }
+    
+            @media(min-width: $xlg) {
+                width: calc(33.3333% - 213.3333px);
+                margin-right: 600px;
+            }
+        }
+    }
+
+    &__fifth-row{
+        width: 50%;
+
+        @media(min-width: $md) {
+            width: 33.3333%;
+            margin-left: 0;
+        }
+
+        @media(min-width: $lg) {
+            margin-left: 75px;
+            width: calc(50% - 195.6665px);
+        }
+
+        @media(min-width: $xlg) {
+            width: calc(33.3333% - 213.3333px);
+            margin-left: 40px;
+
+        }
+
+        &-singles {
+            width: 50%;
+
+            @media(min-width: $md) {
+                width: 33.3333%;
+            }
+    
+            @media(min-width: $lg) {
+                width: calc(50% - 195.6665px);
+                margin-right: 316.333px;
+            }
+    
+            @media(min-width: $xlg) {
+                width: calc(33.3333% - 213.3333px);
+                margin-right: 0;
+
+            }
+        }
+
+        &-last {
+            width: 50%;
+
+            @media(min-width: $md) {
+                width: 33.3333%;
+                margin-right: 0;
+            }
+
+            @media(min-width: $lg) {
+                width: calc(50% - 195.6665px);
+                margin-right: 0;
+                margin-left: 75px;
+            }
+    
+            @media(min-width: $xlg) {
+                width: calc(33.3333% - 213.3333px);
+                margin-right: 600px;
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__sixth-row {
+        width: 50%;
+
+        @media(min-width: $md) {
+            width: 33.3333%;
+            margin-left: 0;
+        }
+
+        @media(min-width: $lg) {
+            margin-left: 0;
+            width: calc(50% - 195.6665px);
+            margin-right: 316.333px;
+        }
+
+        @media(min-width: $xlg) {
+            margin-left: 40px;
+            width: calc(50% - 453.3333px);
+            margin-right: 0;
+        }
+
+        &-last {
+            width: 50%;
+
+            @media(min-width: $md) {
+                width: 33.3333%;
+                margin-right: 0;
+            }
+
+            @media(min-width: $lg) {
+                margin-left: 75px;
+                width: calc(50% - 195.6665px);
+                margin-right: 0px;
+            }
+    
+            @media(min-width: $xlg) {
+                margin-left: 0px;
+                margin-right: 866.6666px;
+                width: calc(50% - 453.3333px);
+            }
+        }
+    }
+
+    &__seventh-row {
+        width: 50%;
+
+        @media(min-width: $md) {
+            width: 33.3333%;
+            margin-left: 0;
+        }
+
+        @media(min-width: $lg) {
+            margin-left: 0;
+            width: calc(50% - 195.6665px);
+            margin-right: 316.333px;
+        }
+
+        @media(min-width: $xlg) {
+            margin-left: 40px;
+            width: calc(50% - 453.3333px);
+            margin-right: 0;
+        }
+
+        &-last {
+            width: 50%;
+
+            @media(min-width: $md) {
+                width: 33.3333%;
+                margin-right: 0;
+            }
+
+            @media(min-width: $lg) {
+                width: 100%;
+                margin-left: 75px;
+                margin-right: 0;
+            }
+    
+            @media(min-width: $xlg) {
+                margin-right: 866.6666px;
+                width: calc(50% - 453.3333px);
+                margin-left: 0;
+            }   
+        }
+    }
+}

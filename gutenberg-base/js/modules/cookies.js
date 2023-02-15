@@ -14,11 +14,11 @@ export function init(){
 function bindUIActions(){
 
     if(!readCookie('userloggedin') && readCookie('peCookies')) {
-        $('head').append("<script>(function(h,o,t,j,a,r){h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};h._hjSettings={hjid:2340458,hjsv:6};a=o.getElementsByTagName('head')[0];r=o.createElement('script');r.async=1;r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;a.appendChild(r)})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=')</script>");
+        $('head').append("<script>(function(h,o,t,j,a,r){h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)}; h._hjSettings={hjid:3101555,hjsv:6};a=o.getElementsByTagName('head')[0];r=o.createElement('script');r.async=1;r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;a.appendChild(r);})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');</script>");
         $('head').append('<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"17550965"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>');
     }
     if(readCookie('neCookies')) {
-        $('body').append("<script>window.intercomSettings = {app_id: 'h00zu34v'};</script><script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==='function'){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/h00zu34v';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>");
+        // $('body').append("<script>window.intercomSettings = {app_id: 'h00zu34v'};</script><script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==='function'){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/h00zu34v';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>");
     }
 
     $(document).on('click touchstart', '.more-info-cookies', function() {
@@ -84,6 +84,24 @@ function bindUIActions(){
         $('body').addClass('modal-active');
 
     });
+
+    $(document).on('mouseleave', function(e) {
+        if($('.landing-page__wrapper').length > 0 ) {
+            if( e.clientY < 0 && !readCookie('leavingModalClosed')) {
+                $('.leaving-modal').addClass('is-open');
+                $('body').addClass('modal-active');
+            }// less than 60px is close enough to the top
+           
+        }
+    });
+
+
+    $('.leaving-modal .bc-modal__close, .leaving-modal .bc-modal__bg').on('click touchstart', function(e) {
+        $('.leaving-modal').removeClass('is-open');
+        $('body').removeClass('modal-active');
+        createCookie('leavingModalClosed', true, 180);
+    });
+
 }
 
 //// FUNCTIONS

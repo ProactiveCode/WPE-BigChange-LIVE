@@ -73,6 +73,52 @@
         }
     }
 
+    &--green {
+        .wp-block-button__link {
+            background: $green;
+            border: none;
+            color: $new-blue;
+            border-radius: 0px;
+
+            &:hover {
+                background-color: $brand-color;
+                color: $white;
+            }
+        }
+
+        &.btn--right {
+            .wp-block-button__link {
+                &:hover {
+                    background-color: $green;
+                    color: $brand-color;
+                }
+            }
+        }
+    }
+
+    &--green-white {
+        .wp-block-button__link {
+            background: $green;
+            border: none;
+            color: $new-blue;
+            border-radius: 0px;
+
+            &:hover {
+                background-color: $white;
+                color: $green;
+            }
+        }
+
+        &.btn--right {
+            .wp-block-button__link {
+                &:hover {
+                    background-color: $green;
+                    color: $brand-color;
+                }
+            }
+        }
+    }
+
     &--light-blue {
         .wp-block-button__link {
             background: $sec-brand-color;
@@ -146,6 +192,8 @@
     line-height: 1;
     border-radius: 0px;
     cursor: pointer;
+    // text-transform: uppercase;
+    // font-family: $condensed;
 
     &:hover {
         color: $brand-color;
@@ -224,6 +272,28 @@
         &:hover {
             background-color: $brand-color;
             color: $white;
+        }
+    }
+
+    &--green {
+        background: $green;
+        border: none;
+        color: $new-blue;
+
+        &:hover {
+            background-color: $brand-color;
+            color: $white;
+        }
+    }
+
+    &--green-white {
+        background: $green;
+        border: none;
+        color: $new-blue;
+
+        &:hover {
+            background-color: $white;
+            color: $green;
         }
     }
 

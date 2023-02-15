@@ -1,0 +1,63 @@
+.mission-cards {
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__card {
+        padding: 20px;
+        box-shadow: 0px 0px 8px #9CBCD7;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+
+        @media(min-width: $md) {
+            padding: 50px;
+            width: calc(50% - 20px);
+        }
+
+        &--only-text {
+            box-shadow: none;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        // max-width: 150px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+
+        img {
+            // width: 100%;
+            max-height: 150px;
+            margin: 0 auto;
+        }
+    }
+
+    &__title {
+        margin-bottom: 10px;
+
+        h3 {
+            color: $new-sec-brand-color;
+            margin: 0;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 20px;
+        p {
+            margin: 0;
+            color: $new-dark-blue;
+        }
+    }
+
+    &__text {
+        margin-bottom: 20px;
+
+        h1,h2,h3,h4,h5,h6,li,ul,ol,span,div,p {
+            margin: 0;
+            color: $new-dark-blue;
+        }
+    }
+}

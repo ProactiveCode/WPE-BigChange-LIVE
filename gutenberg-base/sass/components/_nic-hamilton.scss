@@ -1,0 +1,39 @@
+.nic-hamilton {
+
+    .nic-hamilton__title {
+        font-weight: 600;
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .bc-icon-list {
+        margin-top: 10px;
+    }
+
+    &__columns{
+    
+        .nic-hamilton__columns--left {
+            
+            border: 1px #000 solid;
+
+            @media(min-width: $lg) {
+                margin-right: 70px;
+            }
+        }
+
+        .nic-hamilton__columns--right {
+
+            margin-top: 30px !important;
+            border: 1px #000 solid;
+
+            @media(min-width: $md) {
+                margin-top: 0px !important;
+
+            }
+        }
+    }
+}
