@@ -391,3 +391,172 @@ textarea {
         }
     }
 }
+
+body .container .form-columns-2 {
+    max-width: none;
+}
+
+.hs_email {
+    margin-bottom: 10px;
+
+    @media(min-width: 480px) {
+        margin-bottom: 0;
+    }
+
+    .input {
+        width: 100%;
+
+        @media(min-width: 480px) {
+            width: auto;
+        }
+    }
+
+    input {
+        width: 100% !important;
+        height: 40px;
+        font-size: 18px;
+        border-radius: 5px;
+        background-color: $white;
+        border: none;
+        color: $very-light-blue;
+    }
+}
+
+.demo-form {
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .form-columns-2 {
+            width: 100%;
+        }
+
+        .form-columns-1 {
+            width: 100%;
+
+            @media(min-width: 480px) {
+                width: 50%;
+            }      
+        }
+
+        fieldset {
+            &:nth-of-type(4),
+            &:nth-of-type(5) {
+                width: 0%;
+            }
+        }
+
+        .hs_submit {
+            width: 100%;
+            display: flex;
+
+            @media(min-width: 480px) {
+                width: 50%;
+            }
+        }
+
+        .actions {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            @media(min-width: 480px) {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+        }        
+    }
+
+    .hs_email,
+    .hs_firstname,
+    .hs_lastname,
+    .hs_mobilephone,
+    .hs_company {
+        margin-bottom: 10px;
+        width: 100%;
+
+        .input {
+    
+            @media(max-width: 480px) {
+                margin-right: 0 !important;
+            }
+
+            input {
+                width: 100% !important;
+                height: 42px;
+                font-size: 18px;
+                border-radius: 5px;
+                background-color: $white;
+                border: 1px solid $new-blue;
+                color: $very-light-blue;
+
+                &::placeholder {
+                    color: $very-light-blue !important;
+                }
+            }
+        }
+    }
+}
+
+.hs_focus_industry {
+
+    .input {
+        position: relative;
+        margin-right: 0 !important;
+
+        select {
+            width: 100% !important;
+            height: 40px;
+            font-size: 18px;
+            border-radius: 5px;
+            background-color: $white;
+            border: none;
+            color: $very-light-blue;
+            padding-right: 25px;
+        }
+    
+        &:after {
+            content: '';
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 20px;
+            background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 272.2 400' style='enable-background:new 0 0 272.2 400;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill-rule:evenodd;clip-rule:evenodd;fill:%23020203;%7D%0A%3C/style%3E%3Cg id='Page-1'%3E%3Cg id='Core' transform='translate(-469.000000, -9.000000)'%3E%3Cg id='arrow-drop-down' transform='translate(469.000000, 9.500000)'%3E%3Cpath id='Shape' class='st0' d='M0,263.4l136.1,136.1l136.1-136.1H0z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cg id='Page-1_00000173879706632028667480000017618416632622962082_'%3E%3Cg id='Core_00000129198907727614907830000014321573908507131296_' transform='translate(-469.000000, -9.000000)'%3E%3Cg id='arrow-drop-down_00000106860280436202038600000011066247568399269309_' transform='translate(469.000000, 9.500000)'%3E%3Cpath id='Shape_00000019666379160165101090000010877364528631870125_' class='st0' d='M272.2,135.6L136.1-0.5L0,135.6H272.2z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+            background-size: contain;
+            pointer-events: none;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.actions {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .hs-button {
+        margin: 0;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        transition: all .15s linear;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 12px 24px;
+        background: $yellow;
+        border-color: $yellow;
+        color: $new-blue;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        font-family: arial, helvetica, sans-serif;
+        width: auto;
+    }
+}

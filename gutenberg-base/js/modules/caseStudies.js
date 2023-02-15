@@ -25,8 +25,8 @@ export function init(){
             s.category = 10;
             s.initCat = 10;
         } else {
-            s.category = 5;
-            s.initCat = 5;
+            s.category = 10;
+            s.initCat = 10;
         }
         
         var getUrlParameter = function getUrlParameter(sParam) {
@@ -88,6 +88,7 @@ function bindUIActions(){
 //// FUNCTIONS
 
 function getPosts(cat, filter, search, paged, featured) {
+    var url = window.location.href;
     $.ajax({
         url : "/wp-admin/admin-ajax.php",
         type : 'post',
@@ -97,7 +98,8 @@ function getPosts(cat, filter, search, paged, featured) {
             sort: filter,
             search: search,
             paged: paged,
-            featured: featured
+            featured: featured,
+            url: url
         },
         dataType:'html',
         success : function(response) {    

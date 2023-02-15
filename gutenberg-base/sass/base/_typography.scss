@@ -134,6 +134,66 @@ h6 {
     margin-bottom: 10px;
 }
 
+.act-as-h1 {
+    font-size: 30px !important;
+    font-family: $condensed !important;
+
+    @media(min-width: $md) {
+        font-size: 35px !important;
+    }
+}
+
+.act-as-h2 {
+    font-size: 17px !important;
+    font-family: $condensed !important;
+}
+
+.act-as-h2-large {
+    font-size: 20px !important;
+    font-family: $condensed !important;
+    line-height: 1.1 !important;
+
+    @media(min-width: $md) {
+        font-size: 25px !important;
+    }
+
+    @media(min-width: $lg) {
+        font-size: 40px !important;
+    }
+}
+
+.act-as-h3 {
+    font-size: 20px !important;
+    font-family: $condensed !important;
+    line-height: 1.1 !important;
+
+    @media(min-width: $md) {
+       font-size: 25px !important;
+    }
+
+    @media(min-width: $lg) {
+        font-size: 40px !important;
+    }
+}
+
+.act-as-h4 {
+    font-size: 20px !important;
+    font-family: $condensed !important;
+    line-height: 1.1 !important;
+    margin-bottom: 10px !important;
+
+    @media(min-width: $md) {
+        font-size: 25px !important;
+    }
+}
+
+.act-as-h5,
+.act-as-h6 {
+    font-size: 18px !important;
+    font-family: $condensed !important;
+    margin-bottom: 10px !important;
+}
+
 strong {
     font-weight: bold;
     font-family: $helvetica-bold !important;
@@ -174,6 +234,10 @@ strong {
     @media(min-width: $lg) {
         font-size: 24px;
     }
+}
+
+p.small-text {
+    @include font-size(13);
 }
 
 br.hide-mob {

@@ -145,6 +145,7 @@ function populateSubCats(ids, names) {
 }
 
 function getPosts(cat, filter, search, paged) {
+    var url = window.location.href;
     $.ajax({
         url : "/wp-admin/admin-ajax.php",
         type : 'post',
@@ -153,10 +154,12 @@ function getPosts(cat, filter, search, paged) {
             cat: cat,
             sort: filter,
             search: search,
-            paged: paged
+            paged: paged,
+            url: url
         },
         dataType:'html',
-        success : function(response) {    
+        success : function(response) {  
+            console.log(response);  
             window.history.replaceState(null, null, "?catid="+ cat); 
             if(s.empty == 1) {
                 $('.blog__results').empty();

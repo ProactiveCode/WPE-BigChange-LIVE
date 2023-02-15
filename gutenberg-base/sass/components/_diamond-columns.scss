@@ -2,10 +2,18 @@
     margin-top: 80px;
     margin-bottom: 60px;
 
-    h3 {
+    h1,h2,h3,h4,h5,h6 {
         margin-bottom: 20px;
+        @include font-size(20);
+        font-family: $condensed;
+        line-height: 1.1;
+
+        @media(min-width: $md) {
+            @include font-size(25);
+        }
 
         @media(min-width: $lg) {
+            @include font-size(40);
             margin-bottom: 70px;
         }
     }

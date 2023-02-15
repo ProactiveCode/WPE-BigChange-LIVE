@@ -17,6 +17,24 @@ $grey: #F9F9F9;
 $yellow: #f2a410;
 $light-blue: #9ab3c0;
 $lighter-blue: #D6E4F2;
+$green: #00E167;
+
+//New blues
+$new-brand-color: #1b5eb1;
+$new-sec-brand-color: #2e84ff;
+$new-dark-blue: #0b2642;
+$new-yellow: #FCDF06;
+$another-blue: #012D5A;
+
+$blue-almost-grey: #eff5f9;
+$bright-blue: #00d3fd;
+$brightish-blue: #00A5F0;
+$very-light-blue: #AFCEE3;
+$turquoise: #00CFD3;
+$light-grey: #F0F5F9;
+$db: #1C5EB1;
+
+$nav-sub: #878787;
 
 /**
  * Element Colours
@@ -53,6 +71,13 @@ $hamburger-color: #000;
     }
 
 @font-face {
+    font-family: 'gtpressura';
+        src: url('../../fonts/gtpressuraprobold.woff') format('woff'), /* Pretty Modern Browsers */
+            url('../../fonts/gtpressuraprobold.woff2') format('woff2'), /* Pretty Modern Browsers */
+            url('../../fonts/gtpressuraprobold.ttf')  format('truetype'), /* Safari, Android, iOS */
+    }
+
+@font-face {
     font-family: 'helvetica-new';
         src: url('../../fonts/helveticaneueltstd-lt2.eot'); /* IE9 Compat Modes */
         src: url('../../fonts/helveticaneueltstd-lt2.woff') format('woff'), /* Pretty Modern Browsers */
@@ -65,6 +90,10 @@ $hamburger-color: #000;
             url('../../fonts/helveticabold.woff2') format('woff2');
     }
 
+$new-condensed: 'gtpressura',
+"Times New Roman",
+Arial,
+sans-serif;
 $condensed: 'helvetica-black',
 "Times New Roman",
 Arial,

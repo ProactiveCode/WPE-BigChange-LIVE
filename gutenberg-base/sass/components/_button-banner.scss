@@ -1,7 +1,7 @@
 .button-banner {
     position: fixed;
     bottom: 0;
-    background-color: rgba($color: #3c657b, $alpha: 0.8);
+    background-color: rgba(60,101,123,.8);
     width: 100%;
     padding: 10px 0px;
     z-index: 999;
@@ -19,6 +19,10 @@
 
     &__button {
         margin-right: 20px;
+    }
+
+    &--hide {
+        display: none;
     }
 }
 .page-template-template-ppc-normal,

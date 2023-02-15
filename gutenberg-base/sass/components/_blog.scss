@@ -168,7 +168,8 @@
     }
 
     &__category-wrapper,
-    &__sort {
+    &__sort,
+    &__sort--news {
         width: 100%;
 
         @media(min-width: $md) {
@@ -196,6 +197,7 @@
 
     &__category,
     &__sort,
+    &__sort--news,
     &__sub {
         position: relative;
 
@@ -225,7 +227,10 @@
     }
 
     &__load-more,
-    &__load-more--ceo {
+    &__load-more--ceo,
+    &__load-more--bigcommunity,
+    &__load-more--news,
+    &__load-more--podcast {
         width: 100%;
         text-align: center;
         margin-bottom: 40px;
@@ -243,6 +248,103 @@
 
         &.hidden {
             display: none;
+        }
+    }
+
+    &--podcast {
+
+        .card__image {
+
+            height: 180px;
+            @media(min-width: 580px) {
+                height: 330px;
+            }
+
+            @media(min-width: 766px) {
+                height: 180px;
+            }
+        }
+
+        &-ctas {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+
+            @media(min-width: $md) {
+                justify-content: center;
+            }
+
+            a {
+                position: relative;
+                margin: 0 10px;
+                padding-left: 40px;
+                margin-bottom: 10px;
+
+                &:before {
+                    content: '';
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    left: 15px;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    transition: background-image .25s ease-in-out;
+                }
+
+                &.rss {
+                    &:before {
+                        background-image: url(https://www.bigchange.com/wp-content/uploads/2022/08/bc-rss-white.png);
+                    }
+                }
+
+                &.spotify {
+                    &:before {
+                        background-image: url(https://www.bigchange.com/wp-content/uploads/2022/08/bc-spotify-white.png);
+                    }
+                }
+
+                &.amazon {
+                    &:before {
+                        background-image: url(https://www.bigchange.com/wp-content/uploads/2022/08/bc-amazon-white.png);
+                    }
+                }
+
+                &.apple {
+                    &:before {
+                        background-image: url(https://www.bigchange.com/wp-content/uploads/2022/08/bc-apple-white.png);
+                    }
+                }
+
+                &:hover {
+                    &.rss {
+                        &:before {
+                            background-image: url(https://www.bigchange.com/wp-content/uploads/2022/08/bc-rss-blue.png);
+                        }
+                    }
+    
+                    &.spotify {
+                        &:before {
+                            background-image: url(https://www.bigchange.com/wp-content/uploads/2022/08/bc-spotify-blue.png);
+                        }
+                    }
+    
+                    &.amazon {
+                        &:before {
+                            background-image: url(https://www.bigchange.com/wp-content/uploads/2022/08/bc-amazon-blue.png);
+                        }
+                    }
+    
+                    &.apple {
+                        &:before {
+                            background-image: url(https://www.bigchange.com/wp-content/uploads/2022/08/bc-apple-blue.png);
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -338,5 +440,500 @@
             transform: rotate(360deg);
             }
         } 
+    }
+}
+
+
+
+.combined-blog {
+
+    &__title {
+        margin-top: 60px;
+        padding: 0 10px;
+        margin-bottom: 40px;
+
+        h1 {
+            margin-bottom: 0;
+            @media(min-width: $md) {
+                font-size: 50px;
+            }
+        
+            @media(min-width: $lg) {
+                font-size: 70px;
+            }
+        }
+
+        h2 {
+            margin-bottom: 0;
+            @media(min-width: $md) {
+                font-size: 30px;
+            }
+        }
+    }
+
+    &__carousel {
+        margin-bottom: 40px;
+
+        @media(min-width: $md) {
+            width: calc(100% - 20px);
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+
+        .owl-stage {
+            display: flex;
+            height: 100%;
+            &-outer {
+                height: 100%;
+            }
+        }
+
+        .owl-nav {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            margin-top: -30px;
+            display: none;
+            max-width: 1150px;
+
+            @media(min-width: $md) {
+                display: block;
+            }
+            
+
+            .owl-nav-right,
+            .owl-nav-left {
+                position: absolute;
+                right: 0px;
+
+                &__wrapper {
+                    width: 30px;
+                    height: 30px;
+                    position: relative;
+
+                    @media(min-width: $md) {
+                        width: 40px;
+                        height: 40px;
+                    }
+                    
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 40px;
+                        height: 40px;
+                        opacity: 1;
+                        display: inline-block;
+                        background-image: url("https://www.bigchange.com/wp-content/uploads/2021/10/right-arrow-shadowed.png");
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                        transform: rotate(180deg);
+                    }
+
+                    &:hover {
+                        &:before {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+
+            .owl-nav-right {
+                left: 0;
+                right: auto;
+
+                &__wrapper {
+                    &:before {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+        }
+
+        .owl-dots {
+            text-align: center;
+            margin-top: 10px;
+
+            @media(min-width: $md) {
+                position: absolute;
+                bottom: 10px;
+                right: 20px;
+                margin-top: 0;
+            }
+
+            .owl-dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $new-dark-blue;
+                border: 2px solid $new-dark-blue;
+                transition: background-color 0.3s ease;
+                margin-right: 10px;
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+
+                &.active {
+                    background-color: $new-sec-brand-color;
+                    border-color: $new-sec-brand-color;
+                }
+            }
+        }
+
+        .combined-card {
+            width: 100%;
+            position: relative;
+            display: block;
+            text-decoration: none;
+            padding: 50px 10px;
+            height: 100%;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('https://www.bigchange.com/wp-content/uploads/2021/10/upper-overlay.png');
+                background-size: contain;
+                background-position: left center;
+                background-repeat: no-repeat;
+                display: none;
+
+                @media(min-width: $md) {
+                    display: block;
+                    background-size: cover;
+                }
+
+                @media(min-width: $xlg) {
+                    background-size: auto 100%;
+                }
+            }
+
+            @media(min-width: $md) {
+                padding-top: 100px;
+                padding-bottom: 30px;
+            }
+
+            @media(min-width: $xlg) {
+                padding-top: 150px;
+                padding-bottom: 50px;
+            }
+
+            &__image {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-position: top center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                z-index: -1;
+            }
+
+            &__lower {
+                display: flex;
+                justify-content: flex-end;
+                position: relative;
+                z-index: 10;
+
+                &-wrapper {
+                    width: 100%;
+                    padding: 20px;
+
+                    @media(min-width: $md) {
+                        padding: 40px;
+                    }
+
+                    @media(min-width: $lg) {
+                        width: 50%;
+                        padding: 0;
+                        padding-right: 100px;
+                    }
+                }
+            }
+
+            &__title {
+                h3 {
+                    color: $white;
+                    text-shadow: 3px 3px 3px $new-dark-blue;
+                    margin: 0;
+                }
+            }
+
+            &__link {
+                margin-top: 20px;
+
+                p {
+                    color: $new-dark-blue;
+                    background-color: $white;
+                    margin: 0;
+                    font-size: 26px;
+                    display: inline-block;
+                    font-weight: 700;
+                    padding: 5px;
+                    text-transform: uppercase;
+                    font-family: $new-condensed;
+                    line-height: 1;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &__text {
+        margin: 40px 0px;
+    }
+
+    &__wrapper {
+        position: relative;
+        min-height: 200px;
+    }
+
+    &__results {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 10px;
+
+        .combined-card {
+            width: calc(100% - 10px);
+            height: auto;
+            margin-bottom: 20px;
+            position: relative;
+            text-decoration: none;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('https://www.bigchange.com/wp-content/uploads/2021/10/lower-overlay.png');
+                background-size: contain;
+                background-position: left bottom;
+                background-repeat: no-repeat;
+                z-index: 2;
+                display: none;
+
+                @media(min-width: $md) {
+                    display: block;
+                }
+            }
+        
+            @media(min-width: $md) {
+                width: calc(50% - 30px);
+                margin-bottom: 40px;
+            }
+        
+            @media(min-width: $lg) {
+                width: calc(33.3333% - 40px);
+            }
+
+            &__image {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            &__lower {
+                position: relative;
+                z-index: 10;
+                padding: 40px;
+
+                @media(min-width: $md) {
+                    padding: 300px 20px 20px;
+                }
+            }
+
+            &__title {
+                line-height: 1;
+                border-left: 10px solid $white;
+                display: inline-block;
+                margin-bottom: 15px;
+
+                h3 {
+                    font-size: 20px;
+                    color: $new-dark-blue;
+                    text-transform: uppercase;
+                    display: inline;
+                    background-color: $white;
+
+                    span {
+                        position: relative;
+                        left: -5px;
+                    }
+                }
+            }
+
+            &__link {
+                p {
+                    color: $new-dark-blue;
+                    background-color: $white;
+                    margin: 0;
+                    font-size: 20px;
+                    display: inline-block;
+                    font-weight: 700;
+                    padding: 0px 5px 3px;
+                    text-transform: uppercase;
+                    font-family: $new-condensed;
+                    line-height: 1;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &__upper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        padding: 0px 5px;
+
+        @media(min-width: $md) {
+            padding: 0px 10px;
+        }
+    }
+
+    &__search {
+        width: 100%;
+        margin-bottom: 5px;
+
+        @media(min-width: $md) {
+            margin-bottom: 10px;
+        }
+
+        input {
+            border: 1px solid #B2B2B2;
+            padding: 10px;
+            @include font-size(18);
+            color: $base-color;
+
+            @media(min-width: $md) {
+                max-width: 50%;
+            }
+
+            &::placeholder {
+                color: $base-color;
+            }
+        }
+    }
+
+    &__category-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__type,
+    &__category {
+        width: 100%;
+
+        @media(min-width: $md) {
+            width: calc(50% - 10px);
+        }
+    }
+
+    &__category-wrapper,
+    &__sort,
+    &__sort--news {
+        width: 100%;
+
+        @media(min-width: $md) {
+            width: 50%;
+        }
+    }
+
+    &__sort,
+    &__sort--news {
+        @media(min-width: $md) {
+            width: calc(25% - 20px);
+        }
+    }
+
+    &__category,
+    &__type {
+        margin-bottom: 5px;
+        @media(min-width: $md) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__sub {
+        margin-bottom: 20px;
+        @media(min-width: $md) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__category,
+    &__sort,
+    &__sub,
+    &__type,
+    &__sort--news {
+        position: relative;
+
+        select {
+            padding: 10px 30px 10px 10px;
+            @include font-size(18);
+            border: 1px solid #B2B2B2;
+            // border-radius: 5px;
+            cursor: pointer;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            width: 3px;
+            height: 3px;
+            border: solid #B2B2B2;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 2px;
+            transform: rotate(45deg) translateY(-50%);
+            margin-top: -3px;
+            pointer-events: none;
+        }
+    }
+
+    &__load-more,
+    &__load-more--ceo,
+    &__load-more--community
+    &__load-more--news {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+
+        &.hidden {
+            display: none;
+        }
+    }
+
+    &__loader {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 40px;
+
+        &.hidden {
+            display: none;
+        }
     }
 }

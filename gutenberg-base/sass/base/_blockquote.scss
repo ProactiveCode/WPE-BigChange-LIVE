@@ -1,16 +1,16 @@
 blockquote {
-    text-align: center;
+    text-align: left;
     font-style: italic;
     @media screen and (min-width: $sm) {
         @include font-size(20);
     }
     @media screen and (min-width: $md) {
-        @include font-size(25);
+        @include font-size(20);
     }
     &:before {
         content: '';
         display: block;
-        margin: 15px auto;
+        margin-left: 15px;
         background: url('../../images/icon-quote-outlined.svg') no-repeat center center;
         background-size: contain;
         width: 60px;
@@ -20,7 +20,7 @@ blockquote {
             height: 75px;
         }
     }
-}
+} 
 
 .main-content blockquote {
     margin: $sp-unit*2 0;

@@ -110,6 +110,14 @@ body {
     }
 }
 
+.pad-20-mobile {
+    padding: 20px;
+
+    @media(min-width: $lg) {
+        padding: 0;
+    }
+}
+
 
 .margin-top-bot {
     margin: 30px auto;
@@ -165,8 +173,39 @@ body .wp-block-columns.no-margin-bottom {
     margin-top: 60px;
 }
 
+.margin-bottom-exlarge {
+    margin-bottom: 60px;
+}
+
+.margin-top-verylarge {
+    @media(min-width: $lg) {
+        margin-top: 120px;
+    }
+}
+
 .max-width-120 {
     max-width: 120px;
+}
+
+.pt-30 {
+    padding-top: 30px;
+}
+
+.pt-60 {
+    padding-top: 60px;
+}
+
+.pb-30 {
+    padding-bottom: 30px;
+}
+
+.pb-60 {
+    padding-bottom: 60px !important;
+}
+
+.mtb-30 {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .cntr-80 {
@@ -202,4 +241,8 @@ body .wp-block-columns.no-margin-bottom {
         }    
     }
     
+}
+
+.mb-10 {
+    margin-bottom: 10px;
 }
