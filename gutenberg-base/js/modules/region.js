@@ -54,31 +54,34 @@ if(gotLang == 1) { lang =  final; }
         if(lang == 'gb' || lang == 'GB' || lang == 'en-GB' || lang == 'en-gb') {
             createCookie('geoRegion', 'gb', 180);
             $(".pre-nav__select select").val('uk');
-
+            $("body").addClass('uk');
         }
         if(lang == 'fr' || lang == 'FR' || lang == 'fr-FR' || lang == 'fr-fr') {
             createCookie('geoRegion', 'fr', 180);
             $(".pre-nav__select select").val('fr');
-
+            $("body").addClass('fr');
         }
         if(lang == 'el-CY' || lang == 'el-cy' || lang == 'gr' || lang == 'GR'  || lang == 'el' || lang == 'EL') {
             createCookie('geoRegion', 'cy', 180);
             $(".pre-nav__select select").val('cy');
-
+            $("body").addClass('cy');
         }
         if(lang == 'en-NZ' || lang == 'en-nz' || lang == 'nz' || lang == 'NZ') {
             createCookie('geoRegion', 'nz', 180);
             $(".pre-nav__select select").val('nz');
+            $("body").addClass('nz');
         }
         if(lang == 'en-US' || lang == 'en-us' || lang == 'us' || lang == 'US') {
             createCookie('geoRegion', 'us', 180);
             $(".pre-nav__select select").val('us');
+            $("body").addClass('us');
         }
         if(lang == 'en-CA' || lang == 'en-ca' || lang == 'ca' || lang == 'CA') {
             createCookie('geoRegion', 'ca', 180);
             $(".pre-nav__select select").val('ca');
+            $("body").addClass('ca');
         }
     }
 }
 
-//// FUNCTIONS
+//// FUNCTIONS 
