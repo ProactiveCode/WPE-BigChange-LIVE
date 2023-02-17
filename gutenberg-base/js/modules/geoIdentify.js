@@ -13,6 +13,10 @@ export function init(){
 //// ACTIONS
 function bindUIActions(){
 
+    //Test alert
+    alert('This non jQuery alert worked...');
+    //END Test alert
+
     $.cookie("IPgeoRegion", "uk");
     $("body").addClass('uk');
     console.log('uk body class appended');
