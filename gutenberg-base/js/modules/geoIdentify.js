@@ -19,9 +19,9 @@ function bindUIActions(){
     }
     //END Test alert
 
-    $.cookie("IPgeoRegion", "uk");
+    /*$.cookie("IPgeoRegion", "uk");
     $("body").addClass('uk');
-    console.log('uk body class appended');
+    console.log('uk body class appended');*/
 }
 
 //// FUNCTIONS
