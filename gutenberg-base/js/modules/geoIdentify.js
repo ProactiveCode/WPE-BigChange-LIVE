@@ -14,10 +14,14 @@ export function init(){
 function bindUIActions(){
 
     //Test alert
-    if($("body").hasClass('page')) {
+    /*if($("body").hasClass('page')) {
         console.log("jquery is loaded");
-    }
+    }*/
     //END Test alert
+
+    if( getCookie('IPgeoRegion')){
+        console.log('IPgeoRegion cookie detected.');
+    }
 
     /*$.cookie("IPgeoRegion", "uk");
     $("body").addClass('uk');
