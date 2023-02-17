@@ -14,7 +14,7 @@ export function init(){
 function bindUIActions(){
 
     //Test alert
-    if($(body).hasClass('page')) {
+    if($("body").hasClass('page')) {
         console.log("jquery is loaded");
     }
     //END Test alert
