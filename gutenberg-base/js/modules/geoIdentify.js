@@ -14,7 +14,11 @@ export function init(){
 function bindUIActions(){
 
     //Test alert
-    alert('This non jQuery alert worked...');
+    if (jQuery) {
+        console.log("jquery is loaded");
+    } else {
+        console.log("Not loaded");
+    }
     //END Test alert
 
     $.cookie("IPgeoRegion", "uk");
