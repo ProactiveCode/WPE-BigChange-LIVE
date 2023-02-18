@@ -13,7 +13,7 @@ export function init(){
 //// ACTIONS
 function bindUIActions(){
 
-    //A different experiment
+    //Add class to body dependant on cookie region
     if (document.cookie.split(';').some((item) => item.trim().startsWith('IPgeoRegion='))) {
         // the "IPgeoRegion" cookie exists
         const regionValue = document.cookie
@@ -42,6 +42,10 @@ function bindUIActions(){
         if (regionValue === 'ca') {
             $('body').addClass('ca');
         }
+    }
+    //Hide Sage image if region does not support software
+    if($('body').hasClass('ca') || $('body').hasClass('us') || $('body').hasClass('nz') || $('body').hasClass('au')) {
+      $('img[src="sage-partner-de.webp"]').hide();
     }
 }
 
