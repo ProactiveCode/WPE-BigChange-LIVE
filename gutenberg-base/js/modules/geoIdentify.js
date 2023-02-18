@@ -39,16 +39,17 @@ function bindUIActions(){
     }
 
     //A different experiment
-    function detectUkGeoRegionCookie() {
-        const cookies = document.cookie.split(';');
-        for (let i = 0; i < cookies.length; i++) {
-          const cookie = cookies[i].trim();
-          if (cookie.indexOf('IPgeoRegion=uk') === 0) {
-            console.log('IPgeoRegion cookie detected new method.');
-          }
+    if (document.cookie.split(';').some((item) => item.trim().startsWith('IPgeoRegion='))) {
+        // the "IPgeoRegion" cookie exists
+        const regionValue = document.cookie
+          .split('; ')
+          .find((row) => row.startsWith('IPgeoRegion='))
+          .split('=')[1];
+      
+        if (regionValue === 'uk') {
+          alert('UK is region');
         }
-        console.log('IPgeoRegion cookie NOT detected new method.');
-      }
+    }
 
     /*$.cookie("IPgeoRegion", "uk");
     $("body").addClass('uk');
