@@ -22,25 +22,25 @@ function bindUIActions(){
           .split('=')[1];
       
         if (regionValue === 'uk') {
-          alert('UK is region');
+            $('body').addClass('uk');
         }
         if (regionValue === 'us') {
-            alert('USA is region');
+            $('body').addClass('us');
         }
         if (regionValue === 'fr') {
-            alert('France is region');
+            $('body').addClass('fr');
         }
         if (regionValue === 'cy') {
-            alert('Cyprus is region');
+            $('body').addClass('cy');
         }
         if (regionValue === 'nz') {
-            alert('New Zealand is region');
+            $('body').addClass('nz');
         }
         if (regionValue === 'au') {
-            alert('Australia is region');
+            $('body').addClass('au');
         }
         if (regionValue === 'ca') {
-            alert('Canada is region');
+            $('body').addClass('ca');
         }
     }
 }
