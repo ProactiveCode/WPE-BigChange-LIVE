@@ -38,6 +38,18 @@ function bindUIActions(){
         console.log('IPgeoRegion cookie detected.');
     }
 
+    //A different experiment
+    function detectUkGeoRegionCookie() {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          if (cookie.indexOf('IPgeoRegion=uk') === 0) {
+            console.log('IPgeoRegion cookie detected new method.');
+          }
+        }
+        console.log('IPgeoRegion cookie NOT detected new method.');
+      }
+
     /*$.cookie("IPgeoRegion", "uk");
     $("body").addClass('uk');
     console.log('uk body class appended');*/
