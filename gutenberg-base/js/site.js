@@ -67,3 +67,6 @@ podcastsBlog.init();
 
 import * as bigCommunity from './modules/bigCommunity';
 bigCommunity.init();
+
+import * as geoIdentify from './modules/geoIdentify';
+geoIdentify.init();
