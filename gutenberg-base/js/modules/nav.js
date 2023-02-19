@@ -125,18 +125,26 @@ function bindUIActions(){
             if (value == 'uk'){
                 window.location.href = ukLink;
                 createCookie('IPgeoRegion', value, 180);
+                //$("body").addClass('uk');
+                //console.log('uk body class appended');
                 console.log('uk');
             } else if (value == 'au') {
                 window.location.href = ukLink + '?lang=au';
                 createCookie('IPgeoRegion', value, 180);
+                //$("body").addClass('au');
+                //console.log('au body class appended');
                 console.log('au');
             } else if (value == 'nz') {
                 window.location.href = ukLink + '?lang=nz';
                 createCookie('IPgeoRegion', value, 180);
+                //$("body").addClass('nz');
+                //console.log('nz body class appended');
                 console.log('nz');
             } else if (value == 'ca') {
                 window.location.href = ukLink + '?lang=ca';
                 createCookie('IPgeoRegion', value, 180);
+                //$("body").addClass('ca');
+                //console.log('ca body class appended');
                 console.log('ca');
             }
         } else {

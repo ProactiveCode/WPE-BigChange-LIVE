@@ -120,11 +120,6 @@
         ?>
     </nav>
     <div class="footer__logos container">
-        <!-- START First logo hidden in CSS. -->
-        <div class="logo">
-            <img loading="lazy" src="https://www.bigchange.com/wp-content/uploads/2023/01/sage-partner-de.webp" width="200" height="80" alt="Sage Developer">
-        </div>
-        <!-- END First logo hidden in CSS. -->
         <div class="logo">
             <img loading="lazy" src="https://www.bigchange.com/wp-content/uploads/2023/01/sage-partner-de.webp" width="200" height="80" alt="Sage Developer">
         </div>
