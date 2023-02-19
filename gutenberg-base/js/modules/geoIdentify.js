@@ -45,7 +45,7 @@ function bindUIActions(){
     }
     //Hide Sage image if region does not support software
     if($('body').hasClass('ca') || $('body').hasClass('us') || $('body').hasClass('nz') || $('body').hasClass('au')) {
-      $('img[src="sage-partner-de.webp"]').remove();
+      $('img[src="sage-partner-de.webp"]').addClass('hide');
       console.log('Sage Logo removed.');
     }
 }
