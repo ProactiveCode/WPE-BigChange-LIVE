@@ -49,6 +49,9 @@ function bindUIActions(){
         $('.footer__logos .logo:first-of-type').css('display', 'none');
         console.log('Sage Logo removed.');
     }
+
+    //Manual replacement for Cloudfront forwarding rules
+    
 }
 
 //// FUNCTIONS
