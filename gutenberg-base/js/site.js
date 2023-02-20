@@ -71,5 +71,5 @@ bigCommunity.init();
 import * as geoIdentify from './modules/geoIdentify';
 geoIdentify.init();
 
-import * as region from './modules/region';
-region.init();
+//import * as region from './modules/region';
+//region.init();

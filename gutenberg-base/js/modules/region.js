@@ -62,7 +62,7 @@ if(gotLang == 1) { lang =  final; }
             $(".pre-nav__select select").val('fr');
             $("body").addClass('fr');
             //Cloudfront redirect no longer available after WP Engine Migration. Manual override:
-            window.location.replace("/fr/"); 
+            //window.location.replace("/fr/"); 
         }
         if(lang == 'el-CY' || lang == 'el-cy' || lang == 'gr' || lang == 'GR'  || lang == 'el' || lang == 'EL') {
             createCookie('geoRegion', 'cy', 180);
@@ -85,6 +85,19 @@ if(gotLang == 1) { lang =  final; }
             $("body").addClass('ca');
         }
     }
+
+    // Check if the cookie "cancelgeo" does not exist
+    if (!document.cookie.includes('cancelgeo')) {
+        console.log('User has not manually selected a region.');
+        // Check if the browser language matches 'fr' or 'FR' or 'fr-FR' or 'fr-fr'
+        if (navigator.language.match(/^fr($|-)|^FR($|-)|^fr\-FR($|-)|^fr\-fr($|-)/)) {
+            console.log('User has a French browser lang');
+            // Redirect the user to /fr/
+            console.log('Redirecting to france...');
+            window.location.href = '/fr/';
+        }
+    }
+
 }
 
 //// FUNCTIONS 
