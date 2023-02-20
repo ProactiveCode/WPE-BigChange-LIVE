@@ -51,7 +51,7 @@ function bindUIActions(){
     }
 
     //Manual replacement for Cloudfront forwarding rules
-    console.log('Run FR redirection rule...');
+    //FR
     // Check if the cookie "cancelgeo" does not exist
     if (location.pathname === '/' && !document.cookie.includes('cancelgeo')) {
         // Code to be executed if both conditions are true
@@ -62,6 +62,71 @@ function bindUIActions(){
             // Redirect the user to /fr/
             console.log('Redirecting to france...');
             window.location.href = '/fr/';
+        }
+    }
+    //US
+    // Check if the cookie "cancelgeo" does not exist
+    if (location.pathname === '/' && !document.cookie.includes('cancelgeo')) {
+        // Code to be executed if both conditions are true
+        console.log('User has not manually selected a region.');
+        // Check if the browser language matches various US regions
+        if (navigator.language.match(/^en\-US($|-)|^us($|-)|^US($|-)/)) {
+            console.log('User has a French browser lang');
+            // Redirect the user to /us/
+            console.log('Redirecting to france...');
+            window.location.href = '/us/';
+        }
+    }
+    //CA
+    // Check if the cookie "cancelgeo" does not exist
+    if (location.pathname === '/' && !document.cookie.includes('cancelgeo')) {
+        // Code to be executed if both conditions are true
+        console.log('User has not manually selected a region.');
+        // Check if the browser language matches various Canadian regions.
+        if (navigator.language.match(/^en\-CA($|-)|^en\-ca($|-)|^ca($|-)|^CA($|-)/)) {
+            console.log('User has a French browser lang');
+            // Redirect the user to /ca/
+            console.log('Redirecting to france...');
+            window.location.href = '/?lang=ca';
+        }
+    }
+    //CY
+    // Check if the cookie "cancelgeo" does not exist
+    if (location.pathname === '/' && !document.cookie.includes('cancelgeo')) {
+        // Code to be executed if both conditions are true
+        console.log('User has not manually selected a region.');
+        // Check if the browser language matches 'fr' or 'FR' or 'fr-FR' or 'fr-fr'
+        if (navigator.language.match(/^el\-CY($|-)|^el\-cy($|-)|^gr($|-)|^GR($|-)|^el($|-)|^EL($|-)/)) {
+            console.log('User has a French browser lang');
+            // Redirect the user to /cy/
+            console.log('Redirecting to france...');
+            window.location.href = '/cy/';
+        }
+    }
+    //AU
+    // Check if the cookie "cancelgeo" does not exist
+    if (location.pathname === '/' && !document.cookie.includes('cancelgeo')) {
+        // Code to be executed if both conditions are true
+        console.log('User has not manually selected a region.');
+        // Check if the browser language matches 'fr' or 'FR' or 'fr-FR' or 'fr-fr'
+        if (navigator.language.match(/^en\-AU($|-)|^en\-au($|-)|^au($|-)|^AU($|-)/)) {
+            console.log('User has a French browser lang');
+            // Redirect the user to /au/
+            console.log('Redirecting to france...');
+            window.location.href = '/?lang=au';
+        }
+    }
+    //NZ
+    // Check if the cookie "cancelgeo" does not exist
+    if (location.pathname === '/' && !document.cookie.includes('cancelgeo')) {
+        // Code to be executed if both conditions are true
+        console.log('User has not manually selected a region.');
+        // Check if the browser language matches 'fr' or 'FR' or 'fr-FR' or 'fr-fr'
+        if (navigator.language.match(/^en\-NZ($|-)|^en\-nz($|-)|^nz($|-)|^NZ($|-)/)) {
+            console.log('User has a French browser lang');
+            // Redirect the user to /nz/
+            console.log('Redirecting to france...');
+            window.location.href = '?lang=nz';
         }
     }
 }
