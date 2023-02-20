@@ -51,7 +51,18 @@ function bindUIActions(){
     }
 
     //Manual replacement for Cloudfront forwarding rules
-    
+    console.log('Run FR redirection rule...');
+    // Check if the cookie "cancelgeo" does not exist
+    if (!document.cookie.includes('cancelgeo')) {
+        console.log('User has not manually selected a region.');
+        // Check if the browser language matches 'fr' or 'FR' or 'fr-FR' or 'fr-fr'
+        if (navigator.language.match(/^fr($|-)|^FR($|-)|^fr\-FR($|-)|^fr\-fr($|-)/)) {
+            console.log('User has a French browser lang');
+            // Redirect the user to /fr/
+            console.log('Redirecting to france...');
+            window.location.href = '/fr/';
+        }
+    }
 }
 
 //// FUNCTIONS
