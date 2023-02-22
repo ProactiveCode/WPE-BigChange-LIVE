@@ -144,7 +144,7 @@
                 $dtHide = DateTime::createFromFormat("d/m/Y h:i a", $block['hide_date']);
                 $dtCurrent = DateTime::createFromFormat("d/m/Y h:i a", date("d/m/Y h:i a"));
                 $unixHideDate = $dtHide->getTimestamp();
-                $unixCurrentDate = $dtCurrent->getTimestamp();`
+                $unixCurrentDate = $dtCurrent->getTimestamp();
                 
                 if ($block['logo'] && $unixHideDate > $unixCurrentDate ){ ?>
                 
