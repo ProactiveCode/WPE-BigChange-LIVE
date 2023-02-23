@@ -18,7 +18,17 @@ html:lang(fr-FR) {
         }
 
         @media(min-width: $xlg) {
-            padding-right: 30px;
+            padding-right: 24px;
+        }
+    }
+
+    .site-header {
+        &__demo {
+            a {
+                &:first-of-type {
+                    margin-right: 8px;
+                }
+            }
         }
     }
 

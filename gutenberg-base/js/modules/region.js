@@ -46,6 +46,7 @@ if(gotLang == 1) { lang =  final; }
 
   console.log('redirecting to - ' + lang);  
 
+    //should be set to live domain when released.
     if (window.location.href == "https://www.bigchange.com/") {
         home = true;
     }
@@ -60,6 +61,8 @@ if(gotLang == 1) { lang =  final; }
             createCookie('geoRegion', 'fr', 180);
             $(".pre-nav__select select").val('fr');
             $("body").addClass('fr');
+            //Cloudfront redirect no longer available after WP Engine Migration. Manual override:
+            //window.location.replace("/fr/"); 
         }
         if(lang == 'el-CY' || lang == 'el-cy' || lang == 'gr' || lang == 'GR'  || lang == 'el' || lang == 'EL') {
             createCookie('geoRegion', 'cy', 180);
@@ -82,6 +85,7 @@ if(gotLang == 1) { lang =  final; }
             $("body").addClass('ca');
         }
     }
+
 }
 
 //// FUNCTIONS 

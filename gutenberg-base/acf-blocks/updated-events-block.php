@@ -132,7 +132,7 @@
                 </div>
                 <div class="updated-events-block__events-right">
                     <h2>Exhibition Lobby</h2>
-                    <p>Here are our upcoming events. Join us by signing up to an event and discover how you can be unstoppable with BigChange</p>
+                    <p>Here are our upcoming events. Join us by signing up to an event and discover how you can be unstoppable with BigChange.</p>
                 </div>
             </div>
         </div>
