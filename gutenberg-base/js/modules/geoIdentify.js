@@ -51,26 +51,44 @@ function bindUIActions(){
     }
 
     //Manual replacement for Cloudfront forwarding rules
-    // Check if the cookie "cancelgeo" does not exist
-    if (location.pathname === '/' && !document.cookie.includes('cancelgeo')) {
+    // Check if the cookie "cancelgeo" and "stopGeoRedirect" does not exist
+    if(window.location.pathname === '/' && !document.cookie.includes('cancelgeo') && !document.cookie.includes('stopGeoRedirect')) {
+        
+        //New cookie to stop redirect loops
+        // 1 hour
+        const cookieExpirationHours = 1;
+        // Set the name and value of the cookie
+        const cookieName = "stopGeoRedirect";
+        const cookieValue = "true";
+        // Create the cookie string
+        const cookieString = `${cookieName}=${cookieValue};expires=${new Date(new Date().getTime() + cookieExpirationHours * 60 * 60 * 1000).toUTCString()};path=/`;
+
+
+
         // Code to be executed if both conditions are true
         // Check if the browser language matches 'fr' or 'FR' or 'fr-FR' or 'fr-fr'
         if (navigator.language.match(/^fr($|-)|^FR($|-)|^fr\-FR($|-)|^fr\-fr($|-)/)) {
-            console.log('User has a French browser lang');
+            //console.log('User has a French browser lang');
             // Redirect the user to /fr/
-            console.log('Redirecting to france...');
+            //Stop redirects
+            document.cookie = cookieString;
+            //console.log('Redirecting to france...');
             window.location.href = '/fr/';
         }
         if (navigator.language.match(/^en\-US($|-)|^us($|-)|^US($|-)/)) {
-            console.log('User has a French browser lang');
+            //console.log('User has a French browser lang');
             // Redirect the user to /us/
-            console.log('Redirecting to france...');
+            //Stop redirects
+            document.cookie = cookieString;
+            //console.log('Redirecting to france...');
             window.location.href = '/us/';
         }
         if (navigator.language.match(/^el\-CY($|-)|^el\-cy($|-)|^gr($|-)|^GR($|-)|^el($|-)|^EL($|-)/)) {
-            console.log('User has a French browser lang');
+            //console.log('User has a French browser lang');
             // Redirect the user to /cy/
-            console.log('Redirecting to france...');
+            //Stop redirects
+            document.cookie = cookieString;
+            //console.log('Redirecting to france...');
             window.location.href = '/cy/';
         }
     }
