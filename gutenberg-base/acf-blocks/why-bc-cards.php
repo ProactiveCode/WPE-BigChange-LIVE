@@ -49,6 +49,8 @@
                         <?php if(!$card['stand_out']) { ?>
                             <div class="why-bc-cards__image">
                                 <?php if($card['link']['url']) { ?> 
+
+                                    <?php var_dump($card['link']['url']); ?>
                                     <a href="<?php echo $card['link']['url']; ?>"  target="<?php echo $card['link']['target']; ?>">
                                         <img src="<?php echo $card['image']['url']; ?>" alt="<?php echo $card['image']['alt']; ?>">
                                     </a>
