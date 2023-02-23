@@ -4809,6 +4809,9 @@ ul.margin-mobile-fix {
         width: 0%;
         left: 50%; }
 
+body.fr .site-header__demo a:first-of-type {
+  margin-right: 12px; }
+
 .menu-open .site-header {
   background-color: #fff; }
 
