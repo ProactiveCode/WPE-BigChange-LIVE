@@ -11530,7 +11530,10 @@ html:lang(fr-FR) .nav-menu > li.menu-item-has-children > a {
   @media (min-width: 1200px) {
     html:lang(fr-FR) .nav-menu > li.menu-item-has-children .menu-item-has-children > a,
     html:lang(fr-FR) .nav-menu > li.menu-item-has-children > a {
-      padding-right: 30px; } }
+      padding-right: 24px; } }
+
+html:lang(fr-FR) .site-header__demo a:first-of-type {
+  margin-right: 8px; }
 
 @media (min-width: 1200px) {
   html:lang(fr-FR) .nav-menu > li.menu-item-has-children .menu-item-has-children > a:after, html:lang(fr-FR) .nav-menu > li.menu-item-has-children > a:after {
