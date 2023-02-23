@@ -772,140 +772,6 @@ if( function_exists('acf_add_options_page') ) {
 	));
 }
 
-// function prefix_add_content ($content){
-//	if(is_single() && !get_field('hide_date_on_h2', get_the_ID())) {
-//		$content = preg_replace('/<h2>/i', '<h2>' . get_the_date('jS F Y', get_the_ID()) . ' - ', $content, 1);
-//		return $content;
-//	} else {
-//		return $content;
-//	}
-// }
-// add_filter ('the_content', 'prefix_add_content');
-// add_filter('acf_the_content', 'prefix_add_content');
-
-function seed_sc_htmltest() {
-	return '
-	<h1>Header One</h1>
-
-	<p>Lorem ipsum <em>emphasised text</em> dolor sit amet, <strong>strong text</strong> consectetur adipisicing elit, <abbr title="">abbreviated text</abbr> sed do eiusmod tempor <acronym title="">acronym text</acronym> incididunt ut labore et dolore magna aliqua. Ut <q>quoted text</q> enim ad minim veniam, quis nostrud exercitation <a href="/">link text</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute <del>deleted text</del> <ins>inserted text</ins> irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat <code>code text</code> cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-	<blockquote>
-	<p>Blockquote. Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-	</blockquote>
-
-	<h2>Header 2</h2>
-
-	<p>Extended paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-	<ol>
-	<li>Ordered list</li>
-	<li>Item 2 Consectetur adipisicing elit</li>
-	<li>Item 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
-	<li>Item 4</li>
-	<li>Item 5</li>
-	</ol>
-
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-	<h3>Header 3</h3>
-
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-	<ul>
-	<li>Unordered list</li>
-	<li>Consectetur adipisicing elit</li>
-	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
-	<li>Item</li>
-	<li>Item</li>
-	<li>Item</li>
-	</ul>
-
-	<p>Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-	<pre><code>pre and code pair {
-    margin: $sp-unit 0;
-    padding: $sp-unit;
-    background: $bg-alt;
-    overflow-x: auto;
-}</code></pre>
-	<img src="https://via.placeholder.com/600x400">
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/TnzFRV1LwIo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa nulla veritatis beatae ullam quas repellendus praesentium corporis deserunt ab porro alias debitis voluptatum, dignissimos adipisci, dolor laborum minus hic!</p>
-
-	<h4>Header 4</h4>
-
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-	<dl>
-	<dt>Definition list</dt>
-	<dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-	commodo consequat.</dd>
-	<dt>Lorem ipsum dolor sit amet</dt>
-	<dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
-	<dt>Lorem ipsum dolor sit amet</dt>
-	<dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
-	<dt>Lorem ipsum dolor sit amet</dt>
-	<dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
-	</dl>
-
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-	<table summary="Table summary">
-		<thead>
-			<tr>
-				<th>Header</th><th>Header</th><th>Header</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Content</td><td>1</td><td>a</td>
-			</tr>
-			<tr>
-				<td>Content</td><td>2</td><td>b</td>
-			</tr>
-			<tr>
-				<td>Content</td><td>3</td><td>c</td>
-			</tr>
-			<tr>
-				<td>Content</td><td>4</td><td>d</td>
-			</tr>
-			<tr>
-				<td>Content</td><td>5</td><td>e</td>
-			</tr>
-			<tr>
-				<td>Content</td><td>6</td><td>f</td>
-			</tr>
-		</tbody>
-	</table>
-
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa nulla veritatis beatae ullam quas repellendus praesentium corporis deserunt ab porro alias debitis voluptatum, dignissimos adipisci, dolor laborum minus hic!</p>
-
-	<table summary="Table summary">
-		<thead>
-			<tr>
-				<th>Header</th><th>Header</th><th>Header</th><th>Header</th><th>Header</th><th>Header</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Wide Content</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-			</tr>
-			<tr>
-				<td>Wide Content</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-			</tr>
-			<tr>
-				<td>Wide Content</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-			</tr>
-			<tr>
-				<td>Wide Content</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-			</tr>
-		</tbody>
-	</table>';
-	
-}
-add_shortcode( 'htmlelements', 'seed_sc_htmltest' );
-
 remove_action( 'wp_head', 'rel_canonical' );
 function pricing_form() {
 	$priceText = get_field('download_price_list', 'option');
@@ -1816,3 +1682,9 @@ function get_podcasts() {
     echo $return_obj;
     die();
 }
+
+//Remove the WP titles from the header as these are added via a plugin:
+function remove_titles() {
+    remove_action('wp_head', '_wp_render_title_tag', 1);
+}
+add_action('init', 'remove_titles');
