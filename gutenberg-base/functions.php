@@ -1690,12 +1690,3 @@ function remove_titles() {
     }
 }
 add_action('init', 'remove_titles');
-
-//Remove post titles
-function remove_post_title($title) {
-    if (strpos($_SERVER['REQUEST_URI'], '/fr/') === false) {
-        $title = '';
-    }
-    return $title;
-}
-add_filter('the_title', 'remove_post_title');
