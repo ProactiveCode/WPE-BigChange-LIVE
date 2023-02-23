@@ -48,14 +48,15 @@
                     <div class="why-bc-cards__card <?php if($card['stand_out']) { echo 'why-bc-cards__card--stand-out'; } ?>">
                         <?php if(!$card['stand_out']) { ?>
                             <div class="why-bc-cards__image">
-                                <?php if(str_contains($card['link']['url'], 'http')) { ?> 
-                                    <?php var_dump(str_contains($card['link']['url'], 'http')); ?>
-                                    <a href="<?php echo $card['link']['url']; ?>"  target="<?php echo $card['link']['target']; ?>">
-                                        <img src="<?php echo $card['image']['url']; ?>" alt="<?php echo $card['image']['alt']; ?>">
-                                    </a>
-                                <?php } else {  ?>
-                                    <img src="<?php echo $card['image']['url']; ?>" alt="<?php echo $card['image']['alt']; ?>">
-                                <?php } ?>
+                                <?php
+                                if (filter_var($card['link']['url'], FILTER_VALIDATE_URL)) {
+                                ?>
+                                <a href="<?php echo $card['link']['url']; ?>" target="<?php echo $card['link']['target']; ?>">
+                                <img src="<?php echo $card['image']['url']; ?>" alt="<?php echo $card['image']['alt']; ?>">
+                                </a>
+                                <?php
+                                }
+                                ?>
                             </div>
                         <?php } ?>
                         <div class="why-bc-cards__content-wrapper">
