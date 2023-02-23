@@ -620,7 +620,7 @@ function gutenberg_starter_theme_fonts_url() {
 /**
  * Enqueue scripts and styles.
  */
-
+ $style_ver_diamonds = filemtime( get_stylesheet_directory() . '/compiled/css/min/diamonds-only.css' );
  $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
  // var_dump($actual_link);
@@ -632,7 +632,6 @@ function gutenberg_starter_theme_scripts() {
 	wp_enqueue_style( 'gutenberg-starter-theme-fonts', gutenberg_starter_theme_fonts_url() );
 
 	$style_ver = filemtime( get_stylesheet_directory() . '/compiled/css/min/style.css' );
-	$style_ver_diamonds = filemtime( get_stylesheet_directory() . '/compiled/css/min/diamonds-only.css' );
 
 	if(!is_admin()) {
 		wp_enqueue_style('theme-styles', get_template_directory_uri() . '/compiled/css/min/style.css?' . $style_ver, array(), $style_ver);
