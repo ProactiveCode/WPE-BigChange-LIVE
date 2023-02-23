@@ -47,7 +47,7 @@ if(gotLang == 1) { lang =  final; }
   console.log('redirecting to - ' + lang);  
 
     //should be set to live domain when released.
-    if (window.location.href == "https://bigchangewpdev.wpengine.com/") {
+    if (window.location.href == "https://www.bigchange.com/") {
         home = true;
     }
 
