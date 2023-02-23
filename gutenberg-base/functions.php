@@ -1683,8 +1683,10 @@ function get_podcasts() {
     die();
 }
 
-//Remove the WP titles from the header as these are added via a plugin:
+//Remove the WP titles from the header as these are added via a plugin (not on France):
 function remove_titles() {
-    remove_action('wp_head', '_wp_render_title_tag', 1);
+    if (strpos($_SERVER['REQUEST_URI'], '/fr/') === false) {
+        remove_action('wp_head', '_wp_render_title_tag', 1);
+    }
 }
 add_action('init', 'remove_titles');
