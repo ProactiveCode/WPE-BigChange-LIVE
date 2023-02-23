@@ -70,6 +70,8 @@ function bindUIActions(){
         if (navigator.language.match(/^fr($|-)|^FR($|-)|^fr\-FR($|-)|^fr\-fr($|-)/)) {
             //console.log('User has a French browser lang');
             // Redirect the user to /fr/
+            //override existing cookie
+            document.cookie = "IPgeoRegion=fr; path=/";
             //Stop redirects
             document.cookie = cookieString;
             //console.log('Redirecting to france...');
@@ -78,6 +80,8 @@ function bindUIActions(){
         if (navigator.language.match(/^en\-US($|-)|^us($|-)|^US($|-)/)) {
             //console.log('User has a French browser lang');
             // Redirect the user to /us/
+            //override existing cookie
+            document.cookie = "IPgeoRegion=us; path=/";
             //Stop redirects
             document.cookie = cookieString;
             //console.log('Redirecting to france...');
@@ -86,6 +90,8 @@ function bindUIActions(){
         if (navigator.language.match(/^el\-CY($|-)|^el\-cy($|-)|^gr($|-)|^GR($|-)|^el($|-)|^EL($|-)/)) {
             //console.log('User has a French browser lang');
             // Redirect the user to /cy/
+            //override existing cookie
+            document.cookie = "IPgeoRegion=cy; path=/";
             //Stop redirects
             document.cookie = cookieString;
             //console.log('Redirecting to france...');
