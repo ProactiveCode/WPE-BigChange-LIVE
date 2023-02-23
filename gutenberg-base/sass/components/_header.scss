@@ -422,18 +422,6 @@
 
 }
 
-body.fr {
-    .site-header {
-        &__demo {
-            a {
-                &:first-of-type {
-                    margin-right: 8px;
-                }
-            }
-        }
-    }
-}
-
 .menu-open {
     .site-header {
         background-color: $white;
