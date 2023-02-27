@@ -183,7 +183,7 @@ get_header(); ?>
 								</div>
 								<?php if($newHero['foreground_image']) { ?>
 									<div class="hero__new-image">
-										<div class="hero__new-image-image">
+										<div class="hero__new-image-image no-lazy">
 											<img loading="lazy" src="<?php echo $newHero['foreground_image']['url']; ?>" alt="<?php echo $newHero['foreground_image']['alt']; ?>">
 										</div>
 									</div>
