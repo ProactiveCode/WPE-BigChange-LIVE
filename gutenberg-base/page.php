@@ -181,6 +181,22 @@ get_header(); ?>
 									</div>
 									<?php } ?>
 								</div>
+
+								<?php
+								//Homepage lookup used so exact image dimensions can be used
+								if(is_home() || is_front_page()) {
+									// code for homepage
+									if($newHero['foreground_image']) {
+										// code for foreground image
+										<img src="<?php echo $newHero['foreground_image']['url']; ?>" height="550" width="523" alt="<?php echo $newHero['foreground_image']['alt']; ?>">
+									}
+								} else {
+									// code for other pages
+									<img src="<?php echo $newHero['foreground_image']['url']; ?>" alt="<?php echo $newHero['foreground_image']['alt']; ?>">
+								}
+								?>
+
+
 								<?php if($newHero['foreground_image']) { ?>
 									<div class="hero__new-image">
 										<div class="hero__new-image-image">
