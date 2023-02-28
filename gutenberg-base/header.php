@@ -193,13 +193,6 @@
 	</div>
 	<div class="pre-nav">
 		<div class="pre-nav__container container">
-			<!-- <div class="pre-nav__search">
-				<div class="pre-nav__search-icon">
-					<a href="javascript:void(0);">
-						<img src="<?php //echo get_template_directory_uri() . '/compiled/images/search--white.svg'; ?>" alt="Search icon">
-					</a>
-				</div>
-			</div> -->
 			<?php if($currentLang == 'en') { ?>
 				<div class="pre-nav__number">
 					<a href="tel:<?php if(get_field('phone_number', 'option')) { echo get_field('phone_number', 'option'); } else {  echo '(0)113 457 1000'; } ?>"><?php if(get_field('phone_number', 'option')) { echo get_field('phone_number', 'option'); } else {  echo '(0)113 457 1000'; } ?></a>
@@ -209,7 +202,6 @@
 				<a href="<?php if(get_field('relative_link', 'option')) { echo get_field('relative_link', 'option'); } else {  echo'https://www.bigchange.com'; } ?>/about-us/contact/"><?php echo get_field('string_contact_us', 'option'); ?></a>
 			</div>
 			<div class="pre-nav__select">
-			<!-- UPDATE HREFLANGS LINE 50 ISH ABOVE WITH ANY NEW LANGS YOU ADD -->
 				<select name="country" id="country"> 
 					<option value="uk" data-link="<?php if(get_field('uk_hreflang_url')) { echo get_field('uk_hreflang_url'); } else { echo 'https://www.bigchange.com/'; } ?>">United Kingdom</option>
 					<option value="fr" data-link="<?php if(get_field('fr_hreflang_url')) { echo get_field('fr_hreflang_url'); } else { echo 'https://www.bigchange.com/fr/'; } ?>">France</option>
@@ -219,7 +211,6 @@
 					<option value="au" data-link="<?php if(get_field('au_hreflang_url')) { echo get_field('au_hreflang_url'); } else { echo 'https://www.bigchange.com/au/'; } ?>">Australia</option>
 					<option value="ca" data-link="">Canada</option>
 				</select>
-			<!-- UPDATE HREFLANGS LINE 50 ISH ABOVE WITH ANY NEW LANGS YOU ADD -->
 			</div>
 		</div>
 	</div>
