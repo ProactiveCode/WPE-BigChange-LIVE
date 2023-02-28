@@ -14,7 +14,7 @@
     <?php $logos = get_field('logos');
     foreach ($logos as $logo) { 
         if ($logo['logo']){?>
-            <img loading="lazy" src="<?php echo $logo['logo']['url']; ?>" alt="<?php echo $logo['logo']['alt']; ?>">
+            <img width="150" height="60" loading="lazy" src="<?php echo $logo['logo']['url']; ?>" alt="<?php echo $logo['logo']['alt']; ?>">
         <?php } 
     }?>
 </div>
