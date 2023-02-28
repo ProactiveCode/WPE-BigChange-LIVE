@@ -288,7 +288,7 @@
 			</nav>
 			<div class="site-header__search pre-nav__search-icon">
 				<a href="javascript:void(0);">
-					<img src="https://www.bigchange.com/wp-content/uploads/2022/08/search-new-blue.svg" alt="Search icon">
+					<img height="20" width="20" src="https://www.bigchange.com/wp-content/uploads/2022/08/search-new-blue.svg" alt="Search icon">
 				</a>
 			</div>
 			<div class="search-wrapper">
