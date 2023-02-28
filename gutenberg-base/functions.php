@@ -1689,3 +1689,11 @@ function remove_titles() {
     }
 }
 add_action('init', 'remove_titles');
+
+// Remove dashicons in frontend for unauthenticated users
+add_action( 'wp_enqueue_scripts', 'bs_dequeue_dashicons' );
+function bs_dequeue_dashicons() {
+    if ( ! is_user_logged_in() ) {
+        wp_deregister_style( 'dashicons' );
+    }
+}

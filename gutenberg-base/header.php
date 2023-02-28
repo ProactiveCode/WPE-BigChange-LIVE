@@ -273,7 +273,7 @@
 		<div class="site-header__container container">
 			<div class="site-header__logo">
 				<a href="<?=home_url()?>">
-					<img src="<?php if($currentLang == 'en') { echo 'https://www.bigchange.com/wp-content/uploads/2021/11/bc-logo-smaller.png'; } else { echo get_template_directory_uri() . '/compiled/images/bigchange-logo-2020.png'; } ?>" alt="Big Change Logo">
+					<img width="230" height="60" src="<?php if($currentLang == 'en') { echo 'https://www.bigchange.com/wp-content/uploads/2021/11/bc-logo-smaller.png'; } else { echo get_template_directory_uri() . '/compiled/images/bigchange-logo-2020.png'; } ?>" alt="Big Change Logo">
 				</a>
 			</div>
 			<nav id="site-navigation" class="site-header__nav">
@@ -288,7 +288,7 @@
 			</nav>
 			<div class="site-header__search pre-nav__search-icon">
 				<a href="javascript:void(0);">
-					<img src="https://www.bigchange.com/wp-content/uploads/2022/08/search-new-blue.svg" alt="Search icon">
+					<img height="20" width="20" src="https://www.bigchange.com/wp-content/uploads/2022/08/search-new-blue.svg" alt="Search icon">
 				</a>
 			</div>
 			<div class="search-wrapper">
