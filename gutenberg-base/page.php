@@ -182,17 +182,20 @@ get_header(); ?>
 									<?php } ?>
 								</div>
 								<?php
-								//Homepage lookup used so exact image dimensions can be used
-								if(is_home() || is_front_page()) {
+								// Homepage lookup used so exact image dimensions can be used
+								if (is_home() || is_front_page()) {
 									// code for homepage
-									if($newHero['foreground_image']) {
-										// code for foreground image
+									if ($newHero['foreground_image']) {
+										// code for foreground image?>
 										<img src="<?php echo $newHero['foreground_image']['url']; ?>" height="550" width="523" alt="<?php echo $newHero['foreground_image']['alt']; ?>">
+										<?php
 									}
 								} else {
 									// code for other pages
+									?>
 									<img src="<?php echo $newHero['foreground_image']['url']; ?>" alt="<?php echo $newHero['foreground_image']['alt']; ?>">
-								}
+									<?php
+									}
 								?>
 								<div class="home-capterra" style="display:none;">
 									<img width="100" height="40" src="https://www.bigchange.com/wp-content/uploads/2022/07/capterra-new-logo.png" alt="Capterra Rating 4.6">
