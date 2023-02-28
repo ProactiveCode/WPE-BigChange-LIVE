@@ -14,7 +14,7 @@
     <?php $logos = get_field('logos');
     foreach ($logos as $logo) { 
         if ($logo['logo']){?>
-            <img loading="lazy" src="<?php echo $logo['logo']['url']; ?>" alt="<?php echo $logo['logo']['alt']; ?>">
+            <img width="150" height="60" loading="lazy" src="<?php echo $logo['logo']['url']; ?>" alt="<?php echo $logo['logo']['alt']; ?>">
         <?php } 
     }?>
 </div>
@@ -23,7 +23,7 @@ if($logosseconds) {?>
     <div class="logos-second owl-carousel container">
         <?php foreach ($logosseconds as $logossecond) { 
             if ($logossecond['logo']){?>
-                <img loading="lazy" src="<?php echo $logossecond['logo']['url']; ?>" alt="<?php echo $logossecond['logo']['alt']; ?>">
+                <img width="150" height="60" loading="lazy" src="<?php echo $logossecond['logo']['url']; ?>" alt="<?php echo $logossecond['logo']['alt']; ?>">
             <?php } ?>
         <?php } ?>
     </div>

@@ -11,7 +11,7 @@
                 <?php foreach ($industriesListItems as $item) { ?>
                     <a href="<?php echo $item['link']; ?>" class="industries-list__item">
                         <div class="industries-list__item-image">
-                            <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['text']; ?> icon">
+                            <img width="100" height="100" src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['text']; ?> icon">
                         </div>
                         <div class="industries-list__item-text">
                             <p><?php echo $item['text']; ?></p>
