@@ -392,29 +392,6 @@
             </div>
         </div>
     </div>
-	<!-- Temp Disabled Until Signed Off -->
-	
-	<?php if(is_front_page() && $currentLang != 'fr') { ?>
-		<div class="bc-modal em-modal" style="opacity: 0; z-index: -1;">
-			<div class="bc-modal__bg"></div>
-			<div class="bc-modal__wrapper">
-				<div class="bc-modal__inner">
-					<div class="bc-modal__close"></div>
-					<div class="em-modal__wrapper">
-						<div class="em-modal__text">
-							<!-- <img src="https://www.bigchange.com/wp-content/uploads/2021/11/bigchange-logo-2020-white-trans.webp" alt="BigChange logo"> -->
-							<h3>BE A PART OF OUR PLUMBING & HEATING</h3>
-							<a target="_blank" href="https://webinar.ringcentral.com/webinar/register/3216430206337/WN_laNaKBwKS9GdqPw23Dl34w" class="btn-normal btn-normal--yellow">Book your place now</a>
-						</div>
-						<div class="em-modal__image">
-							<img src="https://www.bigchange.com/wp-content/uploads/2022/01/Webinar-events-page-image.webp" alt="BigChange brochures">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	<?php } ?>
-	 
 
 <div class="cookie-bar cookie-bar--new cookie-bar--hidden">
 	<div class="cookie-bar__inner container">
