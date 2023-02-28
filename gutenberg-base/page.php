@@ -193,7 +193,7 @@ get_header(); ?>
 								} else {
 									// code for other pages
 									?>
-									<img src="<?php echo $newHero['foreground_image']['url']; ?>" alt="<?php echo $newHero['foreground_image']['alt']; ?>">
+									<img loading="lazy" src="<?php echo $newHero['foreground_image']['url']; ?>" alt="<?php echo $newHero['foreground_image']['alt']; ?>">
 									<?php
 									}
 								?>
