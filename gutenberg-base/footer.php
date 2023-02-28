@@ -100,7 +100,7 @@
         </div>
         <?php if (get_field('show_footer_partnerships_link', 'option') && get_field('footer_partnerships_link', 'option')) { ?>
             <div class="logos-partnership-cta footer">
-                <img src="https://www.bigchange.com/wp-content/uploads/2022/05/hand-shake-partnerships.svg" alt="Handshake icon">
+                <img height="60" width="100" src="https://www.bigchange.com/wp-content/uploads/2022/05/hand-shake-partnerships.svg" alt="Handshake icon">
                 <div class="logos-partership-cta__mid-wrapper">
                     <h4>Become a BigChange Partner</h4>
                     <p>We’ll help you expand your service offering to your customers</p>
