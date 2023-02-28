@@ -84,28 +84,7 @@
 			return null;
 		}
 	</script>
-
-	<?php $link = get_the_permalink(); 
-	//if we want to go back to stripping canonicals to be uk version uncomment this 
-	// if(get_field('canonical_split', 'option')) {
-	// 	$removeString = get_field('canonical_split', 'option');
-	// 	$link = str_replace($removeString,"",$link);
-	// }
-	// $french = false;
-	// $usa = false;
-	// $cyprus = false;
-	// $uk = false;
-
-	// if (str_contains($link, '/fr/')) {
-	// 	$french = true;
-	// } else if (str_contains($link, '/us/')) {
-	// 	$usa = true;
-	// } else if (str_contains($link, '/cy/')) {
-	// 	$cyprus = true;
-	// } else {
-	// 	$uk = true;
-	// }
-	?>
+	
 	<link rel="canonical" href="<?php if(get_field('override_canonical') && get_field('canonical_url')) { 
 		echo get_field('canonical_url'); 
 	} else if (is_page(1267) || is_page(1271) && isset($_GET["catid"])) {
@@ -126,14 +105,6 @@
 
 			echo '<link rel="alternate" hreflang="x-default" href="' . $url . '"/>';
 		}
-	?>
-
-	<?php //if(get_field('nz_hreflang_url') && get_field('nz_hreflang_country')) {
-		// 	$url = get_field('nz_hreflang_url');
-		// 	$code = get_field('nz_hreflang_country');
-			
-		// 	echo '<link rel="alternate" href="' . $url . '" hreflang="' . $code . '">';
-		// }
 	?>
 
 	<?php 
@@ -168,23 +139,6 @@
 			}
 		// }
 	?>
-
-	<?php //if(get_field('au_hreflang_url') && get_field('au_hreflang_country')) {
-			// 	$url = get_field('au_hreflang_url');
-			// 	$code = get_field('au_hreflang_country');
-				
-			// 	echo '<link rel="alternate" href="' . $url . '" hreflang="' . $code . '">';
-			// }
-	?>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script> -->
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33182836-4"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'UA-33182836-4');
-	</script> -->
 
 	<?php wp_head(); ?>
 
@@ -239,13 +193,6 @@
 	</div>
 	<div class="pre-nav">
 		<div class="pre-nav__container container">
-			<!-- <div class="pre-nav__search">
-				<div class="pre-nav__search-icon">
-					<a href="javascript:void(0);">
-						<img src="<?php //echo get_template_directory_uri() . '/compiled/images/search--white.svg'; ?>" alt="Search icon">
-					</a>
-				</div>
-			</div> -->
 			<?php if($currentLang == 'en') { ?>
 				<div class="pre-nav__number">
 					<a href="tel:<?php if(get_field('phone_number', 'option')) { echo get_field('phone_number', 'option'); } else {  echo '(0)113 457 1000'; } ?>"><?php if(get_field('phone_number', 'option')) { echo get_field('phone_number', 'option'); } else {  echo '(0)113 457 1000'; } ?></a>
@@ -255,7 +202,6 @@
 				<a href="<?php if(get_field('relative_link', 'option')) { echo get_field('relative_link', 'option'); } else {  echo'https://www.bigchange.com'; } ?>/about-us/contact/"><?php echo get_field('string_contact_us', 'option'); ?></a>
 			</div>
 			<div class="pre-nav__select">
-			<!-- UPDATE HREFLANGS LINE 50 ISH ABOVE WITH ANY NEW LANGS YOU ADD -->
 				<select name="country" id="country"> 
 					<option value="uk" data-link="<?php if(get_field('uk_hreflang_url')) { echo get_field('uk_hreflang_url'); } else { echo 'https://www.bigchange.com/'; } ?>">United Kingdom</option>
 					<option value="fr" data-link="<?php if(get_field('fr_hreflang_url')) { echo get_field('fr_hreflang_url'); } else { echo 'https://www.bigchange.com/fr/'; } ?>">France</option>
@@ -265,7 +211,6 @@
 					<option value="au" data-link="<?php if(get_field('au_hreflang_url')) { echo get_field('au_hreflang_url'); } else { echo 'https://www.bigchange.com/au/'; } ?>">Australia</option>
 					<option value="ca" data-link="">Canada</option>
 				</select>
-			<!-- UPDATE HREFLANGS LINE 50 ISH ABOVE WITH ANY NEW LANGS YOU ADD -->
 			</div>
 		</div>
 	</div>
@@ -387,34 +332,10 @@
                 </div>
                 <div class="bc-modal__form">
 					<?php if(get_field('pricing_embed', 'option')) { echo get_field('pricing_embed', 'option'); } else {  echo '<!--[if lte IE 8]> <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script> <![endif]--> <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script> <script> hbspt.forms.create({ region: "na1", portalId: "20046553", formId: "c6bc6251-8af6-4874-adbc-fdca664d97c8" }); </script>'; } ?>
-                    <!--<php echo do_shortcode('[contact-form-7 id="18639" title="View pricing" html_id="view-pricing"]'); ?>-->
                 </div>
             </div>
         </div>
     </div>
-	<!-- Temp Disabled Until Signed Off -->
-	
-	<?php if(is_front_page() && $currentLang != 'fr') { ?>
-		<div class="bc-modal em-modal" style="opacity: 0; z-index: -1;">
-			<div class="bc-modal__bg"></div>
-			<div class="bc-modal__wrapper">
-				<div class="bc-modal__inner">
-					<div class="bc-modal__close"></div>
-					<div class="em-modal__wrapper">
-						<div class="em-modal__text">
-							<!-- <img src="https://www.bigchange.com/wp-content/uploads/2021/11/bigchange-logo-2020-white-trans.webp" alt="BigChange logo"> -->
-							<h3>BE A PART OF OUR PLUMBING & HEATING</h3>
-							<a target="_blank" href="https://webinar.ringcentral.com/webinar/register/3216430206337/WN_laNaKBwKS9GdqPw23Dl34w" class="btn-normal btn-normal--yellow">Book your place now</a>
-						</div>
-						<div class="em-modal__image">
-							<img src="https://www.bigchange.com/wp-content/uploads/2022/01/Webinar-events-page-image.webp" alt="BigChange brochures">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	<?php } ?>
-	 
 
 <div class="cookie-bar cookie-bar--new cookie-bar--hidden">
 	<div class="cookie-bar__inner container">
@@ -428,25 +349,12 @@
 	</div>
 </div>
 
-
-<!-- <div class="cookie-bar cookie-bar--hidden">
-	<div class="container">
-		<div class="cookie-bar__text">
-			<p><?php //echo get_field('cookie_bar_text', 'option'); ?></p>
-		</div>
-		<div class="cookie-bar__buttons"> 
-			<?php //echo get_field('cookie_bar_buttons', 'option'); ?>
-		</div>
-	</div>
-</div> -->
-
 <div class="bc-modal cookies-modal" style="opacity: 0; z-index: -1;">
 	<div class="bc-modal__bg"></div>
 	<div class="bc-modal__wrapper">
 		<div class="bc-modal__inner">
 			<div class="cookies-modal__upper">
 				<p class="modal-title"><?php echo get_field('string_cookie_modal_title', 'option'); ?></p>
-				<!-- <a href="javascript:void(0);" class="btn-normal save-cookies">Save</a> -->
 			</div>
 			<div class="cookies-modal__text">
 				<p><?php echo get_field('cookie_modal_text', 'option'); ?></p>
