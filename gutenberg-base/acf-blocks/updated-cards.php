@@ -8,7 +8,7 @@
                     <div class="updated-cards__card updated-cards__card--leader">
                         <?php if($item['image']) { ?>
                         <div class="updated-cards__image">
-                            <img width="120" height="127" src="<?php echo $item['image']['url']; ?>" alt="Icon Image">
+                            <img src="<?php echo $item['image']['url']; ?>" alt="Icon Image">
                         </div>
                         <?php } ?>
                         <?php if($item['main_title']) { ?>
@@ -41,7 +41,7 @@
                         <?php } ?>
                         <?php if($item['image']) { ?>
                         <div class="updated-cards__image">
-                            <img src="<?php echo $item['image']['url']; ?>" alt="Icon Image">
+                            <img width="120" height="127" src="<?php echo $item['image']['url']; ?>" alt="Icon Image">
                         </div>
                         <?php } ?>
                         <?php if($item['main_title']) { ?>
