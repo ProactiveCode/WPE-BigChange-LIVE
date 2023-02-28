@@ -84,28 +84,7 @@
 			return null;
 		}
 	</script>
-
-	<?php $link = get_the_permalink(); 
-	//if we want to go back to stripping canonicals to be uk version uncomment this 
-	// if(get_field('canonical_split', 'option')) {
-	// 	$removeString = get_field('canonical_split', 'option');
-	// 	$link = str_replace($removeString,"",$link);
-	// }
-	// $french = false;
-	// $usa = false;
-	// $cyprus = false;
-	// $uk = false;
-
-	// if (str_contains($link, '/fr/')) {
-	// 	$french = true;
-	// } else if (str_contains($link, '/us/')) {
-	// 	$usa = true;
-	// } else if (str_contains($link, '/cy/')) {
-	// 	$cyprus = true;
-	// } else {
-	// 	$uk = true;
-	// }
-	?>
+	
 	<link rel="canonical" href="<?php if(get_field('override_canonical') && get_field('canonical_url')) { 
 		echo get_field('canonical_url'); 
 	} else if (is_page(1267) || is_page(1271) && isset($_GET["catid"])) {
@@ -126,14 +105,6 @@
 
 			echo '<link rel="alternate" hreflang="x-default" href="' . $url . '"/>';
 		}
-	?>
-
-	<?php //if(get_field('nz_hreflang_url') && get_field('nz_hreflang_country')) {
-		// 	$url = get_field('nz_hreflang_url');
-		// 	$code = get_field('nz_hreflang_country');
-			
-		// 	echo '<link rel="alternate" href="' . $url . '" hreflang="' . $code . '">';
-		// }
 	?>
 
 	<?php 
@@ -168,23 +139,6 @@
 			}
 		// }
 	?>
-
-	<?php //if(get_field('au_hreflang_url') && get_field('au_hreflang_country')) {
-			// 	$url = get_field('au_hreflang_url');
-			// 	$code = get_field('au_hreflang_country');
-				
-			// 	echo '<link rel="alternate" href="' . $url . '" hreflang="' . $code . '">';
-			// }
-	?>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script> -->
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33182836-4"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'UA-33182836-4');
-	</script> -->
 
 	<?php wp_head(); ?>
 
@@ -387,7 +341,6 @@
                 </div>
                 <div class="bc-modal__form">
 					<?php if(get_field('pricing_embed', 'option')) { echo get_field('pricing_embed', 'option'); } else {  echo '<!--[if lte IE 8]> <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script> <![endif]--> <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script> <script> hbspt.forms.create({ region: "na1", portalId: "20046553", formId: "c6bc6251-8af6-4874-adbc-fdca664d97c8" }); </script>'; } ?>
-                    <!--<php echo do_shortcode('[contact-form-7 id="18639" title="View pricing" html_id="view-pricing"]'); ?>-->
                 </div>
             </div>
         </div>
@@ -405,25 +358,12 @@
 	</div>
 </div>
 
-
-<!-- <div class="cookie-bar cookie-bar--hidden">
-	<div class="container">
-		<div class="cookie-bar__text">
-			<p><?php //echo get_field('cookie_bar_text', 'option'); ?></p>
-		</div>
-		<div class="cookie-bar__buttons"> 
-			<?php //echo get_field('cookie_bar_buttons', 'option'); ?>
-		</div>
-	</div>
-</div> -->
-
 <div class="bc-modal cookies-modal" style="opacity: 0; z-index: -1;">
 	<div class="bc-modal__bg"></div>
 	<div class="bc-modal__wrapper">
 		<div class="bc-modal__inner">
 			<div class="cookies-modal__upper">
 				<p class="modal-title"><?php echo get_field('string_cookie_modal_title', 'option'); ?></p>
-				<!-- <a href="javascript:void(0);" class="btn-normal save-cookies">Save</a> -->
 			</div>
 			<div class="cookies-modal__text">
 				<p><?php echo get_field('cookie_modal_text', 'option'); ?></p>
