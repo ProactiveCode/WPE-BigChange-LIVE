@@ -189,7 +189,7 @@ get_header(); ?>
 									</div>
 								<?php } ?>
 								<div class="home-capterra" style="display:none;">
-									<img width="100" height="40" src="https://www.bigchange.com/wp-content/uploads/2022/07/capterra-new-logo.png" alt="Capterra Rating 4.6">
+									<img width="100" height="40" src="https://www.bigchange.com/wp-content/uploads/2023/03/capterra-new-logo-de.webp" alt="Capterra Rating 4.6">
 								</div>
 							</div>
 						</div>
