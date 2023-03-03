@@ -149,6 +149,8 @@
 
 	echo get_field('ne_head_section', 'option'); ?>
 
+	<!-- CRO Script -->
+	<script type='text/javascript' src='//c.webtrends-optimize.com/acs/accounts/1c39dcfe-8574-4e57-80df-3e69edab1b14/js/wt.js'></script>
 </head>
 
 <?php $current_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
