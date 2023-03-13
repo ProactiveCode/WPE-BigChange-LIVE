@@ -248,7 +248,7 @@
 			</div>
 			<div class="site-header__demo">
 				<a href="javascript:void(0);" onclick="gtag('event', 'GET A DEMO HEADER BUTTON', { event_category: 'Header Button Clicks', event_action: 'GET A DEMO HEADER BUTTON'});" class="btn-normal btn-normal--yellow demo"><?php echo get_field('string_get_a_demo_button', 'option'); ?></a>
-				<a href="javascript:void(0);" onclick="gtag('event', 'exclude-logins', { event_category: 'ExcludeLogins', event_action: 'Excluded'});" class="btn-normal btn-normal--light-blue login" data-src='<iframe id="loginIFrame" width="420" height="420" scrolling="no" frameborder="0" src="https://client.bigchange.com/loginframe.aspx"></iframe>'><?php echo get_field('string_login_button', 'option'); ?></a>
+				<a href="javascript:void(0);" onclick="gtag('event', 'exclude-logins2', { event_category: 'ExcludeLogins2', event_action: 'Excluded'});" class="btn-normal btn-normal--light-blue login" data-src='<iframe id="loginIFrame" width="420" height="420" scrolling="no" frameborder="0" src="https://client.bigchange.com/loginframe.aspx"></iframe>'><?php echo get_field('string_login_button', 'option'); ?></a>
 			</div>
 			<div class="site-header__menu-toggle">
 				<div class="hamburger">
